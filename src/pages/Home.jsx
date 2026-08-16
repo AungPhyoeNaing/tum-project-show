@@ -75,8 +75,8 @@ export default function Home({ bookmarks, onToggleBookmark }) {
           <span className="stat-label">ပရောဂျက်များ</span>
         </div>
         <Link to="/info" className="stat-item" style={{ cursor: 'pointer' }}>
-          <span className="stat-number">7</span>
-          <span className="stat-label">ပြခန်းဆောင် လမ်းညွှန်</span>
+          <span className="stat-number">21 Aug</span>
+          <span className="stat-label">ကျင်းပမည့်ရက် (အသေးစိတ်)</span>
         </Link>
       </div>
 
