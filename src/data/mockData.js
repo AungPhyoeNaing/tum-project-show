@@ -7,7 +7,8 @@ export const MAJORS_DATA = [
     iconName: "Cpu",
     themeColor: "from-blue-600 to-indigo-700",
     accentColor: "#3b82f6",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+    logo: "/logos/ITLogo.png",
+    image: "/logos/ITLogo.png",
     description: "AI, Software Development, Embedded Systems, Networking, Mobile Apps နှင့် IoT နည်းပညာဆိုင်ရာ ပရောဂျက်များ",
     projects: [
       {
@@ -74,7 +75,8 @@ export const MAJORS_DATA = [
     iconName: "Cog",
     themeColor: "from-amber-600 to-orange-700",
     accentColor: "#ea580c",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80",
+    logo: "/logos/MechanicalLogo.jpg",
+    image: "/logos/MechanicalLogo.jpg",
     description: "စက်မှုဒီဇိုင်း၊ ရေအား/လေအား စွမ်းအင်စနစ်များ၊ မော်တော်ယာဉ် နည်းပညာနှင့် ထုတ်လုပ်မှု စက်ယန္တရားများ",
     projects: [
       {
@@ -123,7 +125,8 @@ export const MAJORS_DATA = [
     iconName: "Bot",
     themeColor: "from-cyan-600 to-teal-700",
     accentColor: "#0891b2",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80",
+    logo: "/logos/MCLogo.jpg",
+    image: "/logos/MCLogo.jpg",
     description: "ရိုဘော့တစ်စ်၊ အလိုအလျောက် စက်မှုထိန်းချုပ်စနစ်များ၊ Drone နည်းပညာနှင့် Smart Automation စနစ်များ",
     projects: [
       {
@@ -172,7 +175,8 @@ export const MAJORS_DATA = [
     iconName: "Building2",
     themeColor: "from-emerald-600 to-green-700",
     accentColor: "#059669",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=600&q=80",
+    logo: "/logos/civilLogo.jpg",
+    image: "/logos/civilLogo.jpg",
     description: "အဆောက်အအုံ ဒီဇိုင်း၊ ငလျင်ဒဏ်ခံ ဒီဇိုင်းများ၊ လမ်းတံတား မြို့ပြအခြေခံအဆောက်အအုံနှင့် BIM နည်းပညာများ",
     projects: [
       {
@@ -203,7 +207,8 @@ export const MAJORS_DATA = [
     iconName: "Zap",
     themeColor: "from-yellow-600 to-amber-700",
     accentColor: "#d97706",
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80",
+    logo: "/logos/EPLogo.jpg",
+    image: "/logos/EPLogo.jpg",
     description: "မဟာဓာတ်အားလိုင်းများ၊ ပြန်လည်ပြည့်ဖြိုးမြဲစွမ်းအင် (Solar/Wind)၊ Smart Grid နှင့် ဓာတ်အားခွဲရုံ မိုက်ခရိုထိန်းချုပ်စနစ်များ",
     projects: [
       {
@@ -234,7 +239,8 @@ export const MAJORS_DATA = [
     iconName: "Radio",
     themeColor: "from-violet-600 to-purple-700",
     accentColor: "#7c3aed",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80",
+    logo: "/logos/ECLogo.jpg",
+    image: "/logos/ECLogo.jpg",
     description: "ဆာကစ်ဒီဇိုင်း၊ Wireless Telecommunications၊ Sensor Networks၊ FPGA နှင့် Embedded Hardware",
     projects: [
       {
@@ -265,7 +271,8 @@ export const MAJORS_DATA = [
     iconName: "Compass",
     themeColor: "from-rose-600 to-pink-700",
     accentColor: "#e11d48",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+    logo: "/logos/ArchLogo.jpg",
+    image: "/logos/ArchLogo.jpg",
     description: "မြို့ပြဒီဇိုင်း၊ အဆောက်အအုံ ဗိသုကာပုံစံများ၊ မြန်မာ့ရိုးရာနှင့် ခေတ်မီဗိသုကာ ပေါင်းစပ်မှုများနှင့် Interior Design",
     projects: [
       {
@@ -296,7 +303,8 @@ export const MAJORS_DATA = [
     iconName: "Flame",
     themeColor: "from-stone-600 to-neutral-800",
     accentColor: "#525252",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+    logo: "/logos/PetroleumLogo.jpg",
+    image: "/logos/PetroleumLogo.jpg",
     description: "ရေနံနှင့် သဘာဝဓာတ်ငွေ့ တူးဖော်ရေး၊ Reservoir Simulation၊ ရေနံသန့်စင်မှုဆိုင်ရာ နည်းပညာများ",
     projects: [
       {
@@ -309,7 +317,7 @@ export const MAJORS_DATA = [
         supervisor: "Dr. Kyaw Moe (HOD, PE)",
         boothNo: "Hall F - Booth 01",
         tags: ["Reservoir Sim", "EOR", "Petroleum Tech"],
-        image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
         features: [
           "CMG Reservoir Simulator modeling results",
           "Eco-friendly bio-based surfactant formula test",
@@ -327,7 +335,8 @@ export const MAJORS_DATA = [
     iconName: "Pickaxe",
     themeColor: "from-amber-700 to-stone-800",
     accentColor: "#b45309",
-    image: "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80",
+    logo: "/logos/MiningLogo.jpg",
+    image: "/logos/MiningLogo.jpg",
     description: "သတ္တုတူးဖော်ရေး ဒီဇိုင်းများ၊ မြေအောက် လုပ်ငန်းခွင် ဘေးကင်းလုံခြုံရေး၊ Mineral Processing နှင့် Geotechnical စစ်ဆေးမှုများ",
     projects: [
       {
@@ -358,7 +367,8 @@ export const MAJORS_DATA = [
     iconName: "FlaskConical",
     themeColor: "from-teal-600 to-emerald-800",
     accentColor: "#0d9488",
-    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+    logo: "/logos/ChemicalLogo.png",
+    image: "/logos/ChemicalLogo.png",
     description: "ဓာတုပစ္စည်း ထုတ်လုပ်မှု စက်ရုံဒီဇိုင်းများ၊ Biodiesel ထုတ်လုပ်မှု၊ ရေဆိုးသန့်စင်စနစ်နှင့် Polymer နည်းပညာများ",
     projects: [
       {

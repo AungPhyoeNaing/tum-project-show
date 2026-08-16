@@ -1,7 +1,7 @@
 import React from 'react';
 import { MAJORS_DATA } from '../data/mockData';
 import ProjectCard from '../components/ProjectCard';
-import { Bookmark, Sparkles, Layers } from 'lucide-react';
+import { Bookmark, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Bookmarks({ bookmarks, onToggleBookmark }) {

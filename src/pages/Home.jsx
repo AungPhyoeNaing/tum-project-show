@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { MAJORS_DATA, SHOW_INFO } from '../data/mockData';
 import MajorCard from '../components/MajorCard';
 import ProjectCard from '../components/ProjectCard';
-import { Search, X, Calendar, MapPin, Sparkles, Layers, BookOpen } from 'lucide-react';
+import { Search, X, Calendar, MapPin, Sparkles, Layers } from 'lucide-react';
 
 export default function Home({ bookmarks, onToggleBookmark }) {
   const [searchQuery, setSearchQuery] = useState('');

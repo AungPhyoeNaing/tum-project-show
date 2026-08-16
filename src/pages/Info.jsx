@@ -1,6 +1,6 @@
 import React from 'react';
 import { SHOW_INFO } from '../data/mockData';
-import { Calendar, Clock, MapPin, Phone, Mail, Globe, Info as InfoIcon, Navigation, ExternalLink } from 'lucide-react';
+import { Calendar, Clock, MapPin, Phone, Globe, Navigation } from 'lucide-react';
 
 export default function Info() {
   return (
@@ -40,6 +40,14 @@ export default function Info() {
             <div>
               <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block' }}>နေရာ</span>
               <strong style={{ fontSize: '0.88rem', color: 'var(--text-main)' }}>{SHOW_INFO.location}</strong>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', background: '#f8fafc', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)' }}>
+            <Phone size={22} color="var(--primary)" />
+            <div>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block' }}>ဆက်သွယ်ရန်</span>
+              <strong style={{ fontSize: '0.88rem', color: 'var(--text-main)' }}>{SHOW_INFO.contact}</strong>
             </div>
           </div>
         </div>

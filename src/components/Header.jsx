@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bookmark, Sparkles } from 'lucide-react';
+import { Bookmark } from 'lucide-react';
 
 export default function Header({ bookmarkCount = 0 }) {
   return (

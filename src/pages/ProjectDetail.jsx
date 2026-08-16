@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { MAJORS_DATA } from '../data/mockData';
 import { ArrowLeft, MapPin, Users, Award, Bookmark, Share2, Check, Sparkles, AlertTriangle } from 'lucide-react';
 
@@ -65,12 +65,15 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
           alt={project.title}
           className="detail-img"
           onError={(e) => {
-            e.target.src = "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80";
+            e.target.src = major.logo || "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80";
           }}
         />
-        <span className="major-tag" style={{ top: '12px', left: '12px', position: 'absolute' }}>
-          {major.shortCode} Major
-        </span>
+        <div className="major-tag" style={{ top: '12px', left: '12px', position: 'absolute', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          {major.logo && (
+            <img src={major.logo} alt="" style={{ width: '18px', height: '18px', borderRadius: '4px', objectFit: 'contain', background: 'white' }} />
+          )}
+          <span>{major.shortCode} Major</span>
+        </div>
       </div>
 
       <div className="detail-header">

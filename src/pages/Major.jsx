@@ -2,8 +2,24 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { MAJORS_DATA } from '../data/mockData';
 import ProjectCard from '../components/ProjectCard';
-import { ArrowLeft, Search, Layers, AlertTriangle } from 'lucide-react';
-import * as Icons from 'lucide-react';
+import { 
+  ArrowLeft, Search, Layers, AlertTriangle,
+  Cpu, Cog, Bot, Building2, Zap, Radio, 
+  Compass, Flame, Pickaxe, FlaskConical, Folder 
+} from 'lucide-react';
+
+const ICON_MAP = {
+  Cpu,
+  Cog,
+  Bot,
+  Building2,
+  Zap,
+  Radio,
+  Compass,
+  Flame,
+  Pickaxe,
+  FlaskConical,
+};
 
 export default function Major({ bookmarks, onToggleBookmark }) {
   const { majorId } = useParams();
@@ -26,7 +42,7 @@ export default function Major({ bookmarks, onToggleBookmark }) {
     );
   }
 
-  const IconComponent = Icons[major.iconName] || Icons.Folder;
+  const IconComponent = ICON_MAP[major.iconName] || Folder;
 
   const projects = major.projects.filter(p => 
     p.title.toLowerCase().includes(filterQuery.toLowerCase()) ||
@@ -43,13 +59,24 @@ export default function Major({ bookmarks, onToggleBookmark }) {
 
       {/* Major Detail Header Banner */}
       <div className="detail-header">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-          <div className="major-icon-box" style={{ backgroundColor: major.accentColor || '#1e3a8a', width: '44px', height: '44px' }}>
-            <IconComponent size={24} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '14px' }}>
+          <div className="major-logo-avatar">
+            <img 
+              src={major.logo || major.image} 
+              alt={major.name} 
+              className="major-logo-img"
+              onError={(e) => {
+                e.target.src = "/logos/ITLogo.png";
+              }}
+            />
           </div>
           <div>
-            <h2 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--text-main)' }}>{major.shortCode} Major</h2>
-            <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', fontWeight: 600 }}>{major.nameMm}</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <IconComponent size={18} color="var(--primary)" />
+              <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-main)' }}>{major.shortCode} Department</h2>
+            </div>
+            <p style={{ fontSize: '0.9rem', color: 'var(--primary)', fontWeight: 600 }}>{major.nameMm}</p>
+            <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>{major.name}</p>
           </div>
         </div>
         <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', lineHeight: '1.5' }}>
@@ -100,3 +127,4 @@ export default function Major({ bookmarks, onToggleBookmark }) {
     </div>
   );
 }
+
