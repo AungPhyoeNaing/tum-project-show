@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { MAJORS_DATA } from '../data/mockData';
-import { ArrowLeft, MapPin, Users, Award, Bookmark, Share2, Check, Sparkles, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, Users, Award, Bookmark, Share2, Check, Sparkles, AlertTriangle } from 'lucide-react';
 
 export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
   const { projectId } = useParams();
@@ -88,14 +88,6 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
               {copied ? 'ကူးယူပြီး' : 'မျှဝေရန်'}
             </button>
           </div>
-        </div>
-
-        {/* Booth Location Chip */}
-        <div style={{ marginBottom: '10px' }}>
-          <span className="project-booth-badge" style={{ fontSize: '0.82rem', padding: '5px 12px' }}>
-            <MapPin size={14} color="var(--primary)" />
-            {project.boothNo}
-          </span>
         </div>
 
         {/* Titles */}

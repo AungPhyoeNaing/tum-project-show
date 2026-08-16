@@ -26,7 +26,6 @@ export const MAJORS_DATA = [
         description: "မန္တလေးမြို့တော်၏ ယာဉ်ကြောပိတ်ဆို့မှုကို လျှော့ချရန်အတွက် Computer Vision နှင့် Deep Learning နည်းပညာများကို အသုံးပြု၍ CCTV ကင်မရာများမှ ယာဉ်အသွားအလာ ပမာဏကို စအချိန်တွက်ချက်ကာ မီးပွိုင့်ချိန်များကို အလိုအလျောက် ချိန်ညှိပေးသည့် စနစ်ဖြစ်ပါသည်။",
         team: ["မောင်ဝင်းကိုကို", "မအေးမြတ်နိုး", "မောင်ဇင်မင်းထက်"],
         supervisor: "Daw Khin Myo Chit",
-        boothNo: "Main Building - Room 101",
         tags: ["AI/ML", "Computer Vision", "Python", "IoT"],
         features: [
           "Real-time vehicle counting via YOLOv8",
@@ -43,7 +42,6 @@ export const MAJORS_DATA = [
         description: "အကြားအာရုံချို့တဲ့သူများနှင့် အများပြည်သူကြား ဆက်သွယ်ရေး လွယ်ကူစေရန်အတွက် ဖုန်းကင်မရာမှတစ်ဆင့် မြန်မာလက်သင်္ကေတပြ ဘာသာစကားကို ရယူကာ စာသားနှင့် အသံအဖြစ် ချက်ချင်း ပြောင်းလဲပေးနိုင်သော Mobile App ဖြစ်ပါသည်။",
         team: ["မဆောင်းနှင်းဖြူ", "မောင်ထက်မြက်အောင်"],
         supervisor: "Daw Ei Ei Khaing",
-        boothNo: "Main Building - Room 102",
         tags: ["Mobile App", "TensorFlow Lite", "Flutter", "Accessibility"],
         features: [
           "95% Accuracy in core Myanmar gestures",
@@ -60,7 +58,6 @@ export const MAJORS_DATA = [
         description: "ကျောင်းသို့ လာရောက်လေ့လာသူများနှင့် ကျောင်းသားသစ်များအတွက် TUM New Campus ပင်မဆောင်သစ်အတွင်း Augmented Reality (AR) စနစ်ဖြင့် လမ်းညွှန်ပြသပေးမည့် Web & Mobile Application ဖြစ်ပါသည်။",
         team: ["မောင်ချမ်းမြေ့အောင်", "မသဇင်ဦး"],
         supervisor: "Daw Thandar Soe",
-        boothNo: "Main Building - Room 103",
         tags: ["AR", "WebXR", "React Native", "GIS"],
         features: [
           "Live camera AR directional arrows",
@@ -77,7 +74,6 @@ export const MAJORS_DATA = [
         description: "စာသင်ခန်းများအတွင်း ကျောင်းသားများ၏ တက်ရောက်မှုကို ကင်မရာမှတစ်ဆင့် မျက်နှာဖတ်၍ အလိုအလျောက် မှတ်တမ်းတင်ပေးပြီး အချိန်ကုန်သက်သာစေမည့် AI Smart Attendance စနစ်ဖြစ်ပါသည်။",
         team: ["မောင်သုတအောင်", "မဝင်းလဲ့ရွှေရည်", "မောင်ကျော်ဇင်ထွန်း"],
         supervisor: "Daw Moh Moh Khaing",
-        boothNo: "Main Building - Room 104",
         tags: ["AI/ML", "Face Recognition", "Python", "Computer Vision"],
         features: [
           "High accuracy multi-face detection in classroom lighting",
@@ -94,7 +90,6 @@ export const MAJORS_DATA = [
         description: "TUM ကျောင်းသား/သူများ၏ ဘွဲ့ယူသုတေသနစာတမ်းများ၊ စာအုပ်များနှင့် သင်ရိုးစာစောင်များကို လွယ်ကူစွာ ရှာဖွေဖတ်ရှုနိုင်မည့် Digital Library စနစ်ဖြစ်ပါသည်။",
         team: ["မနန်းခမ်းလှိုင်", "မောင်စည်သူအောင်", "မခင်မြတ်နိုး"],
         supervisor: "Daw Cho Me Me Maung",
-        boothNo: "Main Building - Room 105",
         tags: ["Web & Mobile", "React", "Cloud Storage", "Database"],
         features: [
           "Fast full-text thesis search and indexing",
@@ -125,7 +120,6 @@ export const MAJORS_DATA = [
         description: "သောက်သုံးရေ ရှားပါးသော ဒေသများနှင့် ကမ်းရိုးတန်းဒေသများအတွက် နေရောင်ခြည်သုံး အပူစွမ်းအင်ကို အသုံးပြု၍ ရေငန် သို့မဟုတ် မသန့်ရှင်းသော ရေများကို သောက်သုံးရေသန့်အဖြစ် ပြောင်းလဲပေးသည့် အရွယ်အစားသေးငယ်သော စနစ်ဖြစ်ပါသည်။",
         team: ["မောင်နိုင်လင်းဦး", "မောင်ကျော်ဇင်သူ", "မခင်သီရိထက်"],
         supervisor: "Dr. Soe Win (Professor)",
-        boothNo: "Outdoor Mech Zone - Booth 01",
         tags: ["Solar Energy", "Thermodynamics", "Clean Water"],
         features: [
           "Zero electricity consumption required",
@@ -142,7 +136,6 @@ export const MAJORS_DATA = [
         description: "သီးနှံများနှင့် စိုက်ပျိုးရေးထွက်ကုန်များကို အရည်အသွေးမပျက်ဘေးကင်းစွာ အခြောက်ခံနိုင်ရန် အပူချိန်နှင့် စိုထိုင်းဆကို PID Controller ဖြင့် တိကျစွာ အလိုအလျောက် ထိန်းချုပ်ပေးနိုင်သော စက်ဖြစ်သည်။",
         team: ["မောင်သူရိန်ဟန်", "မထက်ထက်လွင်"],
         supervisor: "U Zaw Lin (Associate Professor)",
-        boothNo: "Outdoor Mech Zone - Booth 02",
         tags: ["Thermal Design", "Control Systems", "AgriTech"],
         features: [
           "Energy efficient heat exchanger module",
@@ -173,7 +166,6 @@ export const MAJORS_DATA = [
         description: "စိုက်ပျိုးရေးစိုက်ခင်းများ၏ သီးနှံကျန်းမာရေးနှင့် ပိုးမွှားကျရောက်မှုကို Multispectral Camera ဖြင့် ဓာတ်ပုံရိုက်ယူ စစ်ဆေးကာ လိုအပ်သော နေရာများသို့ မြေသြဇာနှင့် ဆေးဖျန်းပေးနိုင်သော Autonomous Drone ဖြစ်ပါသည်။",
         team: ["မောင်ကောင်းမြတ်သူ", "မောင်ရဲရင့်အောင်", "မယမင်းသူ"],
         supervisor: "Dr. Myo Min (HOD, Mechatronics)",
-        boothNo: "Hall B - Booth 01",
         tags: ["Robotics", "Drone Tech", "Autonomous Navigation"],
         features: [
           "GPS Waypoint automatic flight planning",
@@ -190,7 +182,6 @@ export const MAJORS_DATA = [
         description: "စက်ရုံ အလုပ်ရုံများတွင် ပစ္စည်းများကို အရောင်၊ ပုံသဏ္ဌာန်အလိုက် အလိုအလျောက် ခွဲခြားကာ ထုပ်ပိုးပေးနိုင်သော 6-Degree of Freedom စက်မှု ရိုဘော့လက်တံ စနစ်ဖြစ်ပါသည်။",
         team: ["မောင်ကျော်စွာဝင်း", "မမေသူခိုင်"],
         supervisor: "Daw Ei Ei Phyo (Lecturer)",
-        boothNo: "Hall B - Booth 02",
         tags: ["Industrial Automation", "Robotics", "PLC", "Vision System"],
         features: [
           "Inverse Kinematics trajectory control",
@@ -221,7 +212,6 @@ export const MAJORS_DATA = [
         description: "မြန်မာနိုင်ငံ၏ ငလျင်ကြောဒေသများအတွက် ကုန်ကျစရိတ်သက်သာပြီး သဘာဝပတ်ဝန်းကျင်မထိခိုက်စေသော ဝါးမျှင်ပါဝင်ကွန်ကရစ် (Bamboo-RC) နည်းပညာဖြင့် ဒီဇိုင်းထုတ်ထားသည့် ငလျင်ဒဏ်ခံ အဆောက်အအုံ မော်ဒယ်ဖြစ်ပါသည်။",
         team: ["မောင်ထက်အာကာ", "မဆုမြတ်မွန်", "မောင်ဇင်ကို"],
         supervisor: "Dr. Nilar Win (HOD, Civil)",
-        boothNo: "Hall C - Booth 01",
         tags: ["Structural Engineering", "Eco Construction", "BIM"],
         features: [
           "40% cost reduction compared to traditional steel RC",
@@ -252,7 +242,6 @@ export const MAJORS_DATA = [
         description: "နေရောင်ခြည်စွမ်းအင်၊ ဘက်ထရီနှင့် မဟာဓာတ်အားလိုင်းတို့ကို ပေါင်းစပ်၍ အိမ်ထောင်စုများနှင့် စက်ရုံများအတွက် လျှပ်စစ်ဓာတ်အား အလေအလွင့်မရှိ အထိရောက်ဆုံး ခွဲဝေသုံးစွဲနိုင်ရန် IoT နည်းပညာဖြင့် ထိန်းချုပ်သည့် စနစ်ဖြစ်သည်။",
         team: ["မောင်ကျော်ဇင်ဦး", "မနဒီမိုး"],
         supervisor: "U Than Htike (Professor)",
-        boothNo: "Hall D - Booth 01",
         tags: ["Smart Grid", "IoT", "Solar PV", "Power Electronics"],
         features: [
           "Automatic grid switching based on real-time solar yield",
@@ -283,7 +272,6 @@ export const MAJORS_DATA = [
         description: "အင်တာနက်လိုင်း မရှိသော ဝေးလံခေါင်ဖျား စိုက်ပျိုးရေးဧရိယာများတွင် ၁၀ ကီလိုမီတာ အကွာအဝေးအထိ တာဝေးကြိုးမဲ့စနစ် (LoRaWAN) ဖြင့် မြေဆီလွှာစိုထိုင်းဆနှင့် အပူချိန်များကို အလိုအလျောက် သတင်းပို့ပေးမည့် Sensor Node ဖြစ်ပါသည်။",
         team: ["မောင်မင်းသန့်", "မဖွေးဖွေးအောင်"],
         supervisor: "Dr. Aye Aye San (HOD, EC)",
-        boothNo: "Hall E - Booth 01",
         tags: ["LoRaWAN", "Wireless", "Sensors", "Embedded Hardware"],
         features: [
           "10km+ Long Range communication coverage",
@@ -314,7 +302,6 @@ export const MAJORS_DATA = [
         description: "မန္တလေးမြို့၏ သမိုင်းဝင် နေရာများနှင့် ဧရာဝတီမြစ်ကမ်းနား ဧရိယာကို ပြည်သူများ စိတ်အေးချမ်းသာစွာ အပန်းဖြေနိုင်ပြီး ယဉ်ကျေးမှု အမွေအနှစ်များကို ထိန်းသိမ်းနိုင်မည့် ခေတ်မီ ဗိသုကာ ပလပ်ဖောင်း ဒီဇိုင်း ရေးဆွဲထားခြင်း ဖြစ်သည်။",
         team: ["မခင်ရတနာထွေး", "မောင်သီဟစိုး"],
         supervisor: "Daw Thinzar Lwin (Associate Professor)",
-        boothNo: "Architecture Exhibition Gallery",
         tags: ["Urban Design", "Landscape Architecture", "Cultural Heritage"],
         features: [
           "Full 3D Rendered Walkthrough",
@@ -345,7 +332,6 @@ export const MAJORS_DATA = [
         description: "သက်တမ်းရင့် ရေနံတွင်းများမှ ကျန်ရှိနေသော ရေနံစိမ်းများကို သဘာဝပတ်ဝန်းကျင် ဘေးကင်းသည့် Bio-surfactants များ အသုံးပြု၍ ပိုမိုထုတ်ယူနိုင်ရေးအတွက် Computer Simulation ဖြင့် စမ်းသပ်ထားသော ပရောဂျက်ဖြစ်ပါသည်။",
         team: ["မောင်အောင်မြင့်မြတ်", "မအေးချမ်းမွန်"],
         supervisor: "Dr. Kyaw Moe (HOD, PE)",
-        boothNo: "Hall F - Booth 01",
         tags: ["Reservoir Sim", "EOR", "Petroleum Tech"],
         features: [
           "CMG Reservoir Simulator modeling results",
@@ -376,7 +362,6 @@ export const MAJORS_DATA = [
         description: "မြေအောက် သတ္တုတွင်းများအတွင်း အဆိပ်ငွေ့ (Methane/CO) ကျရောက်မှုနှင့် မြေပြိုနိုင်ခြေများကို Sensor များဖြင့် အချိန်နဲ့တပြေးညီ တိုင်းတာကာ သတ္တုတွင်းလုပ်သားများ၏ လုံခြုံရေးအတွက် သတိပေးစနစ်ဖြစ်ပါသည်။",
         team: ["မောင်စောသူရ", "မောင်နိုင်ဝင်း"],
         supervisor: "U Win Naing (Senior Lecturer)",
-        boothNo: "Hall F - Booth 02",
         tags: ["Mine Safety", "Gas Sensors", "IoT Trackers"],
         features: [
           "Multi-gas sensing (Methane, CO, Hydrogen Sulfide)",
@@ -407,7 +392,6 @@ export const MAJORS_DATA = [
         description: "စားသောက်ဆိုင်များနှင့် အိမ်ထောင်စုများမှ ထွက်ရှိသော စွန့်ပစ် စာအုန်းဆီများကို ဓာတုနည်းစဉ်ဖြင့် ပြန်လည်သန့်စင်ကာ မော်တော်ယာဉ်များနှင့် စက်ယန္တရားများတွင် အသုံးပြုနိုင်သည့် Bio-diesel ဆီအဖြစ် ပြောင်းလဲထုတ်လုပ်သော ပရောဂျက်ဖြစ်ပါသည်။",
         team: ["မရွှေရည်ဝင်း", "မောင်ခိုင်မင်းထွန်း", "မပြည့်ဖြိုးမောင်"],
         supervisor: "Dr. Cho Cho San (HOD, Chemical)",
-        boothNo: "Hall G - Booth 01",
         tags: ["Biofuel", "Green Chemistry", "Waste to Energy"],
         features: [
           "Transesterification chemical reactor prototype",

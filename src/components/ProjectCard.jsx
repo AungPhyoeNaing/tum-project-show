@@ -1,22 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Bookmark, Users, ChevronRight } from 'lucide-react';
+import { Bookmark, Users, ChevronRight } from 'lucide-react';
 
 export default function ProjectCard({ project, majorCode, isBookmarked, onToggleBookmark }) {
   return (
     <div className="project-card">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-        <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
-          {majorCode && (
-            <span className="project-booth-badge" style={{ background: 'var(--primary-light)', color: 'var(--primary)', borderColor: '#bfdbfe' }}>
-              {majorCode}
-            </span>
-          )}
-          <span className="project-booth-badge">
-            <MapPin size={12} />
-            {project.boothNo}
+        {majorCode ? (
+          <span className="project-booth-badge" style={{ background: 'var(--primary-light)', color: 'var(--primary)', borderColor: '#bfdbfe', fontWeight: 800 }}>
+            {majorCode} Department
           </span>
-        </div>
+        ) : <div />}
 
         <button 
           className={`bookmark-btn ${isBookmarked ? 'active' : ''}`}
