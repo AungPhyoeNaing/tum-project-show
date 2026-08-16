@@ -82,6 +82,21 @@ export default function Major({ bookmarks, onToggleBookmark }) {
         <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', lineHeight: '1.55' }}>
           {major.description}
         </p>
+
+        {major.faculty && major.faculty.length > 0 && (
+          <div style={{ marginTop: '12px', padding: '10px 14px', background: '#f8fafc', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)' }}>
+            <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-main)', display: 'block', marginBottom: '6px' }}>
+              ကြီးကြပ်ဆရာမများ (Faculty Supervisors)
+            </span>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+              {major.faculty.map((teacher, idx) => (
+                <span key={idx} className="tag-pill" style={{ background: 'white', color: 'var(--primary)', borderColor: '#bfdbfe' }}>
+                  {teacher}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Search within Major */}

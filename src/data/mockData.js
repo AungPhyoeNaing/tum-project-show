@@ -10,6 +10,13 @@ export const MAJORS_DATA = [
     logo: "/logos/ITLogo.png",
     image: "/logos/ITLogo.png",
     description: "AI, Software Development, Embedded Systems, Networking, Mobile Apps နှင့် IoT နည်းပညာဆိုင်ရာ ပရောဂျက်များ",
+    faculty: [
+      "Daw Khin Myo Chit",
+      "Daw Ei Ei Khaing",
+      "Daw Thandar Soe",
+      "Daw Moh Moh Khaing",
+      "Daw Cho Me Me Maung"
+    ],
     projects: [
       {
         id: "ceit-01",
@@ -18,8 +25,8 @@ export const MAJORS_DATA = [
         tagline: "Real-time camera feed analysis to dynamic signal timings using computer vision.",
         description: "မန္တလေးမြို့တော်၏ ယာဉ်ကြောပိတ်ဆို့မှုကို လျှော့ချရန်အတွက် Computer Vision နှင့် Deep Learning နည်းပညာများကို အသုံးပြု၍ CCTV ကင်မရာများမှ ယာဉ်အသွားအလာ ပမာဏကို စအချိန်တွက်ချက်ကာ မီးပွိုင့်ချိန်များကို အလိုအလျောက် ချိန်ညှိပေးသည့် စနစ်ဖြစ်ပါသည်။",
         team: ["မောင်ဝင်းကိုကို", "မအေးမြတ်နိုး", "မောင်ဇင်မင်းထက်"],
-        supervisor: "Dr. Kyaw Swar (HOD, CEIT)",
-        boothNo: "Hall A - Booth 01",
+        supervisor: "Daw Khin Myo Chit",
+        boothNo: "Main Building - Room 101",
         tags: ["AI/ML", "Computer Vision", "Python", "IoT"],
         image: "https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80",
         features: [
@@ -36,8 +43,8 @@ export const MAJORS_DATA = [
         tagline: "Bridging the communication gap for deaf and hard-of-hearing communities.",
         description: "အကြားအာရုံချို့တဲ့သူများနှင့် အများပြည်သူကြား ဆက်သွယ်ရေး လွယ်ကူစေရန်အတွက် ဖုန်းကင်မရာမှတစ်ဆင့် မြန်မာလက်သင်္ကေတပြ ဘာသာစကားကို ရယူကာ စာသားနှင့် အသံအဖြစ် ချက်ချင်း ပြောင်းလဲပေးနိုင်သော Mobile App ဖြစ်ပါသည်။",
         team: ["မဆောင်းနှင်းဖြူ", "မောင်ထက်မြက်အောင်"],
-        supervisor: "Daw Khin Myo Aye (Associate Professor)",
-        boothNo: "Hall A - Booth 02",
+        supervisor: "Daw Ei Ei Khaing",
+        boothNo: "Main Building - Room 102",
         tags: ["Mobile App", "TensorFlow Lite", "Flutter", "Accessibility"],
         image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
         features: [
@@ -52,17 +59,53 @@ export const MAJORS_DATA = [
         title: "TUM Smart Campus Guidance & Indoor Navigation System",
         titleMm: "TUM ကျောင်းပရဝုဏ်အတွင်း လမ်းညွှန် AR မိုဘိုင်းစနစ်",
         tagline: "Augmented Reality based directional guide for university visitors.",
-        description: "ကျောင်းသို့ လာရောက်လေ့လာသူများနှင့် ကျောင်းသားသစ်များအတွက် TUM ကျောင်းပရဝုဏ်နှင့် အဆောက်အအုံများအတွင်း Augmented Reality (AR) စနစ်ဖြင့် လမ်းညွှန်ပြသပေးမည့် Web & Mobile Application ဖြစ်ပါသည်။",
+        description: "ကျောင်းသို့ လာရောက်လေ့လာသူများနှင့် ကျောင်းသားသစ်များအတွက် TUM New Campus ပင်မဆောင်သစ်အတွင်း Augmented Reality (AR) စနစ်ဖြင့် လမ်းညွှန်ပြသပေးမည့် Web & Mobile Application ဖြစ်ပါသည်။",
         team: ["မောင်ချမ်းမြေ့အောင်", "မသဇင်ဦး"],
-        supervisor: "U Aung Myo Chit (Lecturer)",
-        boothNo: "Hall A - Booth 03",
+        supervisor: "Daw Thandar Soe",
+        boothNo: "Main Building - Room 103",
         tags: ["AR", "WebXR", "React Native", "GIS"],
         image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
         features: [
           "Live camera AR directional arrows",
-          "Interactive 3D Map of TUM Campus",
+          "Interactive 3D Map of TUM New Campus",
           "Event location finder during project show",
           "Department directory integration"
+        ]
+      },
+      {
+        id: "ceit-04",
+        title: "Smart Attendance & Face Recognition System for TUM Classrooms",
+        titleMm: "ကျောင်းသားများ မျက်နှာဖတ်၍ အလိုအလျောက် ပျက်ကွက်/တက်ရောက်မှတ်တမ်းစနစ်",
+        tagline: "AI facial recognition for automated student attendance tracking.",
+        description: "စာသင်ခန်းများအတွင်း ကျောင်းသားများ၏ တက်ရောက်မှုကို ကင်မရာမှတစ်ဆင့် မျက်နှာဖတ်၍ အလိုအလျောက် မှတ်တမ်းတင်ပေးပြီး အချိန်ကုန်သက်သာစေမည့် AI Smart Attendance စနစ်ဖြစ်ပါသည်။",
+        team: ["မောင်သုတအောင်", "မဝင်းလဲ့ရွှေရည်", "မောင်ကျော်ဇင်ထွန်း"],
+        supervisor: "Daw Moh Moh Khaing",
+        boothNo: "Main Building - Room 104",
+        tags: ["AI/ML", "Face Recognition", "Python", "Computer Vision"],
+        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80",
+        features: [
+          "High accuracy multi-face detection in classroom lighting",
+          "Real-time attendance export to Excel/CSV",
+          "Anti-spoofing liveness detection",
+          "Mobile notification for student attendance reports"
+        ]
+      },
+      {
+        id: "ceit-05",
+        title: "TUM Online E-Library & Academic Research Repository",
+        titleMm: "တက္ကသိုလ် သုတေသနစာတမ်းများနှင့် e-Library မိုဘိုင်းစနစ်",
+        tagline: "Centralized digital library for thesis, past papers, and engineering publications.",
+        description: "TUM ကျောင်းသား/သူများ၏ ဘွဲ့ယူသုတေသနစာတမ်းများ၊ စာအုပ်များနှင့် သင်ရိုးစာစောင်များကို လွယ်ကူစွာ ရှာဖွေဖတ်ရှုနိုင်မည့် Digital Library စနစ်ဖြစ်ပါသည်။",
+        team: ["မနန်းခမ်းလှိုင်", "မောင်စည်သူအောင်", "မခင်မြတ်နိုး"],
+        supervisor: "Daw Cho Me Me Maung",
+        boothNo: "Main Building - Room 105",
+        tags: ["Web & Mobile", "React", "Cloud Storage", "Database"],
+        image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80",
+        features: [
+          "Fast full-text thesis search and indexing",
+          "Offline PDF document caching",
+          "Department-wise engineering paper categorization",
+          "User-friendly search with Myanmar & English title support"
         ]
       }
     ]
@@ -397,9 +440,9 @@ export const SHOW_INFO = {
   title: "TUM Project Show 2026",
   titleMm: "နည်းပညာတက္ကသိုလ် (မန္တလေး) ပရောဂျက်ပြပွဲ",
   university: "Technological University (Mandalay)",
-  date: "August 25 - 26, 2026",
+  date: "21.8.2026 (Friday)",
   time: "9:00 AM - 4:30 PM",
-  location: "Main Gymnasium & Academic Halls, TUM Campus, Patheingyi, Mandalay",
+  location: "Main Building (New Campus), TUM • ပင်မဆောင်သစ်",
   contact: "info@tum.edu.mm | +95 9 123 456 789",
-  welcomeMessage: "နည်းပညာတက္ကသိုလ် (မန္တလေး) ၏ ကျောင်းသား/သူများမှ ရေးဆွဲဖန်တီးထားသော အဆင့်မြင့် နည်းပညာ ပရောဂျက်များကို လာရောက်လေ့လာရန် နွေးထွေးစွာ ဖိတ်ခေါ်အပ်ပါသည်။"
+  welcomeMessage: "နည်းပညာတက္ကသိုလ် (မန္တလေး) New Campus ပင်မဆောင်သစ်တွင် ကျင်းပမည့် ကျောင်းသား/သူများ၏ အဆင့်မြင့် နည်းပညာ ပရောဂျက်များပြပွဲသို့ လာရောက်လေ့လာရန် နွေးထွေးစွာ ဖိတ်ခေါ်အပ်ပါသည်။"
 };

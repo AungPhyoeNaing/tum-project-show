@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import FooterNav from './components/FooterNav';
 import Home from './pages/Home';
+import MajorsDirectory from './pages/MajorsDirectory';
 import Major from './pages/Major';
 import ProjectDetail from './pages/ProjectDetail';
 import Bookmarks from './pages/Bookmarks';
@@ -43,7 +44,7 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home bookmarks={bookmarks} onToggleBookmark={toggleBookmark} />} />
-          <Route path="/majors" element={<Home bookmarks={bookmarks} onToggleBookmark={toggleBookmark} />} />
+          <Route path="/majors" element={<MajorsDirectory />} />
           <Route path="/major/:majorId" element={<Major bookmarks={bookmarks} onToggleBookmark={toggleBookmark} />} />
           <Route path="/project/:projectId" element={<ProjectDetail bookmarks={bookmarks} onToggleBookmark={toggleBookmark} />} />
           <Route path="/bookmarks" element={<Bookmarks bookmarks={bookmarks} onToggleBookmark={toggleBookmark} />} />

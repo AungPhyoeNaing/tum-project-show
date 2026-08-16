@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { MAJORS_DATA, SHOW_INFO } from '../data/mockData';
-import MajorCard from '../components/MajorCard';
 import ProjectCard from '../components/ProjectCard';
 import { Search, X, Calendar, MapPin, Sparkles, Layers } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Home({ bookmarks, onToggleBookmark }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -30,7 +30,8 @@ export default function Home({ bookmarks, onToggleBookmark }) {
         p.titleMm.includes(q) ||
         p.description.toLowerCase().includes(q) ||
         p.tags.some(t => t.toLowerCase().includes(q)) ||
-        p.majorCode.toLowerCase().includes(q)
+        p.majorCode.toLowerCase().includes(q) ||
+        (p.supervisor && p.supervisor.toLowerCase().includes(q))
       );
     }
 
@@ -58,25 +59,25 @@ export default function Home({ bookmarks, onToggleBookmark }) {
           </div>
           <div className="meta-item">
             <MapPin size={14} />
-            <span>TUM Campus, Mandalay</span>
+            <span>{SHOW_INFO.location}</span>
           </div>
         </div>
       </section>
 
       {/* Event Stats Metric Bar */}
       <div className="event-stats-bar">
-        <div className="stat-item">
+        <Link to="/majors" className="stat-item" style={{ cursor: 'pointer' }}>
           <span className="stat-number">10</span>
-          <span className="stat-label">အင်ဂျင်နီယာမေဂျာများ</span>
-        </div>
+          <span className="stat-label">မေဂျာများ (ကြည့်ရန်)</span>
+        </Link>
         <div className="stat-item">
-          <span className="stat-number">{totalProjectsCount}+</span>
-          <span className="stat-label">ဆန်းသစ်တီထွင်မှုများ</span>
+          <span className="stat-number">{totalProjectsCount}</span>
+          <span className="stat-label">ပရောဂျက်များ</span>
         </div>
-        <div className="stat-item">
+        <Link to="/info" className="stat-item" style={{ cursor: 'pointer' }}>
           <span className="stat-number">7</span>
-          <span className="stat-label">ပြခန်းဆောင်ကြီးများ</span>
-        </div>
+          <span className="stat-label">ပြခန်းဆောင် လမ်းညွှန်</span>
+        </Link>
       </div>
 
       {/* Global Search Bar */}
@@ -86,7 +87,7 @@ export default function Home({ bookmarks, onToggleBookmark }) {
           <input 
             type="text" 
             className="search-input"
-            placeholder="မေဂျာ၊ ပရောဂျက်အမည် သို့မဟုတ် နည်းပညာ ရှာဖွေပါ..."
+            placeholder="မေဂျာ၊ ပရောဂျက် သို့မဟုတ် ကြီးကြပ်ဆရာမ အမည် ရှာပါ..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -105,7 +106,7 @@ export default function Home({ bookmarks, onToggleBookmark }) {
             className={`chip-btn ${selectedMajorFilter === 'ALL' ? 'active' : ''}`}
             onClick={() => setSelectedMajorFilter('ALL')}
           >
-            အားလုံး (All)
+            အားလုံး (All Projects)
           </button>
           {MAJORS_DATA.map(major => (
             <button
@@ -122,54 +123,37 @@ export default function Home({ bookmarks, onToggleBookmark }) {
         </div>
       </div>
 
+      {/* Main Project Showcase Feed */}
       <div className="main-content">
-        {/* If user is searching or has selected a specific department filter chip */}
-        {searchQuery.trim() !== '' || selectedMajorFilter !== 'ALL' ? (
-          <div>
-            <div className="section-header">
-              <h3 className="section-title">
-                <Search size={18} />
-                {searchQuery ? `"${searchQuery}" ရှာဖွေတွေ့ရှိချက်များ` : `${selectedMajorFilter.toUpperCase()} ပရောဂျက်များ`}
-              </h3>
-              <span className="section-badge">{displayedProjects.length} Projects</span>
-            </div>
+        <div className="section-header">
+          <h3 className="section-title">
+            <Layers size={18} />
+            {searchQuery 
+              ? `"${searchQuery}" ရှာဖွေတွေ့ရှိချက်များ` 
+              : selectedMajorFilter !== 'ALL' 
+                ? `${selectedMajorFilter.toUpperCase()} ပရောဂျက်များ` 
+                : 'ပြပွဲ ပရောဂျက်များ အားလုံး'}
+          </h3>
+          <span className="section-badge">{displayedProjects.length} Projects</span>
+        </div>
 
-            {displayedProjects.length > 0 ? (
-              <div className="project-list">
-                {displayedProjects.map(project => (
-                  <ProjectCard 
-                    key={project.id}
-                    project={project}
-                    majorCode={project.majorCode}
-                    isBookmarked={bookmarks.includes(project.id)}
-                    onToggleBookmark={onToggleBookmark}
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="empty-state">
-                <Search size={36} />
-                <h3>ရှာဖွေမှုမတွေ့ရှိပါ</h3>
-                <p>ကိုက်ညီသော ပရောဂျက် သို့မဟုတ် မေဂျာ မရှိသေးပါ။ အခြားစကားလုံးဖြင့် ထပ်မံရှာဖွေကြည့်ပါ။</p>
-              </div>
-            )}
+        {displayedProjects.length > 0 ? (
+          <div className="project-list">
+            {displayedProjects.map(project => (
+              <ProjectCard 
+                key={project.id}
+                project={project}
+                majorCode={project.majorCode}
+                isBookmarked={bookmarks.includes(project.id)}
+                onToggleBookmark={onToggleBookmark}
+              />
+            ))}
           </div>
         ) : (
-          /* Default View: 10 Majors Grid */
-          <div>
-            <div className="section-header">
-              <h3 className="section-title">
-                <Layers size={18} />
-                မေဂျာ (၁၀) ခု
-              </h3>
-              <span className="section-badge">10 Departments</span>
-            </div>
-
-            <div className="major-grid">
-              {MAJORS_DATA.map(major => (
-                <MajorCard key={major.id} major={major} />
-              ))}
-            </div>
+          <div className="empty-state">
+            <Search size={36} />
+            <h3>ရှာဖွေမှုမတွေ့ရှိပါ</h3>
+            <p>"{searchQuery}" နှင့် ကိုက်ညီသော ပရောဂျက် မရှိသေးပါ။ အခြားစကားလုံးဖြင့် ထပ်မံရှာဖွေကြည့်ပါ။</p>
           </div>
         )}
       </div>

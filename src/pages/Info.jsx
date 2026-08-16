@@ -64,7 +64,7 @@ export default function Info() {
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px', marginBottom: '20px', fontSize: '0.84rem' }}>
           <div style={{ padding: '10px 14px', background: '#eff6ff', borderRadius: 'var(--radius-sm)', borderLeft: '4px solid #3b82f6' }}>
-            <strong style={{ color: '#1e40af' }}>Hall A (CEIT & Mobile Zone):</strong> ပထမထပ် အဓိက ခန်းမကြီး
+            <strong style={{ color: '#1e40af' }}>Hall A (CEIT & Software Zone):</strong> Main Building (ပင်မဆောင်သစ်) ပထမထပ် ခန်းမ
           </div>
           <div style={{ padding: '10px 14px', background: '#fff7ed', borderRadius: 'var(--radius-sm)', borderLeft: '4px solid #ea580c' }}>
             <strong style={{ color: '#9a3412' }}>Outdoor Mech Zone (ME):</strong> စက်မှုအဆောက်အအုံ ရှေ့ဝန်း
