@@ -77,17 +77,17 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
       </div>
 
       <div className="detail-header">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-          <span className="project-booth-badge" style={{ fontSize: '0.8rem', padding: '4px 10px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+          <span className="project-booth-badge" style={{ fontSize: '0.8rem', padding: '5px 12px' }}>
             <MapPin size={14} />
             {project.boothNo}
           </span>
 
-          <div style={{ display: 'flex', gap: '6px' }}>
+          <div style={{ display: 'flex', gap: '8px' }}>
             <button 
               className={`bookmark-btn ${isBookmarked ? 'active' : ''}`}
               onClick={() => onToggleBookmark(project.id)}
-              style={{ border: '1px solid var(--border-color)', padding: '6px 12px', borderRadius: 'var(--radius-sm)', display: 'flex', gap: '6px', fontSize: '0.8rem', fontWeight: 600 }}
+              style={{ border: '1px solid var(--border-color)', padding: '7px 14px', borderRadius: 'var(--radius-sm)', display: 'flex', gap: '6px', fontSize: '0.82rem', fontWeight: 700 }}
             >
               <Bookmark size={16} fill={isBookmarked ? "#f59e0b" : "none"} />
               {isBookmarked ? 'သိမ်းပြီး' : 'သိမ်းမည်'}
@@ -95,10 +95,10 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
 
             <button 
               onClick={handleShare}
-              style={{ border: '1px solid var(--border-color)', padding: '6px 12px', borderRadius: 'var(--radius-sm)', display: 'flex', gap: '6px', fontSize: '0.8rem', fontWeight: 600, background: '#f8fafc' }}
+              style={{ border: '1px solid var(--border-color)', padding: '7px 14px', borderRadius: 'var(--radius-sm)', display: 'flex', gap: '6px', fontSize: '0.82rem', fontWeight: 700, background: '#f8fafc' }}
             >
               {copied ? <Check size={16} color="#16a34a" /> : <Share2 size={16} />}
-              {copied ? 'Copied!' : 'မျှဝေပါ'}
+              {copied ? 'ကူးယူပြီး' : 'မျှဝေရန်'}
             </button>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
         <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '4px', lineHeight: '1.3' }}>
           {project.title}
         </h2>
-        <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '12px' }}>
+        <h3 style={{ fontSize: '0.96rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '14px' }}>
           {project.titleMm}
         </h3>
 
@@ -116,19 +116,19 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
 
         <div className="project-tags" style={{ marginBottom: '16px' }}>
           {project.tags.map((tag, idx) => (
-            <span key={idx} className="tag-pill" style={{ fontSize: '0.75rem', padding: '4px 10px' }}>
+            <span key={idx} className="tag-pill" style={{ fontSize: '0.74rem', padding: '4px 10px' }}>
               {tag}
             </span>
           ))}
         </div>
 
         {/* Team & Supervisor Section */}
-        <div style={{ background: '#f8fafc', padding: '12px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)', marginBottom: '16px' }}>
+        <div style={{ background: '#f8fafc', padding: '14px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)', marginBottom: '16px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-main)' }}>
             <Users size={16} color="var(--primary)" />
             <span>ပြုလုပ်သည့် ကျောင်းသားအဖွဲ့</span>
           </div>
-          <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginBottom: '10px' }}>
+          <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginBottom: '12px' }}>
             {project.team ? project.team.join('၊ ') : 'N/A'}
           </p>
 
@@ -159,6 +159,14 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
           </div>
         )}
       </div>
+
+      {/* Floating Toast Message */}
+      {copied && (
+        <div className="toast-notification">
+          <Check size={16} color="#4ade80" />
+          <span>ပရောဂျက်လင့်ခ်ကို ကူးယူပြီးပါပြီ</span>
+        </div>
+      )}
     </div>
   );
 }

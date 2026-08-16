@@ -26,8 +26,9 @@ export default function ProjectCard({ project, majorCode, isBookmarked, onToggle
             onToggleBookmark(project.id);
           }}
           title={isBookmarked ? "Remove Bookmark" : "Save Project"}
+          aria-label={isBookmarked ? "Remove Bookmark" : "Save Project"}
         >
-          <Bookmark size={18} fill={isBookmarked ? "#f59e0b" : "none"} />
+          <Bookmark size={17} fill={isBookmarked ? "#f59e0b" : "none"} />
         </button>
       </div>
 
@@ -49,8 +50,8 @@ export default function ProjectCard({ project, majorCode, isBookmarked, onToggle
             <span>{project.team ? project.team.join(', ') : 'Student Team'}</span>
           </div>
 
-          <span style={{ color: 'var(--primary)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '2px' }}>
-            အပြည့်အစုံဖတ်ရန် <ChevronRight size={14} />
+          <span style={{ color: 'var(--primary)', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '2px' }}>
+            ကြည့်ရှုရန် <ChevronRight size={14} />
           </span>
         </div>
       </Link>

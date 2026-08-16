@@ -39,7 +39,7 @@ export default function MajorCard({ major }) {
 
       <div className="major-card-body">
         <div className="major-card-header">
-          <div className="major-icon-box" style={{ backgroundColor: major.accentColor || '#1e3a8a' }}>
+          <div className="major-icon-box" style={{ backgroundColor: major.accentColor || '#0f3460' }}>
             <IconComponent size={18} />
           </div>
           <div>
@@ -51,13 +51,12 @@ export default function MajorCard({ major }) {
         <p className="major-desc">{major.description}</p>
 
         <div className="major-card-footer">
-          <span>{major.projects?.length || 0} Projects Available</span>
+          <span>{major.projects?.length || 0} Projects</span>
           <span style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
-            ကြည့်ရန် <ChevronRight size={16} />
+            ကြည့်ရန် <ChevronRight size={15} />
           </span>
         </div>
       </div>
     </Link>
   );
 }
-

@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { MAJORS_DATA } from '../data/mockData';
 import ProjectCard from '../components/ProjectCard';
 import { 
-  ArrowLeft, Search, Layers, AlertTriangle,
+  ArrowLeft, Search, Layers, AlertTriangle, X,
   Cpu, Cog, Bot, Building2, Zap, Radio, 
   Compass, Flame, Pickaxe, FlaskConical, Folder 
 } from 'lucide-react';
@@ -75,11 +75,11 @@ export default function Major({ bookmarks, onToggleBookmark }) {
               <IconComponent size={18} color="var(--primary)" />
               <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-main)' }}>{major.shortCode} Department</h2>
             </div>
-            <p style={{ fontSize: '0.9rem', color: 'var(--primary)', fontWeight: 600 }}>{major.nameMm}</p>
+            <p style={{ fontSize: '0.9rem', color: 'var(--accent-hover)', fontWeight: 600 }}>{major.nameMm}</p>
             <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>{major.name}</p>
           </div>
         </div>
-        <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', lineHeight: '1.5' }}>
+        <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', lineHeight: '1.55' }}>
           {major.description}
         </p>
       </div>
@@ -94,6 +94,11 @@ export default function Major({ bookmarks, onToggleBookmark }) {
           value={filterQuery}
           onChange={(e) => setFilterQuery(e.target.value)}
         />
+        {filterQuery && (
+          <button className="clear-search" onClick={() => setFilterQuery('')} aria-label="Clear Search">
+            <X size={16} />
+          </button>
+        )}
       </div>
 
       {/* Projects List */}
@@ -127,4 +132,3 @@ export default function Major({ bookmarks, onToggleBookmark }) {
     </div>
   );
 }
-

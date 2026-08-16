@@ -40,11 +40,11 @@ export default function Bookmarks({ bookmarks, onToggleBookmark }) {
         </div>
       ) : (
         <div className="empty-state">
-          <Bookmark size={40} />
+          <Bookmark size={42} />
           <h3>သိမ်းဆည်းထားသော ပရောဂျက် မရှိသေးပါ</h3>
-          <p>ပရောဂျက်များ ဖတ်ရှုစဉ် Bookmark ခလုတ်ကို နှိပ်၍ နောက်မှ ကြည့်ရှုလိုသော ပရောဂျက်များကို စာရင်းမှတ်ထားနိုင်ပါသည်။</p>
+          <p>ပရောဂျက်များ ဖတ်ရှုစဉ် Bookmark ခလုတ်ကို နှိပ်၍ နောက်မှ ကြည့်ရှုလိုသော ပရောဂျက်များကို အလွယ်တကူ စာရင်းမှတ်သားနိုင်ပါသည်။</p>
           <Link to="/" className="back-btn" style={{ marginTop: '16px', display: 'inline-flex' }}>
-            <Layers size={16} /> မေဂျာများ ကြည့်ရှုရန်
+            <Layers size={16} /> မေဂျာများနှင့် ပရောဂျက်များ ကြည့်ရှုရန်
           </Link>
         </div>
       )}

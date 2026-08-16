@@ -6,23 +6,23 @@ export default function FooterNav() {
   return (
     <nav className="mobile-bottom-nav">
       <NavLink to="/" end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-        <Home size={20} />
-        <span>ပင်မစာမျက်နှာ</span>
+        <Home size={19} />
+        <span>ပင်မ</span>
       </NavLink>
 
       <NavLink to="/majors" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-        <Layers size={20} />
+        <Layers size={19} />
         <span>မေဂျာများ</span>
       </NavLink>
 
       <NavLink to="/bookmarks" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-        <Bookmark size={20} />
-        <span>သိမ်းထားသည်များ</span>
+        <Bookmark size={19} />
+        <span>သိမ်းဆည်းထားမှု</span>
       </NavLink>
 
       <NavLink to="/info" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-        <Info size={20} />
-        <span>သတင်းအချက်အလက်</span>
+        <Info size={19} />
+        <span>အချက်အလက်</span>
       </NavLink>
     </nav>
   );
