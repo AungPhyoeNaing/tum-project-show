@@ -28,7 +28,6 @@ export const MAJORS_DATA = [
         supervisor: "Daw Khin Myo Chit",
         boothNo: "Main Building - Room 101",
         tags: ["AI/ML", "Computer Vision", "Python", "IoT"],
-        image: "https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80",
         features: [
           "Real-time vehicle counting via YOLOv8",
           "Dynamic traffic light timing algorithm",
@@ -46,7 +45,6 @@ export const MAJORS_DATA = [
         supervisor: "Daw Ei Ei Khaing",
         boothNo: "Main Building - Room 102",
         tags: ["Mobile App", "TensorFlow Lite", "Flutter", "Accessibility"],
-        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
         features: [
           "95% Accuracy in core Myanmar gestures",
           "Offline processing capabilities on mobile devices",
@@ -64,7 +62,6 @@ export const MAJORS_DATA = [
         supervisor: "Daw Thandar Soe",
         boothNo: "Main Building - Room 103",
         tags: ["AR", "WebXR", "React Native", "GIS"],
-        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
         features: [
           "Live camera AR directional arrows",
           "Interactive 3D Map of TUM New Campus",
@@ -82,7 +79,6 @@ export const MAJORS_DATA = [
         supervisor: "Daw Moh Moh Khaing",
         boothNo: "Main Building - Room 104",
         tags: ["AI/ML", "Face Recognition", "Python", "Computer Vision"],
-        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80",
         features: [
           "High accuracy multi-face detection in classroom lighting",
           "Real-time attendance export to Excel/CSV",
@@ -100,7 +96,6 @@ export const MAJORS_DATA = [
         supervisor: "Daw Cho Me Me Maung",
         boothNo: "Main Building - Room 105",
         tags: ["Web & Mobile", "React", "Cloud Storage", "Database"],
-        image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80",
         features: [
           "Fast full-text thesis search and indexing",
           "Offline PDF document caching",
@@ -132,7 +127,6 @@ export const MAJORS_DATA = [
         supervisor: "Dr. Soe Win (Professor)",
         boothNo: "Outdoor Mech Zone - Booth 01",
         tags: ["Solar Energy", "Thermodynamics", "Clean Water"],
-        image: "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=600&q=80",
         features: [
           "Zero electricity consumption required",
           "Produces 15 Liters of potable water per day",
@@ -150,7 +144,6 @@ export const MAJORS_DATA = [
         supervisor: "U Zaw Lin (Associate Professor)",
         boothNo: "Outdoor Mech Zone - Booth 02",
         tags: ["Thermal Design", "Control Systems", "AgriTech"],
-        image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80",
         features: [
           "Energy efficient heat exchanger module",
           "Digital sensor feedback loop for uniform drying",
@@ -182,7 +175,6 @@ export const MAJORS_DATA = [
         supervisor: "Dr. Myo Min (HOD, Mechatronics)",
         boothNo: "Hall B - Booth 01",
         tags: ["Robotics", "Drone Tech", "Autonomous Navigation"],
-        image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=80",
         features: [
           "GPS Waypoint automatic flight planning",
           "NDVI index crop stress analysis",
@@ -200,7 +192,6 @@ export const MAJORS_DATA = [
         supervisor: "Daw Ei Ei Phyo (Lecturer)",
         boothNo: "Hall B - Booth 02",
         tags: ["Industrial Automation", "Robotics", "PLC", "Vision System"],
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
         features: [
           "Inverse Kinematics trajectory control",
           "Color and QR code scanner gripping tool",
@@ -232,7 +223,6 @@ export const MAJORS_DATA = [
         supervisor: "Dr. Nilar Win (HOD, Civil)",
         boothNo: "Hall C - Booth 01",
         tags: ["Structural Engineering", "Eco Construction", "BIM"],
-        image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80",
         features: [
           "40% cost reduction compared to traditional steel RC",
           "ETABS seismic force simulation verified",
@@ -264,7 +254,6 @@ export const MAJORS_DATA = [
         supervisor: "U Than Htike (Professor)",
         boothNo: "Hall D - Booth 01",
         tags: ["Smart Grid", "IoT", "Solar PV", "Power Electronics"],
-        image: "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=600&q=80",
         features: [
           "Automatic grid switching based on real-time solar yield",
           "Mobile monitoring & power billing app",
@@ -296,7 +285,6 @@ export const MAJORS_DATA = [
         supervisor: "Dr. Aye Aye San (HOD, EC)",
         boothNo: "Hall E - Booth 01",
         tags: ["LoRaWAN", "Wireless", "Sensors", "Embedded Hardware"],
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
         features: [
           "10km+ Long Range communication coverage",
           "Ultra-low power design (2+ years on coin battery)",
@@ -328,7 +316,6 @@ export const MAJORS_DATA = [
         supervisor: "Daw Thinzar Lwin (Associate Professor)",
         boothNo: "Architecture Exhibition Gallery",
         tags: ["Urban Design", "Landscape Architecture", "Cultural Heritage"],
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
         features: [
           "Full 3D Rendered Walkthrough",
           "Eco-friendly passive cooling architectural elements",
@@ -360,7 +347,6 @@ export const MAJORS_DATA = [
         supervisor: "Dr. Kyaw Moe (HOD, PE)",
         boothNo: "Hall F - Booth 01",
         tags: ["Reservoir Sim", "EOR", "Petroleum Tech"],
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
         features: [
           "CMG Reservoir Simulator modeling results",
           "Eco-friendly bio-based surfactant formula test",
@@ -392,7 +378,6 @@ export const MAJORS_DATA = [
         supervisor: "U Win Naing (Senior Lecturer)",
         boothNo: "Hall F - Booth 02",
         tags: ["Mine Safety", "Gas Sensors", "IoT Trackers"],
-        image: "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80",
         features: [
           "Multi-gas sensing (Methane, CO, Hydrogen Sulfide)",
           "Wireless Mesh Network connectivity underground",
@@ -424,7 +409,6 @@ export const MAJORS_DATA = [
         supervisor: "Dr. Cho Cho San (HOD, Chemical)",
         boothNo: "Hall G - Booth 01",
         tags: ["Biofuel", "Green Chemistry", "Waste to Energy"],
-        image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
         features: [
           "Transesterification chemical reactor prototype",
           "High fuel purity complying with ASTM standards",
