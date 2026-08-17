@@ -121,9 +121,14 @@ export const MAJORS_DATA = [
         "tagline": "University-exclusive social platform for TUM students, professors, and staff.",
         "description": "နည်းပညာတက္ကသိုလ် (မန္တလေး) အသိုင်းအဝိုင်း တစ်ခုလုံးအတွက် သီးသန့်ဖန်တီးထားသော ကျောင်းသားဗဟိုပြု လူမှုကွန်ရက် ပလက်ဖောင်းဖြစ်ပါသည်။ ကျောင်းတွင်း သတင်းအချက်အလက်များ မျှဝေခြင်း၊ ပို့စ်တင်ခြင်း၊ React/Comment ပေးခြင်း၊ မိတ်ဖွဲ့ခြင်း၊ အချင်းချင်း တိုက်ရိုက်စာပို့ဆက်သွယ်ခြင်း (Chatrooms) နှင့် လှုပ်ရှားမှုများကို အချိန်နှင့်တစ်ပြေးညီ သိရှိနိုင်ပါသည်။",
         "team": [
-          "Trends of TUM Project Team"
+          "Aung Phyoe Naing",
+          "Hsu Thiri Naing",
+          "Aye Chan",
+          "Thu Khant Aung",
+          "Hlyan Bhone Htet",
+          "Prism Makers Club"
         ],
-        "supervisor": "Department of Computer Engineering and Information Technology",
+        "supervisor": "Daw Ei Ei Khaing (Lecturer, Department of CEIT)",
         "tags": [
           "Social Network",
           "Web Application",
@@ -146,9 +151,14 @@ export const MAJORS_DATA = [
         "tagline": "Interactive web app powered by Google Gemini API, Node.js Socket.io, and Web Audio synthesis.",
         "description": "Google Gemini 3.1 Flash Lite API, React 18, Vite 5 နှင့် Node.js Socket.io တို့ဖြင့် တည်ဆောက်ထားသော ဆန်းသစ်သည့် ဝဘ်ပလက်ဖောင်း ဖြစ်ပါသည်။ Tomo မှတစ်ဆင့် AI သုံးသပ်ချက်ဖြင့် နှစ်ဦးကြား လိုက်ဖက်မှုနှင့် အမူအကျင့်များကို ဆန်းစစ်နိုင်ပြီး၊ Nomo မှတစ်ဆင့် အချင်းချင်း အပြန်အလှန် Quiz ဂိမ်း ကစားကာ ရင်းနှီးမှုနှင့် အမှတ်တရများ ဖန်တီးနိုင်ပါသည်။",
         "team": [
-          "Tomo & Nomo Developer Team"
+          "Aung Phyoe Naing",
+          "Hsu Thiri Naing",
+          "Aye Chan",
+          "Thu Khant Aung",
+          "Hlyan Bhone Htet",
+          "Prism Makers Club"
         ],
-        "supervisor": "Department of Computer Engineering and Information Technology",
+        "supervisor": "Daw Ei Ei Khaing (Lecturer, Department of CEIT)",
         "tags": [
           "React 18",
           "Vite",
@@ -200,9 +210,14 @@ export const MAJORS_DATA = [
         "tagline": "Low-cost wireless security sentinel detecting Deauth, Evil Twin, and ARP Spoofing attacks.",
         "description": "ESP32 Dual-Core မိုက်ခရိုကွန်ထရိုလာနှင့် Python Scapy နည်းပညာကို အသုံးပြု၍ Wi-Fi ကွန်ရက်လုံခြုံရေးကို အချိန်နှင့်တစ်ပြေးညီ စောင့်ကြည့်စစ်ဆေးသည့် စနစ်ဖြစ်ပါသည်။ 2.4GHz Band အတွင်းရှိ Deauthentication တိုက်ခိုက်မှု၊ Evil Twin AP လိုင်းတုများနှင့် ARP Spoofing များကို စက္ကန့်ပိုင်းအတွင်း ဖမ်းဆီးဖော်ထုတ်ကာ အသံနှင့် Visual Dashboard နှစ်မျိုးစလုံးဖြင့် သတိပေးချက် ထုတ်ပေးပါသည်။",
         "team": [
-          "WIDS Security Research Team"
+          "Aung Phyoe Naing",
+          "Hsu Thiri Naing",
+          "Aye Chan",
+          "Thu Khant Aung",
+          "Hlyan Bhone Htet",
+          "Prism Makers Club"
         ],
-        "supervisor": "Department of Computer Engineering and Information Technology",
+        "supervisor": "Daw Ei Ei Khaing (Lecturer, Department of CEIT)",
         "tags": [
           "ESP32",
           "Cybersecurity",
