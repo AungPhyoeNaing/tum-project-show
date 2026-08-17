@@ -67,7 +67,7 @@ export default function Home({ bookmarks, onToggleBookmark }) {
       {/* Event Stats Metric Bar */}
       <div className="event-stats-bar">
         <Link to="/majors" className="stat-item" style={{ cursor: 'pointer' }}>
-          <span className="stat-number">10</span>
+          <span className="stat-number">{MAJORS_DATA.length}</span>
           <span className="stat-label">မေဂျာများ (ကြည့်ရန်)</span>
         </Link>
         <div className="stat-item">

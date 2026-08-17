@@ -22,7 +22,7 @@ export default function MajorsDirectory() {
         <div>
           <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Layers size={22} color="var(--primary)" />
-            အင်ဂျင်နီယာမေဂျာ (၁၀) ခု
+            အင်ဂျင်နီယာဌာန ({MAJORS_DATA.length}) ခု
           </h2>
           <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: '2px' }}>
             Technological University (Mandalay) Departments Directory
