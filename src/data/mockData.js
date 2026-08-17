@@ -19,8 +19,8 @@ export const MAJORS_DATA = [
     "iconName": "Cpu",
     "themeColor": "from-blue-600 to-indigo-700",
     "accentColor": "#3b82f6",
-    "logo": "/logos/ITLogo.png",
-    "image": "/logos/ITLogo.png",
+    "logo": "/logos/CEIT_2026_logo.PNG",
+    "image": "/logos/CEIT_2026_logo.PNG",
     "description": "ဂိမ်းအင်ဂျင် 3D Simulation၊ AI/ML ဉာဏ်ရည်တုစနစ်၊ ဝဘ်နှင့် မိုဘိုင်း အက်ပ်လီကေးရှင်း၊ ကြိုးမဲ့ ဆက်သွယ်ရေးနှင့် ကွန်ရက်လုံခြုံရေးဆိုင်ရာ လက်တွေ့သုတေသန ပရောဂျက်များ",
     "faculty": [
       "Dr. Thandar Soe (Professor)",

@@ -31,7 +31,7 @@ export default function MajorCard({ major }) {
           className="major-card-img"
           loading="lazy"
           onError={(e) => {
-            e.target.src = "/logos/ITLogo.png";
+            e.target.src = "/logos/CEIT_2026_logo.PNG";
           }}
         />
         <span className="major-tag">{major.shortCode}</span>

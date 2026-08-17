@@ -66,7 +66,7 @@ export default function Major({ bookmarks, onToggleBookmark }) {
               alt={major.name} 
               className="major-logo-img"
               onError={(e) => {
-                e.target.src = "/logos/ITLogo.png";
+                e.target.src = "/logos/CEIT_2026_logo.PNG";
               }}
             />
           </div>
