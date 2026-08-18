@@ -10,7 +10,7 @@ import InfoModal from '../components/InfoModal';
 import BookmarksModal from '../components/BookmarksModal';
 import { 
   ArrowLeft, Search, X, Layers, AlertTriangle, 
-  Filter, RefreshCw, FileText
+  RefreshCw, FileText
 } from 'lucide-react';
 
 export default function Major({ 
@@ -25,7 +25,6 @@ export default function Major({
   const navigate = useNavigate();
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedTag, setSelectedTag] = useState('ALL');
   const [activeModalProject, setActiveModalProject] = useState(null);
   const [activeLightbox, setActiveLightbox] = useState(null); // { project, initialPageIndex }
 
@@ -37,24 +36,7 @@ export default function Major({
     return major?.projects.some(p => PAMPHLETS_DATA[p.id]);
   }, [major]);
 
-  // Extract popular tags for this major
-  const availableTags = useMemo(() => {
-    if (!major?.projects) return [];
-    
-    const tagCountMap = {};
-    major.projects.forEach((p) => {
-      p.tags?.forEach((tag) => {
-        tagCountMap[tag] = (tagCountMap[tag] || 0) + 1;
-      });
-    });
-
-    return Object.entries(tagCountMap)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 8)
-      .map(([tag]) => tag);
-  }, [major]);
-
-  // Filter projects by tag and search query
+  // Filter projects by search query
   const displayedProjects = useMemo(() => {
     if (!major?.projects) return [];
 
@@ -66,10 +48,6 @@ export default function Major({
       majorName: major.name,
       majorLogo: major.logo || major.image,
     }));
-
-    if (selectedTag !== 'ALL') {
-      result = result.filter((p) => p.tags?.includes(selectedTag));
-    }
 
     if (searchQuery.trim() !== '') {
       const q = searchQuery.toLowerCase().trim();
@@ -84,7 +62,7 @@ export default function Major({
     }
 
     return result;
-  }, [major, selectedTag, searchQuery]);
+  }, [major, searchQuery]);
 
   if (!major) {
     return (
@@ -165,32 +143,6 @@ export default function Major({
           )}
         </div>
 
-        {/* Quick Tag Pills */}
-        {availableTags.length > 0 && (
-          <div className="quick-tags-bar">
-            <span className="quick-tags-label">
-              <Filter size={13} />
-              <span>စစ်ထုတ်ရန်:</span>
-            </span>
-            <button
-              type="button"
-              className={`quick-tag-chip ${selectedTag === 'ALL' ? 'active' : ''}`}
-              onClick={() => setSelectedTag('ALL')}
-            >
-              အားလုံး ({major.projects.length})
-            </button>
-            {availableTags.map((tag) => (
-              <button
-                key={tag}
-                type="button"
-                className={`quick-tag-chip ${selectedTag === tag ? 'active' : ''}`}
-                onClick={() => setSelectedTag(selectedTag === tag ? 'ALL' : tag)}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
-        )}
       </div>
 
       {/* Filter Status Line */}
@@ -204,9 +156,6 @@ export default function Major({
                 ? `${major.shortCode} ဘွဲ့ကြိုသုတေသန မူရင်း Pamphlet စာမျက်နှာများ` 
                 : `${major.shortCode} ဌာန၏ ရရှိနိုင်သော ပရောဂျက်များ`}
           </h3>
-          {selectedTag !== 'ALL' && (
-            <span className="active-tag-indicator">Tag: {selectedTag}</span>
-          )}
         </div>
         <span className="section-badge">{displayedProjects.length} Projects</span>
       </div>
@@ -261,7 +210,6 @@ export default function Major({
             style={{ marginTop: '16px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
             onClick={() => {
               setSearchQuery('');
-              setSelectedTag('ALL');
             }}
           >
             <RefreshCw size={15} /> ပရောဂျက်များ အားလုံး ပြန်ကြည့်မည်
