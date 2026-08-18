@@ -6,7 +6,7 @@ export const SHOW_INFO = {
   "location": "ပင်မဆောင်၊ နည်းပညာတက္ကသိုလ် (မန္တလေး)၊ အောင်ချမ်းသာရပ်ကွက်၊ ပုသိမ်ကြီးမြို့နယ်",
   "university": "Technological University (Mandalay)",
   "contact": "ဖုန်း: +95-9-258225398 / အီးမေးလ်: info@tum.edu.mm",
-  "welcomeMessage": "နည်းပညာတက္ကသိုလ် (မန္တလေး) ၏ နှစ်စဉ်ကျင်းပမြဲဖြစ်သော Project Show & Job Fair 2026 မှ ကြိုဆိုပါ၏။ အင်ဂျင်နီယာမေဂျာ (၆) ခုမှ ကျောင်းသား၊ ကျောင်းသူများ၏ လက်တွေ့ဖန်တီးထားသော ဘွဲ့ကြိုသုတေသန ပရောဂျက်ပေါင်း (၄၇) ခုကို တစ်နေရာတည်းတွင် စုံလင်စွာ လေ့လာကြည့်ရှုနိုင်ပါသည်။",
+  "welcomeMessage": "နည်းပညာတက္ကသိုလ် (မန္တလေး) ၏ နှစ်စဉ်ကျင်းပမြဲဖြစ်သော Project Show & Job Fair 2026 မှ ကြိုဆိုပါ၏။ အင်ဂျင်နီယာမေဂျာ (၆) ခုမှ ကျောင်းသား၊ ကျောင်းသူများ၏ လက်တွေ့ဖန်တီးထားသော ဘွဲ့ကြိုသုတေသန ပရောဂျက်ပေါင်း (၄၉) ခုကို တစ်နေရာတည်းတွင် စုံလင်စွာ လေ့လာကြည့်ရှုနိုင်ပါသည်။",
   "description": "နည်းပညာတက္ကသိုလ် (မန္တလေး) ကျောင်းသား၊ ကျောင်းသူများ၏ လက်တွေ့တီထွင်ဖန်တီးထားသော စက်မှု၊ လျှပ်စစ်၊ အီလက်ထရောနစ်၊ ကွန်ပျူတာ၊ မက္ကာထရောနစ်နှင့် မြို့ပြအင်ဂျင်နီယာ ဘွဲ့ကြိုသုတေသန ပရောဂျက်များအား ခင်းကျင်းပြသခြင်း ဖြစ်ပါသည်။"
 };
 
@@ -259,6 +259,37 @@ export const MAJORS_DATA = [
           "Real-time Fast Fourier Transform (FFT) audio spectral decomposition",
           "Digital ambient noise filtering for accurate signal extraction",
           "Works completely standalone on Web browsers without third-party software install"
+        ]
+      },
+      {
+        "id": "ceit-09",
+        "title": "Harvestia — 2D Farming Simulation Game",
+        "titleMm": "Harvestia — ၂D သီးနှံစိုက်ပျိုးရေးနှင့် ကျေးရွာပြန်လည်တည်ထောင်မှု သရုပ်ဖော်ဂိမ်း",
+        "tagline": "Story-driven 2D farming simulation game built with Godot 4.5 and GDScript featuring crop cycles and quest progression.",
+        "description": "Godot 4.5 ဂိမ်းအင်ဂျင်၊ GDScript နှင့် Aseprite Pixel Art နည်းပညာများဖြင့် ဖန်တီးထားသော Story-Driven 2D စိုက်ပျိုးရေး Simulation ဂိမ်းဖြစ်ပါသည်။ စွန့်ပစ်မြေယာများအား ပြန်လည်ပြုပြင်ခြင်း၊ သီးနှံမျိုးစုံ စိုက်ပျိုး/ရေလောင်း/ရိတ်သိမ်းခြင်း၊ Day & Night သဘာဝပတ်ဝန်းကျင် အပြောင်းအလဲ၊ ရွာသားများအတွက် Quest များ ဖြေရှင်းပေးခြင်းနှင့် Game Save/Load စနစ်များ ပါဝင်ပါသည်။",
+        "team": [
+          "Nyan Linn Htike (ဉာဏ်လင်းထိုက်)",
+          "Wai Tun Lu (ဝေထွန်းလူ)",
+          "Yin Mon Myint Myat (ယဉ်မွန်မြင့်မြတ်)",
+          "Phyo Thiri (ဖြိုးသီရိ)",
+          "Kaung Khant Soe (ကောင်းခန့်စိုး)"
+        ],
+        "supervisor": "Department of Computer Engineering and Information Technology",
+        "tags": [
+          "Godot 4.5",
+          "GDScript",
+          "Aseprite",
+          "2D Game Engine",
+          "Farming Simulation",
+          "Pixel Art",
+          "Quest System"
+        ],
+        "features": [
+          "Farm & Grow — Dynamic Crop growth cycle (Till, Plant, Water, Harvest & Collect)",
+          "Rebuild & Restore — Restoring grandfather's house and reviving abandoned village land",
+          "Villagers & Quests — Interactive NPC quest progression uncovering the village backstory",
+          "Day & Night Cycle — Dynamic time-management environment and lighting ambiance",
+          "Save & Load System — Persistent player game-state and inventory progression storage"
         ]
       }
     ]
@@ -1073,6 +1104,33 @@ export const MAJORS_DATA = [
           "HC-SR04 ultrasonic sensor monitoring internal trash container fill capacity",
           "High-torque gear motor with lead screw, 8mm shaft, and LM8UU bearings for automatic container lifting & dumping",
           "3S 18650 Lithium-Ion rechargeable battery pack with integrated BMS protection board"
+        ]
+      },
+      {
+        "id": "mc-07",
+        "title": "Wireless Control of a Mobile Robot Using IMU-Based Hand Gesture",
+        "titleMm": "IMU အာရုံခံကိရိယာသုံး လက်ဟန်ခြေဟန်ဖြင့် အဝေးထိန်းချုပ် မိုဘိုင်းရိုဘော့စနစ်",
+        "tagline": "Real-time hand gesture teleoperation of a mobile robot using MPU6050 IMU sensor, Arduino, and RF wireless module.",
+        "description": "လူသားတို့၏ လက်ဟန်လှုပ်ရှားမှု (Hand Gestures) များကို MPU6050 IMU ဆင်ဆာဖြင့် ဖမ်းယူစစ်ဆေးကာ RF Wireless Module ဖြင့် မိုဘိုင်းရိုဘော့အား အဝေးမှ Real-Time ထိန်းချုပ်မောင်းနှင်နိုင်သော စနစ်ဖြစ်ပါသည်။ လက်ကို ရှေ့/နောက်/ဘယ်/ညာ စောင်းခြင်းဖြင့် ရိုဘော့အား တိကျစွာ လမ်းကြောင်းပြောင်းစေပြီး စက်မှုကုန်ပစ္စည်း သယ်ယူပို့ဆောင်ရေးနှင့် ရှာဖွေကယ်ဆယ်ရေး လုပ်ငန်းများတွင် အသုံးချနိုင်ပါသည်။",
+        "team": [
+          "Mg Kaung Myat Min (VI MC - 9)"
+        ],
+        "supervisor": "Department of Mechatronic Engineering",
+        "tags": [
+          "Arduino UNO",
+          "MPU6050 IMU",
+          "RF Module",
+          "Hand Gesture Control",
+          "Mobile Robot",
+          "Teleoperation",
+          "Wireless Control"
+        ],
+        "features": [
+          "5-State Gesture Recognition: Forward (Down), Backward (Up), Left, Right, and Rest (Stop)",
+          "Real-time sensor fusion and data filtering on MPU6050 6-DOF IMU module",
+          "Low-latency RF wireless communication pipeline between wearable transmitter and mobile robot",
+          "Dual DC gear motor driver integration for agile differential steering navigation",
+          "Applications in industrial material handling, hazardous environment inspection, and healthcare assistance"
         ]
       }
     ]
