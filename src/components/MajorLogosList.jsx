@@ -3,15 +3,6 @@ import { Link } from 'react-router-dom';
 import { MAJORS_DATA } from '../data/mockData';
 import { Sparkles } from 'lucide-react';
 
-const SHORT_NAMES_MM = {
-  ceit: 'ကွန်ပျူတာ',
-  civil: 'မြို့ပြ',
-  ec: 'အီလက်ထရောနစ်',
-  ep: 'လျှပ်စစ်',
-  mc: 'မက္ကာထရောနစ်',
-  me: 'စက်မှု',
-};
-
 export default function MajorLogosList() {
   return (
     <div className="major-logos-section" id="majors-hub">
@@ -50,7 +41,6 @@ export default function MajorLogosList() {
             {/* Short Term Name & Tag */}
             <div className="logo-button-label">
               <span className="logo-short-code">{major.shortCode}</span>
-              <span className="logo-short-mm">{SHORT_NAMES_MM[major.id] || major.shortCode}</span>
               <span className="logo-count-badge">{major.projects.length} Projects</span>
             </div>
           </Link>

@@ -475,7 +475,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 6px;
 }
 
 .logo-short-code {
@@ -484,13 +484,6 @@ button {
   color: var(--primary);
   letter-spacing: -0.3px;
   line-height: 1.2;
-}
-
-.logo-short-mm {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--accent-hover);
-  margin-bottom: 6px;
 }
 
 .logo-count-badge {
@@ -1089,15 +1082,17 @@ button {
 
 .lightbox-zoom-controls {
   display: flex;
-  background: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-full);
-  padding: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2px 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  gap: 2px;
 }
 
 .lightbox-btn {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   color: white;
   display: flex;
@@ -1107,12 +1102,29 @@ button {
 }
 
 .lightbox-btn:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .lightbox-btn:disabled {
-  opacity: 0.4;
+  opacity: 0.35;
   cursor: not-allowed;
+}
+
+.lightbox-zoom-badge-btn {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: #e2e8f0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.25);
+  min-width: 44px;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-zoom-badge-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
 .lightbox-download-btn {
@@ -1137,7 +1149,7 @@ button {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(239, 68, 68, 0.8);
+  background: rgba(239, 68, 68, 0.85);
   color: white;
   display: flex;
   align-items: center;
@@ -1147,6 +1159,7 @@ button {
 
 .lightbox-close-btn:hover {
   background: #ef4444;
+  transform: scale(1.05);
 }
 
 /* Lightbox Viewport */
@@ -1159,22 +1172,92 @@ button {
   position: relative;
   user-select: none;
   touch-action: none;
+  background: radial-gradient(circle at center, rgba(30, 41, 59, 0.5) 0%, rgba(10, 15, 30, 0.95) 100%);
+}
+
+.lightbox-img-transform-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .lightbox-pamphlet-img {
-  max-width: 96vw;
-  max-height: 82vh;
+  max-width: 95vw;
+  max-height: 80vh;
   object-fit: contain;
   border-radius: var(--radius-sm);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-  transition: transform 0.12s ease-out;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Gesture Hint Pill */
+.lightbox-gesture-pill {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(8px);
+  color: #cbd5e1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  z-index: 5;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Floating Navigation Buttons */
+.lightbox-floating-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-floating-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.lightbox-floating-nav-btn.prev {
+  left: 14px;
+}
+
+.lightbox-floating-nav-btn.next {
+  right: 14px;
 }
 
 /* Bottombar Page Switcher */
 .lightbox-bottombar {
   height: 60px;
   padding: 0 16px;
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(15, 23, 42, 0.88);
   backdrop-filter: blur(12px);
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
@@ -1911,5 +1994,78 @@ button {
   to {
     opacity: 1;
     transform: translate(-50%, 0);
+  }
+}
+
+/* Lightbox Mobile Adjustments */
+@media (max-width: 640px) {
+  .lightbox-topbar {
+    height: 52px;
+    padding: 0 10px;
+  }
+  
+  .lightbox-title-area {
+    max-width: 45%;
+  }
+
+  .lightbox-project-title {
+    font-size: 0.8rem;
+  }
+
+  .lightbox-page-indicator {
+    font-size: 0.68rem;
+  }
+
+  .lightbox-zoom-controls {
+    padding: 1px 2px;
+  }
+
+  .lightbox-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .lightbox-zoom-badge-btn {
+    padding: 2px 6px;
+    font-size: 0.68rem;
+    min-width: 38px;
+  }
+
+  .lightbox-close-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .lightbox-download-btn {
+    padding: 5px 8px;
+    font-size: 0.72rem;
+  }
+
+  .lightbox-floating-nav-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .lightbox-floating-nav-btn.prev {
+    left: 8px;
+  }
+
+  .lightbox-floating-nav-btn.next {
+    right: 8px;
+  }
+
+  .lightbox-bottombar {
+    height: 54px;
+    padding: 0 10px;
+  }
+
+  .lightbox-nav-btn {
+    padding: 5px 9px;
+    font-size: 0.75rem;
+  }
+
+  .lightbox-page-tab {
+    padding: 5px 10px;
+    font-size: 0.72rem;
   }
 }

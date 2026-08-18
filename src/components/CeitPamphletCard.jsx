@@ -95,16 +95,9 @@ export default function CeitPamphletCard({
         </div>
       </div>
 
-      {/* Team, Supervisor and Action Bar */}
+      {/* Team and Action Bar */}
       <div className="pamphlet-meta-footer">
-        {project.supervisor && (
-          <div className="pamphlet-supervisor">
-            <Award size={14} className="supervisor-icon" />
-            <span className="supervisor-label">ကြီးကြပ်သူ:</span>
-            <span className="supervisor-name">{project.supervisor}</span>
-          </div>
-        )}
-
+        {/* Supervisor hidden for now */}
         {project.team && project.team.length > 0 && (
           <div className="pamphlet-team">
             <Users size={14} />

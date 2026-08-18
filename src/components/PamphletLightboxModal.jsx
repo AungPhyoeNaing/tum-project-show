@@ -1,82 +1,297 @@
-import React, { useState, useEffect } from 'react';
-import { X, ZoomIn, ZoomOut, RotateCcw, Download, ChevronLeft, ChevronRight, FileText } from 'lucide-react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { X, ZoomIn, ZoomOut, RotateCcw, Download, ChevronLeft, ChevronRight, FileText, Move } from 'lucide-react';
 
 export default function PamphletLightboxModal({ project, pamphletData, initialPageIndex = 0, onClose }) {
   const [currentPageIndex, setCurrentPageIndex] = useState(initialPageIndex);
   const [zoomLevel, setZoomLevel] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [isInteracting, setIsInteracting] = useState(false);
+
+  const viewportRef = useRef(null);
+  const imgRef = useRef(null);
+
+  // Gesture tracking refs
+  const gestureRef = useRef({
+    startDist: 0,
+    startZoom: 1,
+    startPan: { x: 0, y: 0 },
+    startCenter: { x: 0, y: 0 },
+    lastSingleTouch: null,
+    swipeStartX: 0,
+    swipeStartY: 0,
+    lastTapTime: 0,
+    lastTapPos: { x: 0, y: 0 },
+    isMouseDown: false,
+    mouseStart: { x: 0, y: 0 },
+  });
 
   const pages = pamphletData?.pageImages || [];
   const pageLabels = pamphletData?.pageLabels || [];
   const currentImage = pages[currentPageIndex] || '';
 
-  // Close on Escape, arrow navigation
+  const resetZoom = useCallback(() => {
+    setZoomLevel(1);
+    setPosition({ x: 0, y: 0 });
+    setIsInteracting(false);
+  }, []);
+
+  const clampPan = useCallback((currentZoom, pos = position) => {
+    if (currentZoom <= 1.05) {
+      setZoomLevel(1);
+      setPosition({ x: 0, y: 0 });
+      return;
+    }
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+
+    const vRect = viewport.getBoundingClientRect();
+    const maxPanX = Math.max(0, (vRect.width * (currentZoom - 1)) / 1.8 + 120);
+    const maxPanY = Math.max(0, (vRect.height * (currentZoom - 1)) / 1.8 + 120);
+
+    setPosition({
+      x: Math.min(Math.max(pos.x, -maxPanX), maxPanX),
+      y: Math.min(Math.max(pos.y, -maxPanY), maxPanY),
+    });
+  }, [position]);
+
+  // Keyboard navigation & zoom shortcuts
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowRight' && currentPageIndex < pages.length - 1) {
+      if (e.key === 'Escape') {
+        onClose();
+      } else if (e.key === 'ArrowRight' && currentPageIndex < pages.length - 1) {
         setCurrentPageIndex(prev => prev + 1);
         resetZoom();
-      }
-      if (e.key === 'ArrowLeft' && currentPageIndex > 0) {
+      } else if (e.key === 'ArrowLeft' && currentPageIndex > 0) {
         setCurrentPageIndex(prev => prev - 1);
+        resetZoom();
+      } else if (e.key === '+' || e.key === '=') {
+        setZoomLevel(prev => Math.min(prev + 0.4, 5));
+      } else if (e.key === '-' || e.key === '_') {
+        setZoomLevel(prev => {
+          const next = Math.max(prev - 0.4, 1);
+          if (next === 1) setPosition({ x: 0, y: 0 });
+          return next;
+        });
+      } else if (e.key === '0' || e.key === 'r' || e.key === 'R') {
         resetZoom();
       }
     };
+
     window.addEventListener('keydown', handleKeyDown);
     document.body.style.overflow = 'hidden';
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [currentPageIndex, pages.length, onClose]);
+  }, [currentPageIndex, pages.length, onClose, resetZoom]);
+
+  // Mouse wheel & trackpad pinch zoom
+  useEffect(() => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+
+    const handleWheel = (e) => {
+      e.preventDefault();
+      const zoomFactor = e.deltaY < 0 ? 1.18 : 0.85;
+      setZoomLevel((prevZoom) => {
+        const nextZoom = Math.min(Math.max(prevZoom * zoomFactor, 1), 5);
+        if (nextZoom === 1) {
+          setPosition({ x: 0, y: 0 });
+        }
+        return nextZoom;
+      });
+    };
+
+    viewport.addEventListener('wheel', handleWheel, { passive: false });
+    return () => {
+      viewport.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
 
   const handleZoomIn = () => {
-    setZoomLevel(prev => Math.min(prev + 0.35, 3.5));
+    setZoomLevel(prev => Math.min(prev + 0.5, 5));
   };
 
   const handleZoomOut = () => {
     setZoomLevel(prev => {
-      const next = Math.max(prev - 0.35, 1);
+      const next = Math.max(prev - 0.5, 1);
       if (next === 1) setPosition({ x: 0, y: 0 });
       return next;
     });
   };
 
-  const resetZoom = () => {
-    setZoomLevel(1);
-    setPosition({ x: 0, y: 0 });
-  };
+  // Touch handlers: Pinch-to-zoom + 1-finger move/drag + swipe
+  const handleTouchStart = (e) => {
+    if (e.touches.length === 1) {
+      const touch = e.touches[0];
+      const now = Date.now();
+      const lastTap = gestureRef.current.lastTapPos;
+      const distFromLastTap = Math.hypot(touch.clientX - lastTap.x, touch.clientY - lastTap.y);
 
-  // Drag / Pan handling
-  const handleMouseDown = (e) => {
-    if (zoomLevel > 1) {
-      setIsDragging(true);
-      setDragStart({ x: e.clientX - position.x, y: e.clientY - position.y });
+      // Double tap detected
+      if (now - gestureRef.current.lastTapTime < 320 && distFromLastTap < 40) {
+        if (zoomLevel > 1.1) {
+          resetZoom();
+        } else {
+          setZoomLevel(2.5);
+          const rect = viewportRef.current?.getBoundingClientRect();
+          if (rect) {
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const tapOffsetX = touch.clientX - rect.left - centerX;
+            const tapOffsetY = touch.clientY - rect.top - centerY;
+            setPosition({
+              x: -tapOffsetX * 1.2,
+              y: -tapOffsetY * 1.2,
+            });
+          }
+        }
+        gestureRef.current.lastTapTime = 0;
+        return;
+      }
+
+      gestureRef.current.lastTapTime = now;
+      gestureRef.current.lastTapPos = { x: touch.clientX, y: touch.clientY };
+      gestureRef.current.lastSingleTouch = { x: touch.clientX, y: touch.clientY };
+      gestureRef.current.swipeStartX = touch.clientX;
+      gestureRef.current.swipeStartY = touch.clientY;
+      setIsInteracting(true);
+    } else if (e.touches.length === 2) {
+      const t1 = e.touches[0];
+      const t2 = e.touches[1];
+      const dist = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+      const center = {
+        x: (t1.clientX + t2.clientX) / 2,
+        y: (t1.clientY + t2.clientY) / 2,
+      };
+
+      gestureRef.current.startDist = dist;
+      gestureRef.current.startZoom = zoomLevel;
+      gestureRef.current.startPan = { ...position };
+      gestureRef.current.startCenter = center;
+      setIsInteracting(true);
     }
   };
 
+  const handleTouchMove = (e) => {
+    if (e.touches.length === 1 && gestureRef.current.lastSingleTouch) {
+      const touch = e.touches[0];
+      const dx = touch.clientX - gestureRef.current.lastSingleTouch.x;
+      const dy = touch.clientY - gestureRef.current.lastSingleTouch.y;
+
+      if (zoomLevel > 1) {
+        setPosition(prev => ({
+          x: prev.x + dx,
+          y: prev.y + dy,
+        }));
+        gestureRef.current.lastSingleTouch = { x: touch.clientX, y: touch.clientY };
+      }
+    } else if (e.touches.length === 2 && gestureRef.current.startDist > 0) {
+      const t1 = e.touches[0];
+      const t2 = e.touches[1];
+      const dist = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+      const center = {
+        x: (t1.clientX + t2.clientX) / 2,
+        y: (t1.clientY + t2.clientY) / 2,
+      };
+
+      const scaleRatio = dist / gestureRef.current.startDist;
+      const newZoom = Math.min(Math.max(gestureRef.current.startZoom * scaleRatio, 1), 5);
+
+      const centerDx = center.x - gestureRef.current.startCenter.x;
+      const centerDy = center.y - gestureRef.current.startCenter.y;
+
+      setZoomLevel(newZoom);
+      if (newZoom <= 1.02) {
+        setPosition({ x: 0, y: 0 });
+      } else {
+        setPosition({
+          x: gestureRef.current.startPan.x + centerDx,
+          y: gestureRef.current.startPan.y + centerDy,
+        });
+      }
+    }
+  };
+
+  const handleTouchEnd = (e) => {
+    if (e.touches.length === 0) {
+      setIsInteracting(false);
+      gestureRef.current.startDist = 0;
+
+      // Page swipe when at 1x zoom
+      if (zoomLevel <= 1.08 && gestureRef.current.swipeStartX) {
+        const touch = e.changedTouches[0];
+        if (touch) {
+          const deltaX = touch.clientX - gestureRef.current.swipeStartX;
+          const deltaY = touch.clientY - gestureRef.current.swipeStartY;
+
+          if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY) * 1.4) {
+            if (deltaX < 0 && currentPageIndex < pages.length - 1) {
+              setCurrentPageIndex(prev => prev + 1);
+              resetZoom();
+            } else if (deltaX > 0 && currentPageIndex > 0) {
+              setCurrentPageIndex(prev => prev - 1);
+              resetZoom();
+            }
+          }
+        }
+      }
+
+      clampPan(zoomLevel);
+    } else if (e.touches.length === 1) {
+      const touch = e.touches[0];
+      gestureRef.current.lastSingleTouch = { x: touch.clientX, y: touch.clientY };
+      gestureRef.current.startDist = 0;
+    }
+  };
+
+  // Mouse handlers (Desktop pan & drag)
+  const handleMouseDown = (e) => {
+    if (e.button !== 0) return;
+    gestureRef.current.isMouseDown = true;
+    gestureRef.current.mouseStart = { x: e.clientX, y: e.clientY };
+    gestureRef.current.startPan = { ...position };
+    setIsInteracting(true);
+  };
+
   const handleMouseMove = (e) => {
-    if (isDragging && zoomLevel > 1) {
+    if (!gestureRef.current.isMouseDown) return;
+    const dx = e.clientX - gestureRef.current.mouseStart.x;
+    const dy = e.clientY - gestureRef.current.mouseStart.y;
+    if (zoomLevel > 1) {
       setPosition({
-        x: e.clientX - dragStart.x,
-        y: e.clientY - dragStart.y
+        x: gestureRef.current.startPan.x + dx,
+        y: gestureRef.current.startPan.y + dy,
       });
     }
   };
 
   const handleMouseUp = () => {
-    setIsDragging(false);
+    if (gestureRef.current.isMouseDown) {
+      gestureRef.current.isMouseDown = false;
+      setIsInteracting(false);
+      clampPan(zoomLevel);
+    }
   };
 
-  // Double tap / double click zoom
-  const handleDoubleClick = () => {
-    if (zoomLevel > 1) {
+  // Double click on desktop
+  const handleDoubleClick = (e) => {
+    if (zoomLevel > 1.1) {
       resetZoom();
     } else {
-      setZoomLevel(2);
+      setZoomLevel(2.5);
+      const rect = viewportRef.current?.getBoundingClientRect();
+      if (rect) {
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const tapOffsetX = e.clientX - rect.left - centerX;
+        const tapOffsetY = e.clientY - rect.top - centerY;
+        setPosition({
+          x: -tapOffsetX * 1.2,
+          y: -tapOffsetY * 1.2,
+        });
+      }
     }
   };
 
@@ -104,28 +319,45 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
                 type="button" 
                 className="lightbox-btn" 
                 onClick={handleZoomOut} 
-                title="Zoom Out"
+                title="Zoom Out (-)"
                 disabled={zoomLevel <= 1}
+                aria-label="Zoom Out"
               >
-                <ZoomOut size={18} />
+                <ZoomOut size={17} />
               </button>
+
               <button 
                 type="button" 
-                className="lightbox-btn" 
+                className="lightbox-zoom-badge-btn" 
                 onClick={resetZoom} 
-                title="Reset Zoom"
+                title="Reset Zoom (0)"
+                aria-label="Reset Zoom"
               >
-                <RotateCcw size={16} />
+                {Math.round(zoomLevel * 100)}%
               </button>
+
               <button 
                 type="button" 
                 className="lightbox-btn" 
                 onClick={handleZoomIn} 
-                title="Zoom In"
-                disabled={zoomLevel >= 3.5}
+                title="Zoom In (+)"
+                disabled={zoomLevel >= 5}
+                aria-label="Zoom In"
               >
-                <ZoomIn size={18} />
+                <ZoomIn size={17} />
               </button>
+
+              {zoomLevel > 1 && (
+                <button 
+                  type="button" 
+                  className="lightbox-btn" 
+                  onClick={resetZoom} 
+                  title="Reset (0)"
+                  aria-label="Reset View"
+                >
+                  <RotateCcw size={15} />
+                </button>
+              )}
             </div>
 
             {/* Download PDF Button */}
@@ -148,7 +380,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
               type="button" 
               className="lightbox-close-btn" 
               onClick={onClose}
-              title="Close"
+              title="Close (Esc)"
               aria-label="Close"
             >
               <X size={20} />
@@ -158,7 +390,12 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
 
         {/* Pamphlet Viewport Area */}
         <div 
+          ref={viewportRef}
           className="lightbox-viewport"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          onTouchCancel={handleTouchEnd}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
@@ -166,21 +403,77 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
           onDoubleClick={handleDoubleClick}
         >
           {currentImage ? (
-            <img
-              src={currentImage}
-              alt={`${project.title} - Page ${currentPageIndex + 1}`}
-              className="lightbox-pamphlet-img"
+            <div 
+              className="lightbox-img-transform-wrapper"
               style={{
-                transform: `scale(${zoomLevel}) translate(${position.x / zoomLevel}px, ${position.y / zoomLevel}px)`,
-                cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'zoom-in',
+                transform: `translate3d(${position.x}px, ${position.y}px, 0px) scale(${zoomLevel})`,
+                transformOrigin: 'center center',
+                transition: isInteracting ? 'none' : 'transform 0.22s cubic-bezier(0.16, 1, 0.3, 1)',
+                cursor: zoomLevel > 1 ? (isInteracting ? 'grabbing' : 'grab') : 'zoom-in',
+                willChange: 'transform',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                height: '100%',
               }}
-              draggable={false}
-            />
+            >
+              <img
+                ref={imgRef}
+                src={currentImage}
+                alt={`${project.title} - Page ${currentPageIndex + 1}`}
+                className="lightbox-pamphlet-img"
+                draggable={false}
+              />
+            </div>
           ) : (
             <div className="empty-state">
               <FileText size={48} />
               <p>Pamphlet page not available</p>
             </div>
+          )}
+
+          {/* Touch Gesture Floating Hint (disappears when zoomed) */}
+          {zoomLevel <= 1 && (
+            <div className="lightbox-gesture-pill">
+              <Move size={13} />
+              <span>Pinch သို့မဟုတ် ၂ ချက်နှိပ်၍ အကြီးချဲ့ကြည့်ရှုနိုင်ပါသည်</span>
+            </div>
+          )}
+
+          {/* Quick Page Overlay Navigation Arrows (for easy touch access) */}
+          {pages.length > 1 && (
+            <>
+              {currentPageIndex > 0 && (
+                <button
+                  type="button"
+                  className="lightbox-floating-nav-btn prev"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCurrentPageIndex(prev => Math.max(prev - 1, 0));
+                    resetZoom();
+                  }}
+                  aria-label="Previous Page"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+              )}
+
+              {currentPageIndex < pages.length - 1 && (
+                <button
+                  type="button"
+                  className="lightbox-floating-nav-btn next"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCurrentPageIndex(prev => Math.min(prev + 1, pages.length - 1));
+                    resetZoom();
+                  }}
+                  aria-label="Next Page"
+                >
+                  <ChevronRight size={24} />
+                </button>
+              )}
+            </>
           )}
         </div>
 
