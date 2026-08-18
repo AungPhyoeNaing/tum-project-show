@@ -186,7 +186,7 @@ export const MAJORS_DATA = [
         "team": [
           "MetricFit Team"
         ],
-        "supervisor": "Department of Computer Engineering and Information Technology (Daw Moh Moh Khaing)",
+        "supervisor": "Daw Moh Moh Khaing (Associate Professor, Department of CEIT)",
         "tags": [
           "React Native",
           "Expo",
