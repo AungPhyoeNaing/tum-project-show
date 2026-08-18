@@ -1,6 +1,6 @@
 export const PAMPHLETS_DATA = {
   "ceit-01": {
-    "pdfUrl": "/public/pdfs/ceit/ceit-01-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ceit/ceit-01-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -8,7 +8,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ceit-02": {
-    "pdfUrl": "/public/pdfs/ceit/ceit-02-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ceit/ceit-02-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -16,7 +16,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ceit-03": {
-    "pdfUrl": "/public/pdfs/ceit/ceit-03-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ceit/ceit-03-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -24,7 +24,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ceit-04": {
-    "pdfUrl": "/public/pdfs/ceit/ceit-04-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ceit/ceit-04-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -32,7 +32,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ceit-05": {
-    "pdfUrl": "/public/pdfs/ceit/ceit-05-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ceit/ceit-05-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -40,7 +40,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ceit-06": {
-    "pdfUrl": "/public/pdfs/ceit/ceit-06-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ceit/ceit-06-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -48,7 +48,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ceit-07": {
-    "pdfUrl": "/public/pdfs/ceit/ceit-07-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ceit/ceit-07-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -56,7 +56,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ceit-08": {
-    "pdfUrl": "/public/pdfs/ceit/ceit-08-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ceit/ceit-08-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -64,7 +64,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ceit-09": {
-    "pdfUrl": "/public/pdfs/ceit/ceit-09-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ceit/ceit-09-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -72,7 +72,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ceit-10": {
-    "pdfUrl": "/public/pdfs/ceit/ceit-10-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ceit/ceit-10-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -80,28 +80,28 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "chem-01": {
-    "pdfUrl": "/public/pdfs/chemical/chem-01-pamphlet.pdf",
+    "pdfUrl": "/pdfs/chemical/chem-01-pamphlet.pdf",
     "pageCount": 1,
     "pageLabels": [
       "စာမျက်နှာ 1"
     ]
   },
   "chem-02": {
-    "pdfUrl": "/public/pdfs/chemical/chem-02-pamphlet.pdf",
+    "pdfUrl": "/pdfs/chemical/chem-02-pamphlet.pdf",
     "pageCount": 1,
     "pageLabels": [
       "စာမျက်နှာ 1"
     ]
   },
   "chem-03": {
-    "pdfUrl": "/public/pdfs/chemical/chem-03-pamphlet.pdf",
+    "pdfUrl": "/pdfs/chemical/chem-03-pamphlet.pdf",
     "pageCount": 1,
     "pageLabels": [
       "စာမျက်နှာ 1"
     ]
   },
   "civil-01": {
-    "pdfUrl": "/public/pdfs/civil/civil-01-pamphlet.pdf",
+    "pdfUrl": "/pdfs/civil/civil-01-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -109,7 +109,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "civil-02": {
-    "pdfUrl": "/public/pdfs/civil/civil-02-pamphlet.pdf",
+    "pdfUrl": "/pdfs/civil/civil-02-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -117,7 +117,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "civil-03": {
-    "pdfUrl": "/public/pdfs/civil/civil-03-pamphlet.pdf",
+    "pdfUrl": "/pdfs/civil/civil-03-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -125,7 +125,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "civil-04": {
-    "pdfUrl": "/public/pdfs/civil/civil-04-pamphlet.pdf",
+    "pdfUrl": "/pdfs/civil/civil-04-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -133,7 +133,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "civil-05": {
-    "pdfUrl": "/public/pdfs/civil/civil-05-pamphlet.pdf",
+    "pdfUrl": "/pdfs/civil/civil-05-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -141,7 +141,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "civil-06": {
-    "pdfUrl": "/public/pdfs/civil/civil-06-pamphlet.pdf",
+    "pdfUrl": "/pdfs/civil/civil-06-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -150,7 +150,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ec-01": {
-    "pdfUrl": "/public/pdfs/ec/ec-01-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ec/ec-01-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -159,7 +159,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ec-02": {
-    "pdfUrl": "/public/pdfs/ec/ec-02-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ec/ec-02-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -168,7 +168,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ec-03": {
-    "pdfUrl": "/public/pdfs/ec/ec-03-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ec/ec-03-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -177,7 +177,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ec-04": {
-    "pdfUrl": "/public/pdfs/ec/ec-04-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ec/ec-04-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -186,7 +186,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ec-05": {
-    "pdfUrl": "/public/pdfs/ec/ec-05-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ec/ec-05-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -195,7 +195,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ec-06": {
-    "pdfUrl": "/public/pdfs/ec/ec-06-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ec/ec-06-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -204,7 +204,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-01": {
-    "pdfUrl": "/public/pdfs/ep/ep-01-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ep/ep-01-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -213,7 +213,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-02": {
-    "pdfUrl": "/public/pdfs/ep/ep-02-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ep/ep-02-pamphlet.pdf",
     "pageCount": 4,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -223,7 +223,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-03": {
-    "pdfUrl": "/public/pdfs/ep/ep-03-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ep/ep-03-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -232,7 +232,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-04": {
-    "pdfUrl": "/public/pdfs/ep/ep-04-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ep/ep-04-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -241,7 +241,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-05": {
-    "pdfUrl": "/public/pdfs/ep/ep-05-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ep/ep-05-pamphlet.pdf",
     "pageCount": 4,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -251,7 +251,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-06": {
-    "pdfUrl": "/public/pdfs/ep/ep-06-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ep/ep-06-pamphlet.pdf",
     "pageCount": 4,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -261,7 +261,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-07": {
-    "pdfUrl": "/public/pdfs/ep/ep-07-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ep/ep-07-pamphlet.pdf",
     "pageCount": 4,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -271,7 +271,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-08": {
-    "pdfUrl": "/public/pdfs/ep/ep-08-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ep/ep-08-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -280,7 +280,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-09": {
-    "pdfUrl": "/public/pdfs/ep/ep-09-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ep/ep-09-pamphlet.pdf",
     "pageCount": 4,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -290,7 +290,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-10": {
-    "pdfUrl": "/public/pdfs/ep/ep-10-pamphlet.pdf",
+    "pdfUrl": "/pdfs/ep/ep-10-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -299,7 +299,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "mc-01": {
-    "pdfUrl": "/public/pdfs/mc/mc-01-pamphlet.pdf",
+    "pdfUrl": "/pdfs/mc/mc-01-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -307,7 +307,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "mc-02": {
-    "pdfUrl": "/public/pdfs/mc/mc-02-pamphlet.pdf",
+    "pdfUrl": "/pdfs/mc/mc-02-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -315,7 +315,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "mc-03": {
-    "pdfUrl": "/public/pdfs/mc/mc-03-pamphlet.pdf",
+    "pdfUrl": "/pdfs/mc/mc-03-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -323,7 +323,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "mc-04": {
-    "pdfUrl": "/public/pdfs/mc/mc-04-pamphlet.pdf",
+    "pdfUrl": "/pdfs/mc/mc-04-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -331,7 +331,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "mc-05": {
-    "pdfUrl": "/public/pdfs/mc/mc-05-pamphlet.pdf",
+    "pdfUrl": "/pdfs/mc/mc-05-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -339,7 +339,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "mc-06": {
-    "pdfUrl": "/public/pdfs/mc/mc-06-pamphlet.pdf",
+    "pdfUrl": "/pdfs/mc/mc-06-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -347,7 +347,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "mc-07": {
-    "pdfUrl": "/public/pdfs/mc/mc-07-pamphlet.pdf",
+    "pdfUrl": "/pdfs/mc/mc-07-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -355,7 +355,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-01": {
-    "pdfUrl": "/public/pdfs/me/me-01-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-01-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -363,7 +363,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-02": {
-    "pdfUrl": "/public/pdfs/me/me-02-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-02-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -371,7 +371,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-03": {
-    "pdfUrl": "/public/pdfs/me/me-03-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-03-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -379,7 +379,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-04": {
-    "pdfUrl": "/public/pdfs/me/me-04-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-04-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -387,7 +387,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-05": {
-    "pdfUrl": "/public/pdfs/me/me-05-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-05-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -395,7 +395,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-06": {
-    "pdfUrl": "/public/pdfs/me/me-06-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-06-pamphlet.pdf",
     "pageCount": 9,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -410,7 +410,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-07": {
-    "pdfUrl": "/public/pdfs/me/me-07-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-07-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -418,7 +418,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-08": {
-    "pdfUrl": "/public/pdfs/me/me-08-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-08-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -427,7 +427,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-09": {
-    "pdfUrl": "/public/pdfs/me/me-09-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-09-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -435,7 +435,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-10": {
-    "pdfUrl": "/public/pdfs/me/me-10-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-10-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -443,7 +443,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "me-11": {
-    "pdfUrl": "/public/pdfs/me/me-11-pamphlet.pdf",
+    "pdfUrl": "/pdfs/me/me-11-pamphlet.pdf",
     "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
@@ -451,7 +451,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "mn-01": {
-    "pdfUrl": "/public/pdfs/mining/mn-01-pamphlet.pdf",
+    "pdfUrl": "/pdfs/mining/mn-01-pamphlet.pdf",
     "pageCount": 9,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -466,7 +466,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "mn-02": {
-    "pdfUrl": "/public/pdfs/mining/mn-02-pamphlet.pdf",
+    "pdfUrl": "/pdfs/mining/mn-02-pamphlet.pdf",
     "pageCount": 6,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -478,7 +478,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "pe-01": {
-    "pdfUrl": "/public/pdfs/petroleum/pe-01-pamphlet.pdf",
+    "pdfUrl": "/pdfs/petroleum/pe-01-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
@@ -487,7 +487,7 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "pe-02": {
-    "pdfUrl": "/public/pdfs/petroleum/pe-02-pamphlet.pdf",
+    "pdfUrl": "/pdfs/petroleum/pe-02-pamphlet.pdf",
     "pageCount": 3,
     "pageLabels": [
       "စာမျက်နှာ 1",
