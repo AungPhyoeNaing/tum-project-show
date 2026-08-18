@@ -72,7 +72,7 @@ export const MAJORS_DATA = [
         "team": [
           "BOJF Development Team"
         ],
-        "supervisor": "Department of Computer Engineering and Information Technology",
+        "supervisor": "Daw Yamin Phyu (Tutor, Department of CEIT)",
         "tags": [
           "Full-Stack",
           "Web Application",
