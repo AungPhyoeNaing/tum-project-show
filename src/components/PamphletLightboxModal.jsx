@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { X, ZoomIn, ZoomOut, RotateCcw, Download, ChevronLeft, ChevronRight, FileText, Move } from 'lucide-react';
-import { Document, Page, pdfjs } from 'react-pdf';
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+import { Document, Page } from 'react-pdf';
 
 export default function PamphletLightboxModal({ project, pamphletData, initialPageIndex = 0, onClose }) {
   const [currentPageIndex, setCurrentPageIndex] = useState(initialPageIndex);
