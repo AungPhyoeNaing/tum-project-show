@@ -65,13 +65,15 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
     }
   };
 
+  const detailPreviewWidth = typeof window !== 'undefined' ? Math.min(window.innerWidth - 48, 640) : 360;
+
   return (
     <div className="main-content" style={{ paddingTop: '16px' }}>
       <button onClick={() => navigate(-1)} className="back-btn" style={{ marginBottom: '14px' }}>
         <ArrowLeft size={16} /> နောက်သို့ ပြန်သွားရန်
       </button>
 
-      <div className="detail-header" style={{ background: 'white', borderRadius: 'var(--radius-lg)', border: '1.5px solid var(--border-color)', padding: '20px', boxShadow: 'var(--shadow-card)' }}>
+      <div className="detail-header" style={{ background: 'white', borderRadius: 'var(--radius-lg)', border: '1.5px solid var(--border-color)', padding: '20px', boxShadow: 'var(--shadow-card)', overflow: 'hidden' }}>
         {/* Department Badge and Action Bar */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '16px', paddingBottom: '12px', borderBottom: '1px solid var(--border-subtle)' }}>
           <Link to={`/major/${major.id}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'var(--primary-light)', padding: '5px 12px', borderRadius: 'var(--radius-full)', border: '1px solid #bfdbfe' }}>
@@ -104,10 +106,10 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
         </div>
 
         {/* Titles */}
-        <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '4px', lineHeight: '1.35' }}>
+        <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '4px', lineHeight: '1.35', wordBreak: 'break-word' }}>
           {project.title}
         </h2>
-        <h3 style={{ fontSize: '0.96rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '14px', lineHeight: '1.6' }}>
+        <h3 style={{ fontSize: '0.96rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '14px', lineHeight: '1.6', wordBreak: 'break-word' }}>
           {project.titleMm}
         </h3>
 
@@ -140,7 +142,7 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
               onKeyDown={(e) => { if (e.key === 'Enter') setIsLightboxOpen(true); }}
             >
               {pamphletData.pdfUrl ? (
-                <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'hidden' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', width: '100%', maxWidth: '100%', overflow: 'hidden' }}>
                   <Document
                     file={pamphletData.pdfUrl}
                     loading={
@@ -152,7 +154,7 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
                   >
                     <Page
                       pageNumber={activePageIndex + 1}
-                      width={360}
+                      width={detailPreviewWidth}
                       renderTextLayer={false}
                       renderAnnotationLayer={false}
                     />

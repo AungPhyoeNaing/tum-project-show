@@ -17,6 +17,8 @@ export default function PamphletCard({
   const pages = pamphletData?.pageImages || [];
   const currentImage = pages[activePageIndex] || '';
 
+  const previewWidth = typeof window !== 'undefined' ? Math.min(window.innerWidth - 64, 520) : 340;
+
   return (
     <div className="pamphlet-project-card">
       {/* Project Header Info */}
@@ -76,7 +78,7 @@ export default function PamphletCard({
         }}
       >
         {pamphletData?.pdfUrl ? (
-          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'hidden' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', maxWidth: '100%', overflow: 'hidden' }}>
             <Document
               file={pamphletData.pdfUrl}
               loading={
@@ -88,7 +90,7 @@ export default function PamphletCard({
             >
               <Page
                 pageNumber={activePageIndex + 1}
-                width={360}
+                width={previewWidth}
                 renderTextLayer={false}
                 renderAnnotationLayer={false}
               />
