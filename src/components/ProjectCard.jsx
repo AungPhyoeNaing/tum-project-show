@@ -45,7 +45,6 @@ export default function ProjectCard({ project, majorCode, isBookmarked, onToggle
 
       <div className="project-card-titles">
         <h3 className="project-title">{project.title}</h3>
-        <h4 className="project-title-mm">{project.titleMm}</h4>
       </div>
 
       <p className="project-desc">{project.description}</p>

@@ -29,7 +29,6 @@ export default function PamphletCard({
             <span className="pamphlet-pages-pill">{pageCount} Pages</span>
           </div>
           <h3 className="pamphlet-project-title">{project.title}</h3>
-          <h4 className="pamphlet-project-title-mm">{project.titleMm}</h4>
         </div>
 
         <button 

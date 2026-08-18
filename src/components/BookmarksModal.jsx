@@ -75,7 +75,6 @@ export default function BookmarksModal({ isOpen, onClose, bookmarks, onToggleBoo
                   </div>
 
                   <h3 className="bookmark-card-title">{project.title}</h3>
-                  <p className="bookmark-card-title-mm">{project.titleMm}</p>
 
                   <div className="bookmark-card-actions">
                     <button
