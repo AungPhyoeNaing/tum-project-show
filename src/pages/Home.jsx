@@ -27,7 +27,7 @@ export default function Home({
       <section className="hero-banner">
         <div className="hero-content">
           <h1 className="hero-title">{SHOW_INFO.titleMm}</h1>
-          <p className="hero-sub">{SHOW_INFO.university} • Final Year Research Showcase</p>
+          <p className="hero-sub">{SHOW_INFO.university}</p>
 
           <div className="hero-meta">
             <div className="meta-item">
