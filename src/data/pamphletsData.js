@@ -1,4 +1,4 @@
-export const CEIT_PAMPHLETS = {
+export const PAMPHLETS_DATA = {
   "ceit-01": {
     "pdfUrl": "/pdfs/ceit/ceit-01-pamphlet.pdf",
     "pageImages": [

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { MAJORS_DATA } from '../data/mockData';
-import { CEIT_PAMPHLETS } from '../data/ceitPamphlets';
+import { PAMPHLETS_DATA } from '../data/pamphletsData';
 import PamphletLightboxModal from '../components/PamphletLightboxModal';
 import { 
   ArrowLeft, Users, Award, Bookmark, Share2, Check, 
@@ -44,8 +44,7 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
   }
 
   const isBookmarked = bookmarks.includes(project.id);
-  const isCeit = major.id === 'ceit';
-  const pamphletData = isCeit ? CEIT_PAMPHLETS[project.id] : null;
+  const pamphletData = PAMPHLETS_DATA[project.id];
   const pages = pamphletData?.pageImages || [];
   const pageLabels = pamphletData?.pageLabels || [];
   const currentImage = pages[activePageIndex] || '';
@@ -110,8 +109,8 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
           {project.titleMm}
         </h3>
 
-        {/* Pamphlet Viewer for CEIT */}
-        {isCeit && pamphletData && (
+        {/* Pamphlet Viewer (Displays if project has pamphlet data) */}
+        {pamphletData && (
           <div style={{ marginBottom: '20px' }}>
             {/* Page Switcher */}
             {pages.length > 1 && (

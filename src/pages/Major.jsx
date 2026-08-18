@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { MAJORS_DATA } from '../data/mockData';
-import { CEIT_PAMPHLETS } from '../data/ceitPamphlets';
+import { PAMPHLETS_DATA } from '../data/pamphletsData';
 import ProjectCard from '../components/ProjectCard';
-import CeitPamphletCard from '../components/CeitPamphletCard';
+import PamphletCard from '../components/PamphletCard';
 import PamphletLightboxModal from '../components/PamphletLightboxModal';
 import ProjectDetailModal from '../components/ProjectDetailModal';
 import InfoModal from '../components/InfoModal';
@@ -33,7 +33,9 @@ export default function Major({
     return MAJORS_DATA.find((m) => m.id === majorId);
   }, [majorId]);
 
-  const isCeit = majorId === 'ceit';
+  const hasPamphlets = useMemo(() => {
+    return major?.projects.some(p => PAMPHLETS_DATA[p.id]);
+  }, [major]);
 
   // Extract popular tags for this major
   const availableTags = useMemo(() => {
@@ -126,7 +128,7 @@ export default function Major({
               <span className="selected-major-count-pill">
                 {major.projects.length} Projects
               </span>
-              {isCeit && (
+              {hasPamphlets && (
                 <span className="pdf-showcase-pill">
                   <FileText size={12} />
                   Original PDF Pamphlets
@@ -198,8 +200,8 @@ export default function Major({
             <Layers size={18} />
             {searchQuery 
               ? `"${searchQuery}" ရှာဖွေတွေ့ရှိချက်များ` 
-              : isCeit 
-                ? 'CEIT ဘွဲ့ကြိုသုတေသန မူရင်း Pamphlet စာမျက်နှာများ' 
+              : hasPamphlets 
+                ? `${major.shortCode} ဘွဲ့ကြိုသုတေသန မူရင်း Pamphlet စာမျက်နှာများ` 
                 : `${major.shortCode} ဌာန၏ ရရှိနိုင်သော ပရောဂျက်များ`}
           </h3>
           {selectedTag !== 'ALL' && (
@@ -211,16 +213,17 @@ export default function Major({
 
       {/* Projects Grid Feed */}
       {displayedProjects.length > 0 ? (
-        <div className={isCeit ? "pamphlet-projects-list" : "project-list"}>
+        <div className={hasPamphlets ? "pamphlet-projects-list" : "project-list"}>
           {displayedProjects.map((project) => {
             const isBookmarked = bookmarks.includes(project.id);
+            const pamphletData = PAMPHLETS_DATA[project.id];
 
-            if (isCeit) {
-              const pamphletData = CEIT_PAMPHLETS[project.id];
+            if (pamphletData) {
               return (
-                <CeitPamphletCard
+                <PamphletCard
                   key={project.id}
                   project={project}
+                  majorCode={major.shortCode}
                   pamphletData={pamphletData}
                   isBookmarked={isBookmarked}
                   onToggleBookmark={onToggleBookmark}

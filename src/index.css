@@ -774,7 +774,7 @@ button {
 }
 
 /* ==========================================================================
-   CEIT Mobile-First Pamphlet Cards
+   Pamphlet Project Cards
    ========================================================================== */
 .pamphlet-projects-list {
   display: flex;
@@ -782,7 +782,7 @@ button {
   gap: 20px;
 }
 
-.ceit-pamphlet-card {
+.pamphlet-project-card {
   background: white;
   border: 1.5px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -791,7 +791,7 @@ button {
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
-.ceit-pamphlet-card:hover {
+.pamphlet-project-card:hover {
   border-color: #bfdbfe;
   box-shadow: var(--shadow-md);
 }

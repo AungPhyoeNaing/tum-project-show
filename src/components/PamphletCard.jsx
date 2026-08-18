@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Bookmark, Users, Award, Maximize2, FileText, Download } from 'lucide-react';
 
-export default function CeitPamphletCard({ 
+export default function PamphletCard({ 
   project, 
+  majorCode,
   pamphletData, 
   isBookmarked, 
   onToggleBookmark, 
@@ -15,12 +16,12 @@ export default function CeitPamphletCard({
   const currentImage = pages[activePageIndex] || '';
 
   return (
-    <div className="ceit-pamphlet-card">
+    <div className="pamphlet-project-card">
       {/* Project Header Info */}
       <div className="pamphlet-card-header">
         <div className="pamphlet-titles-block">
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-            <span className="pamphlet-dept-badge">CEIT Pamphlet</span>
+            <span className="pamphlet-dept-badge">{majorCode || 'Project'} Pamphlet</span>
             <span className="pamphlet-pages-pill">{pages.length} Pages</span>
           </div>
           <h3 className="pamphlet-project-title">{project.title}</h3>
