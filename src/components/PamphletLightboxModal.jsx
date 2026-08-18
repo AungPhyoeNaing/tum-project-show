@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { X, ZoomIn, ZoomOut, RotateCcw, Download, ChevronLeft, ChevronRight, FileText, Move } from 'lucide-react';
+import { Document, Page, pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 export default function PamphletLightboxModal({ project, pamphletData, initialPageIndex = 0, onClose }) {
   const [currentPageIndex, setCurrentPageIndex] = useState(initialPageIndex);
@@ -402,7 +405,44 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
           onMouseLeave={handleMouseUp}
           onDoubleClick={handleDoubleClick}
         >
-          {currentImage ? (
+          {pamphletData?.pdfUrl ? (
+            <div 
+              className="lightbox-img-transform-wrapper"
+              style={{
+                transform: `translate3d(${position.x}px, ${position.y}px, 0px) scale(${zoomLevel})`,
+                transformOrigin: 'center center',
+                transition: isInteracting ? 'none' : 'transform 0.22s cubic-bezier(0.16, 1, 0.3, 1)',
+                cursor: zoomLevel > 1 ? (isInteracting ? 'grabbing' : 'grab') : 'zoom-in',
+                willChange: 'transform',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                height: '100%',
+              }}
+            >
+              <Document
+                file={pamphletData.pdfUrl}
+                loading={
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', color: 'rgba(255,255,255,0.7)' }}>
+                    <div className="pdf-spinner" style={{ width: '40px', height: '40px', border: '3px solid rgba(255,255,255,0.1)', borderTopColor: '#fff', borderRadius: '50%', animation: 'spin 1s linear infinite' }}></div>
+                    <span>Loading High-Res PDF...</span>
+                    <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+                  </div>
+                }
+                className="lightbox-pdf-document"
+              >
+                <Page
+                  pageNumber={currentPageIndex + 1}
+                  height={typeof window !== 'undefined' ? window.innerHeight * 0.8 : 800}
+                  renderTextLayer={false}
+                  renderAnnotationLayer={false}
+                  className="lightbox-pamphlet-pdf-page"
+                  devicePixelRatio={3}
+                />
+              </Document>
+            </div>
+          ) : currentImage ? (
             <div 
               className="lightbox-img-transform-wrapper"
               style={{

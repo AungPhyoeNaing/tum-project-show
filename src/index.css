@@ -1200,6 +1200,15 @@ button {
   transform: translateZ(0);
 }
 
+.lightbox-pamphlet-pdf-page canvas {
+  border-radius: var(--radius-sm);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  max-width: 95vw !important;
+  max-height: 80vh !important;
+  object-fit: contain;
+}
+
 /* Gesture Hint Pill */
 .lightbox-gesture-pill {
   position: absolute;
