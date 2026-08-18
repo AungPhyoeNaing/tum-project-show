@@ -152,9 +152,7 @@ export default function Major({
             <Layers size={18} />
             {searchQuery 
               ? `"${searchQuery}" ရှာဖွေတွေ့ရှိချက်များ` 
-              : hasPamphlets 
-                ? `${major.shortCode} ဘွဲ့ကြိုသုတေသန မူရင်း Pamphlet စာမျက်နှာများ` 
-                : `${major.shortCode} ဌာန၏ ရရှိနိုင်သော ပရောဂျက်များ`}
+              : `${major.shortCode} Department`}
           </h3>
         </div>
         <span className="section-badge">{displayedProjects.length} Projects</span>
