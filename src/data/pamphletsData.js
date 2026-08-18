@@ -71,6 +71,35 @@ export const PAMPHLETS_DATA = {
       "စာမျက်နှာ 2 (Back)"
     ]
   },
+  "ceit-10": {
+    "pdfUrl": "/public/pdfs/ceit/ceit-10-pamphlet.pdf",
+    "pageCount": 2,
+    "pageLabels": [
+      "စာမျက်နှာ 1 (Front)",
+      "စာမျက်နှာ 2 (Back)"
+    ]
+  },
+  "chem-01": {
+    "pdfUrl": "/public/pdfs/chemical/chem-01-pamphlet.pdf",
+    "pageCount": 1,
+    "pageLabels": [
+      "စာမျက်နှာ 1"
+    ]
+  },
+  "chem-02": {
+    "pdfUrl": "/public/pdfs/chemical/chem-02-pamphlet.pdf",
+    "pageCount": 1,
+    "pageLabels": [
+      "စာမျက်နှာ 1"
+    ]
+  },
+  "chem-03": {
+    "pdfUrl": "/public/pdfs/chemical/chem-03-pamphlet.pdf",
+    "pageCount": 1,
+    "pageLabels": [
+      "စာမျက်နှာ 1"
+    ]
+  },
   "civil-01": {
     "pdfUrl": "/public/pdfs/civil/civil-01-pamphlet.pdf",
     "pageCount": 2,
@@ -317,6 +346,14 @@ export const PAMPHLETS_DATA = {
       "စာမျက်နှာ 2 (Back)"
     ]
   },
+  "mc-07": {
+    "pdfUrl": "/public/pdfs/mc/mc-07-pamphlet.pdf",
+    "pageCount": 2,
+    "pageLabels": [
+      "စာမျက်နှာ 1 (Front)",
+      "စာမျက်နှာ 2 (Back)"
+    ]
+  },
   "me-01": {
     "pdfUrl": "/public/pdfs/me/me-01-pamphlet.pdf",
     "pageCount": 2,
@@ -411,6 +448,51 @@ export const PAMPHLETS_DATA = {
     "pageLabels": [
       "စာမျက်နှာ 1 (Front)",
       "စာမျက်နှာ 2 (Back)"
+    ]
+  },
+  "mn-01": {
+    "pdfUrl": "/public/pdfs/mining/mn-01-pamphlet.pdf",
+    "pageCount": 9,
+    "pageLabels": [
+      "စာမျက်နှာ 1",
+      "စာမျက်နှာ 2",
+      "စာမျက်နှာ 3",
+      "စာမျက်နှာ 4",
+      "စာမျက်နှာ 5",
+      "စာမျက်နှာ 6",
+      "စာမျက်နှာ 7",
+      "စာမျက်နှာ 8",
+      "စာမျက်နှာ 9"
+    ]
+  },
+  "mn-02": {
+    "pdfUrl": "/public/pdfs/mining/mn-02-pamphlet.pdf",
+    "pageCount": 6,
+    "pageLabels": [
+      "စာမျက်နှာ 1",
+      "စာမျက်နှာ 2",
+      "စာမျက်နှာ 3",
+      "စာမျက်နှာ 4",
+      "စာမျက်နှာ 5",
+      "စာမျက်နှာ 6"
+    ]
+  },
+  "pe-01": {
+    "pdfUrl": "/public/pdfs/petroleum/pe-01-pamphlet.pdf",
+    "pageCount": 3,
+    "pageLabels": [
+      "စာမျက်နှာ 1",
+      "စာမျက်နှာ 2",
+      "စာမျက်နှာ 3"
+    ]
+  },
+  "pe-02": {
+    "pdfUrl": "/public/pdfs/petroleum/pe-02-pamphlet.pdf",
+    "pageCount": 3,
+    "pageLabels": [
+      "စာမျက်နှာ 1",
+      "စာမျက်နှာ 2",
+      "စာမျက်နှာ 3"
     ]
   }
 };

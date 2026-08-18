@@ -6,7 +6,7 @@ export const SHOW_INFO = {
   "location": "ပင်မဆောင်၊ နည်းပညာတက္ကသိုလ် (မန္တလေး)၊ အောင်ချမ်းသာရပ်ကွက်၊ ပုသိမ်ကြီးမြို့နယ်",
   "university": "Technological University (Mandalay)",
   "contact": "ဖုန်း: +95-9-258225398 / အီးမေးလ်: info@tum.edu.mm",
-  "welcomeMessage": "နည်းပညာတက္ကသိုလ် (မန္တလေး) ၏ နှစ်စဉ်ကျင်းပမြဲဖြစ်သော Project Show & Job Fair 2026 မှ ကြိုဆိုပါ၏။ အင်ဂျင်နီယာမေဂျာ (၆) ခုမှ ကျောင်းသား၊ ကျောင်းသူများ၏ လက်တွေ့ဖန်တီးထားသော ဘွဲ့ကြိုသုတေသန ပရောဂျက်ပေါင်း (၄၉) ခုကို တစ်နေရာတည်းတွင် စုံလင်စွာ လေ့လာကြည့်ရှုနိုင်ပါသည်။",
+  "welcomeMessage": "နည်းပညာတက္ကသိုလ် (မန္တလေး) ၏ နှစ်စဉ်ကျင်းပမြဲဖြစ်သော Project Show & Job Fair 2026 မှ ကြိုဆိုပါ၏။ အင်ဂျင်နီယာမေဂျာ (9) ခုမှ ကျောင်းသား၊ ကျောင်းသူများ၏ လက်တွေ့ဖန်တီးထားသော ဘွဲ့ကြိုသုတေသန ပရောဂျက်ပေါင်း (57) ခုကို တစ်နေရာတည်းတွင် စုံလင်စွာ လေ့လာကြည့်ရှုနိုင်ပါသည်။",
   "description": "နည်းပညာတက္ကသိုလ် (မန္တလေး) ကျောင်းသား၊ ကျောင်းသူများ၏ လက်တွေ့တီထွင်ဖန်တီးထားသော စက်မှု၊ လျှပ်စစ်၊ အီလက်ထရောနစ်၊ ကွန်ပျူတာ၊ မက္ကာထရောနစ်နှင့် မြို့ပြအင်ဂျင်နီယာ ဘွဲ့ကြိုသုတေသန ပရောဂျက်များအား ခင်းကျင်းပြသခြင်း ဖြစ်ပါသည်။"
 };
 
@@ -290,6 +290,29 @@ export const MAJORS_DATA = [
           "Villagers & Quests — Interactive NPC quest progression uncovering the village backstory",
           "Day & Night Cycle — Dynamic time-management environment and lighting ambiance",
           "Save & Load System — Persistent player game-state and inventory progression storage"
+        ]
+      },
+      {
+        "id": "ceit-10",
+        "title": "TaskWave — Task Management & Collaboration Platform",
+        "titleMm": "TaskWave — အဖွဲ့အစည်းနှင့် လုပ်ငန်းဆောင်တာများ စီမံခန့်ခွဲရေး ပလက်ဖောင်း",
+        "tagline": "Modern project productivity and task workflow tracking system with interactive kanban and team boards.",
+        "description": "အဖွဲ့အစည်းများနှင့် လုပ်ငန်းခွင်များအတွင်း လုပ်ငန်းဆောင်တာ (Task) များကို စနစ်တကျ ခွဲဝေဆောင်ရွက်နိုင်ရန်နှင့် Project Timeline များကို ခြေရာခံနိုင်ရန် ရေးဆွဲထားသော ပလက်ဖောင်းဖြစ်ပါသည်။",
+        "team": [
+          "CEIT TaskWave Development Team"
+        ],
+        "supervisor": "Department of Computer Engineering & Information Technology",
+        "tags": [
+          "React",
+          "Node.js",
+          "Task Management",
+          "Productivity",
+          "Collaboration"
+        ],
+        "features": [
+          "Kanban Board view for agile workflow tracking",
+          "Real-time task assignment and progress reporting",
+          "Automated deadline reminders and team notifications"
         ]
       }
     ]
@@ -1425,6 +1448,230 @@ export const MAJORS_DATA = [
           "Submerged copper evaporator coil directly absorbing thermal energy from the insulated water tank",
           "Continuous output of hygienic chilled drinking water with reliable thermostatic temperature stability",
           "Constructed with food-grade stainless storage tank and robust sheet metal housing"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chemical",
+    "shortCode": "ChE",
+    "name": "Chemical Engineering",
+    "nameMm": "ဓာတုအင်ဂျင်နီယာဌာန",
+    "iconName": "FlaskConical",
+    "themeColor": "from-emerald-600 to-teal-700",
+    "accentColor": "#059669",
+    "logo": "/logos/ChemicalLogo.png",
+    "image": "/logos/ChemicalLogo.png",
+    "description": "သဘာဝပစ္စည်းများမှ အဖိုးတန် ဇီဝဒြပ်ပေါင်းများ ထုတ်ယူခြင်း၊ ပရိုတင်းနှင့် စွန့်ပစ်ပစ္စည်းများအား တန်ဖိုးမြှင့် အစားအစာအဖြစ် ထုတ်လုပ်ခြင်းဆိုင်ရာ သုတေသန ပရောဂျက်များ",
+    "faculty": [
+      "Department of Chemical Engineering Faculty"
+    ],
+    "projects": [
+      {
+        "id": "chem-01",
+        "title": "Extraction of Soluble Bioactive Compounds from Dried Tea Leaves",
+        "titleMm": "လက်ဖက်ခြောက်မှ ပျော်ဝင်နိုင်သော ဇီဝဒြပ်ပေါင်းများကို Soxhlet နည်းပညာဖြင့် ထုတ်ယူခြင်း",
+        "tagline": "Soxhlet extraction of antioxidants, catechins, and polyphenols from Camellia sinensis.",
+        "description": "သဘာဝလက်ဖက်ခြောက် (Camellia sinensis) မှ ကျန်းမာရေးအတွက် အလွန်အသုံးဝင်သော Polyphenols, Catechins, Flavonoids, EGCG နှင့် Amino Acids များကို Soxhlet Extraction နည်းပညာဖြင့် အောင်မြင်စွာ ထုတ်ယူသုတေသနပြုထားခြင်း ဖြစ်ပါသည်။",
+        "team": [
+          "Ma Phyo Thiri Kyaw (V Ch.E-1)",
+          "Ma Ei Thandar Moe (V Ch.E-2)"
+        ],
+        "supervisor": "Department of Chemical Engineering",
+        "tags": [
+          "Soxhlet Extraction",
+          "Tea Extract",
+          "Antioxidants",
+          "Polyphenols",
+          "Bioactive Compounds"
+        ],
+        "features": [
+          "Optimal solvent extraction of high-grade catechins (EGCG)",
+          "Soluble compound concentration analysis and process flow optimization",
+          "Pharmaceutical and nutraceutical applications"
+        ]
+      },
+      {
+        "id": "chem-02",
+        "title": "Preparation of Soybean Protein Isolate (SPI) from Defatted Soybean Meal",
+        "titleMm": "ဆီထုတ်ပြီး ပဲဖတ်မှ ပဲပရိုတင်း (SPI) ထုတ်လုပ်ခြင်း",
+        "tagline": "Alkaline extraction and acid precipitation process producing quality plant-based protein isolate.",
+        "description": "ပဲဆီထုတ်လုပ်ပြီးနောက် ထွက်ရှိလာသော ဘေးထွက်ပစ္စည်းဖြစ်သည့် ပဲဖတ်မှ တန်ဖိုးမြင့် အပင်အခြေခံပရိုတင်း (Soybean Protein Isolate - SPI) ကို အယ်ကာလီထုတ်ယူခြင်းနှင့် အက်ဆစ်အနည်ချခြင်း နည်းလမ်းများဖြင့် သန့်စင်ထုတ်လုပ်ထားပါသည်။",
+        "team": [
+          "Mg Kaung Khant Kyaw (V Ch.E-3)"
+        ],
+        "supervisor": "Department of Chemical Engineering",
+        "tags": [
+          "Soybean Protein",
+          "SPI",
+          "Alkaline Extraction",
+          "Acid Precipitation",
+          "Food Engineering"
+        ],
+        "features": [
+          "High-yield protein separation via centrifugation solid-liquid separation",
+          "Acid precipitation at isoelectric point for maximum protein purity",
+          "Value addition to agricultural byproduct defatted soybean meal"
+        ]
+      },
+      {
+        "id": "chem-03",
+        "title": "Valorization of Watermelon Rind into Value-Added Fruit Leather",
+        "titleMm": "ဖရဲသီးခွံမှ တန်ဖိုးမြှင့် သစ်သီးယိုချပ် (Fruit Leather) ထုတ်လုပ်ခြင်း",
+        "tagline": "Converting organic watermelon rind waste into functional, fiber-rich confectionery fruit leather.",
+        "description": "စွန့်ပစ်ပစ္စည်းဖြစ်သော ဖရဲသီးအခွံမှ အာဟာရဓာတ်များနှင့် အမျှင်ဓာတ်များကို အသုံးချ၍ အရည်အသွေးမြင့် သစ်သီးယိုချပ် (Fruit Leather) အဖြစ် အဆင့်ဆင့် သန့်စင်ပြုပြင် ထုတ်လုပ်ထားသော အစားအသောက် အင်ဂျင်နီယာ သုတေသန ဖြစ်ပါသည်။",
+        "team": [
+          "Mg Kaung Si Thu (V Ch.E-4)"
+        ],
+        "supervisor": "Department of Chemical Engineering",
+        "tags": [
+          "Waste Valorization",
+          "Fruit Leather",
+          "Watermelon Rind",
+          "Food Processing",
+          "Sustainability"
+        ],
+        "features": [
+          "Controlled heating (60°C) and de-aeration (90°C) process",
+          "Drying optimization at 80°C for ideal chewy texture",
+          "Zero-waste food engineering and organic waste upcycling"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mining",
+    "shortCode": "MN",
+    "name": "Mining Engineering",
+    "nameMm": "သတ္တုတွင်းတူးဖော်ရေးအင်ဂျင်နီယာဌာန",
+    "iconName": "Mountain",
+    "themeColor": "from-amber-600 to-yellow-800",
+    "accentColor": "#d97706",
+    "logo": "/logos/MiningLogo.jpg",
+    "image": "/logos/MiningLogo.jpg",
+    "description": "သတ္တုနှင့် ကျောက်နမူနာများအား အဏုကြည့်မှန်ပြောင်းဖြင့် ခွဲခြမ်းစိတ်ဖြာခြင်းနှင့် မြေပြင်တုန်ခါမှု တိုင်းတာစောင့်ကြည့်ရေးဆိုင်ရာ ဘူမိအင်ဂျင်နီယာ သုတေသနများ",
+    "faculty": [
+      "Dr. Aung Myoe (Professor & Head of Department)",
+      "Dr. Zaw Win Htut (Lecturer)",
+      "U Zayar Win Soe (Instructor)"
+    ],
+    "projects": [
+      {
+        "id": "mn-01",
+        "title": "Microscopic Analysis in Mineralization and Earth Materials Characterization",
+        "titleMm": "သတ္တုဖြစ်ထွန်းမှုနှင့် မြေကြီးပစ္စည်းများ၏ ဂုဏ်သတ္တိများကို အဏုကြည့်မှန်ဖြင့် ခွဲခြမ်းစိတ်ဖြာလေ့လာခြင်း",
+        "tagline": "Thin-section petrographic polarizing microscope analysis of ore minerals, fossils, and geological rock samples.",
+        "description": "ကျောက်နှင့် သတ္တုနမူနာများ၏ Thin Section များကို Polarizing Microscope အောက်တွင် အသေးစိတ် စစ်ဆေးလေ့လာပြီး သတ္တုဖြစ်ထွန်းမှု သဘောတရားများနှင့် ဘူမိဗေဒဆိုင်ရာ အချက်အလက်များကို ဖော်ထုတ်ထားခြင်း ဖြစ်ပါသည်။",
+        "team": [
+          "Mining & Geology Research Team"
+        ],
+        "supervisor": "Dr. Aung Myoe, Dr. Zaw Win Htut, U Zayar Win Soe",
+        "tags": [
+          "Microscopic Analysis",
+          "Mineralization",
+          "Polarizing Microscope",
+          "Thin Section",
+          "Geology",
+          "Mining"
+        ],
+        "features": [
+          "Identification of copper, iron, kyanite, and precious ore minerals",
+          "Microscopic analysis of Chaungmagyi Group rock samples",
+          "Fossil characterization including Shark Teeth and Fossil Wood"
+        ]
+      },
+      {
+        "id": "mn-02",
+        "title": "Ground Vibration Monitoring in Geotechnical Investigation Using Surveying Instruments",
+        "titleMm": "မြေတိုင်းတာရေး ကိရိယာများဖြင့် ဘူမိနည်းပညာ စူးစမ်းလေ့လာမှုအတွက် မြေပြင်တုန်ခါမှု စောင့်ကြည့်တိုင်းတာခြင်း",
+        "tagline": "Integration of Total Station, GNSS/GPS, and Microtremor Seismograph for ground stability assessment.",
+        "description": "ဆောက်လုပ်ရေးနှင့် သတ္တုတွင်း စီမံကိန်းများ၏ ဘေးကင်းလုံခြုံရေးအတွက် Total Station, GNSS/GPS Receiver, Digital Level နှင့် Microtremor Seismograph များကို အသုံးပြု၍ မြေပြင်တုန်ခါမှုနှင့် ရွေ့လျားမှုများကို တိကျစွာ စောင့်ကြည့်တိုင်းတာထားပါသည်။",
+        "team": [
+          "Mg Wai Yan Moe Htet Kyaw (IV.MN-1)",
+          "Mg Min Khant Kyaw (IV.MN-2)",
+          "Mg Kyal Sin Hein (IV.MN-4)",
+          "Mg Okkar Lin (IV.MN-5)"
+        ],
+        "supervisor": "Dr. Zaw Win Htut (Lecturer), U Zayar Win Soe (Instructor)",
+        "tags": [
+          "Ground Vibration",
+          "Microtremor",
+          "Geotechnical",
+          "Total Station",
+          "GPS",
+          "Surveying"
+        ],
+        "features": [
+          "Real-time vibration tracking using Microtremor sensors along roads and bridges",
+          "Geotechnical stability analysis for slopes, tunnels, and structures",
+          "Disaster risk reduction and engineering data integration"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "petroleum",
+    "shortCode": "PE",
+    "name": "Petroleum Engineering",
+    "nameMm": "ရေနံအင်ဂျင်နီယာဌာန",
+    "iconName": "Fuel",
+    "themeColor": "from-red-600 to-rose-800",
+    "accentColor": "#e11d48",
+    "logo": "/logos/PetroleumLogo.jpg",
+    "image": "/logos/PetroleumLogo.jpg",
+    "description": "ရေနံနှင့် သဘာဝဓာတ်ငွေ့ ရှာဖွေတူးဖော်ရေး၊ ရေနံတွင်းတူးစက်နှင့် ရေနံထုတ်လုပ်မှုဆိုင်ရာ စက်မှုအင်ဂျင်နီယာ သုတေသနများ",
+    "faculty": [
+      "U Moe Moe (Assistant Lecturer)",
+      "U Zin Moe Htwe (Instructor)",
+      "U Ye Tun (Instructor)"
+    ],
+    "projects": [
+      {
+        "id": "pe-01",
+        "title": "Rotary Drilling Operation",
+        "titleMm": "ရေနံတွင်းတူးစက် (Rotary Drilling Rig Prototype)",
+        "tagline": "Working mechanical model of a rotary drilling rig with drill string, traveling block, and DC motor.",
+        "description": "မြေအောက်အနက်ပိုင်းရှိ ရေနံနှင့် သဘာဝဓာတ်ငွေ့များကို ထိုးဖောက်တူးဖော်နိုင်သော Rotary Drilling Rig စနစ်၏ လည်ပတ်ပုံကို လက်တွေ့ပြသနိုင်ရန် ပုံစံတူ မော်ဒယ် တည်ဆောက်ထားခြင်း ဖြစ်ပါသည်။",
+        "team": [
+          "Mg Hein Saw Oo (V.PE-1)",
+          "Mg Paing Zay Lwin (V.PE-2)"
+        ],
+        "supervisor": "U Moe Moe (Assistant Lecturer), U Zin Moe Htwe (Instructor)",
+        "tags": [
+          "Rotary Drilling",
+          "Drill Rig",
+          "Drill Bit",
+          "Derrick",
+          "Petroleum Exploration"
+        ],
+        "features": [
+          "Functional mechanical rig with traveling block, crown block, and swivel",
+          "Rotary motion and weight-on-bit rock penetration demonstration",
+          "Scale model (8ft x 4ft) with 12V DC power system"
+        ]
+      },
+      {
+        "id": "pe-02",
+        "title": "Sucker Rod Pumping System",
+        "titleMm": "မောင်းချဉ်စက် (Sucker Rod Pumping System)",
+        "tagline": "Surface beam pumping unit converting rotary motor drive into reciprocating downhole lift.",
+        "description": "ရေနံတွင်းအတွင်းမှ ရေနံစိမ်းများကို မြေပေါ်သို့ မောင်းချဉ်စက်ဖြင့် ထုတ်ယူပေးသော Sucker Rod Pumping စနစ်ကို ပုံစံထုတ် သရုပ်ပြ တည်ဆောက်ထားခြင်း ဖြစ်ပါသည်။",
+        "team": [
+          "Mg Min Khant Kyaw (V.PE-2)",
+          "Ma Shwe Sin Win (V.PE-1)"
+        ],
+        "supervisor": "U Ye Tun (Instructor), U Zin Moe Htwe (Instructor)",
+        "tags": [
+          "Sucker Rod",
+          "Beam Pumping",
+          "Horsehead",
+          "Artificial Lift",
+          "Petroleum Production"
+        ],
+        "features": [
+          "Mechanical crank, walking beam, horsehead, and pitman arm linkage",
+          "Reciprocating downhole pump lifting fluid to storage tank",
+          "Demonstrates artificial lift principles in petroleum extraction"
         ]
       }
     ]
