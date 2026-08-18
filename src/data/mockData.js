@@ -23,11 +23,12 @@ export const MAJORS_DATA = [
     "image": "/logos/CEIT_2026_logo.PNG",
     "description": "ဂိမ်းအင်ဂျင် 3D Simulation၊ AI/ML ဉာဏ်ရည်တုစနစ်၊ ဝဘ်နှင့် မိုဘိုင်း အက်ပ်လီကေးရှင်း၊ ကြိုးမဲ့ ဆက်သွယ်ရေးနှင့် ကွန်ရက်လုံခြုံရေးဆိုင်ရာ လက်တွေ့သုတေသန ပရောဂျက်များ",
     "faculty": [
+      "Dr. Khin Myo Chit (Department Head)",
       "Dr. Thandar Soe (Professor)",
-      "Dr. Moh Moh Khaing (Associate Professor)",
-      "Dr. Cho Me Me Maung (Lecturer)",
-      "Dr. Ei Ei Khaing (Lecturer)",
-      "Dr. Khin Myo Chit (Lecturer)"
+      "Dr. Cho Me Me Maung (Professor)",
+      "Daw Moh Moh Khaing (Associate Professor)",
+      "Daw Ei Ei Khaing (Associate Professor)",
+      "Daw Yamin Phyu (Tutor)"
     ],
     "projects": [
       {
@@ -128,7 +129,7 @@ export const MAJORS_DATA = [
           "Hlyan Bhone Htet",
           "Prism Makers Club"
         ],
-        "supervisor": "Dr. Ei Ei Khaing (Lecturer, Department of CEIT)",
+        "supervisor": "Daw Ei Ei Khaing (Associate Professor, Department of CEIT)",
         "tags": [
           "Social Network",
           "Web Application",
@@ -158,7 +159,7 @@ export const MAJORS_DATA = [
           "Hlyan Bhone Htet",
           "Prism Makers Club"
         ],
-        "supervisor": "Dr. Ei Ei Khaing (Lecturer, Department of CEIT)",
+        "supervisor": "Daw Ei Ei Khaing (Associate Professor, Department of CEIT)",
         "tags": [
           "React 18",
           "Vite",
@@ -185,7 +186,7 @@ export const MAJORS_DATA = [
         "team": [
           "MetricFit Team"
         ],
-        "supervisor": "Department of Computer Engineering and Information Technology (Dr. Moh Moh Khaing)",
+        "supervisor": "Department of Computer Engineering and Information Technology (Daw Moh Moh Khaing)",
         "tags": [
           "React Native",
           "Expo",
@@ -217,7 +218,7 @@ export const MAJORS_DATA = [
           "Hlyan Bhone Htet",
           "Prism Makers Club"
         ],
-        "supervisor": "Dr. Ei Ei Khaing (Lecturer, Department of CEIT)",
+        "supervisor": "Daw Ei Ei Khaing (Associate Professor, Department of CEIT)",
         "tags": [
           "ESP32",
           "Cybersecurity",
