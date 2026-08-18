@@ -118,16 +118,8 @@ export default function PamphletCard({
         </div>
       </div>
 
-      {/* Team and Action Bar */}
+      {/* Action Bar */}
       <div className="pamphlet-meta-footer">
-        {/* Supervisor hidden for now */}
-        {project.team && project.team.length > 0 && (
-          <div className="pamphlet-team">
-            <Users size={14} />
-            <span>{project.team.join('၊ ')}</span>
-          </div>
-        )}
-
         {/* Action Links */}
         <div className="pamphlet-actions-row">
           {pamphletData?.pdfUrl && (

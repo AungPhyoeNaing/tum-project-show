@@ -70,12 +70,7 @@ export default function ProjectCard({ project, majorCode, isBookmarked, onToggle
         </div>
       )}
 
-      <div className="project-footer">
-        <div className="project-team">
-          <Users size={14} />
-          <span>{project.team ? project.team.join(', ') : 'Student Team'}</span>
-        </div>
-
+      <div className="project-footer" style={{ justifyContent: 'flex-end' }}>
         <button 
           type="button" 
           className="project-view-btn"
