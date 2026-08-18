@@ -568,19 +568,6 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
         {/* Bottom Navigation & Page Switcher */}
         {pageCount > 1 && (
           <div className="lightbox-bottombar">
-            <button
-              type="button"
-              className="lightbox-nav-btn prev-btn"
-              onClick={() => {
-                setCurrentPageIndex(prev => Math.max(prev - 1, 0));
-                resetZoom();
-              }}
-              disabled={currentPageIndex === 0}
-            >
-              <ChevronLeft size={18} />
-              <span>ရှေ့စာမျက်နှာ</span>
-            </button>
-
             <div className="lightbox-page-tabs">
               {Array.from({ length: pageCount }).map((_, idx) => (
                 <button
@@ -596,19 +583,6 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
                 </button>
               ))}
             </div>
-
-            <button
-              type="button"
-              className="lightbox-nav-btn next-btn"
-              onClick={() => {
-                setCurrentPageIndex(prev => Math.min(prev + 1, pages.length - 1));
-                resetZoom();
-              }}
-              disabled={currentPageIndex === pages.length - 1}
-            >
-              <span>နောက်စာမျက်နှာ</span>
-              <ChevronRight size={18} />
-            </button>
           </div>
         )}
       </div>
