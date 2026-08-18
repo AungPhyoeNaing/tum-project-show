@@ -361,7 +361,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "civil-02",
-        "title": "Rainwater Harvesting for Domestic House",
+        "title": "Rainwater Harvesting",
         "titleMm": "လူနေအိမ်များအတွက် မိုးရေသိုလှောင်စုဆောင်း အသုံးချစနစ်",
         "tagline": "Sustainable water conservation system for a 2-storey RC residence with 10-year rainfall analysis.",
         "description": "မြေအောက်ရေ သုံးစွဲမှု လျှော့ချရန်နှင့် ရေရှားပါးချိန်တွင် အထောက်အကူပြုစေရန် ပျဉ်းမနားမြို့ရှိ (၃၈'-၆\" x ၃၈'-၆\") အမိုးလေးဖက်စောင်း နှစ်ထပ် RC အဆောက်အအုံကို အခြေခံ၍ ဒီဇိုင်းထုတ်ထားသော ပရောဂျက်ဖြစ်ပါသည်။ ပျဉ်းမနားဒေသ၏ ၁၀ နှစ်တာ ပျမ်းမျှမိုးရေချိန် (၄၇.၀၉ လက်မ) နှင့် မိသားစုဝင် ၅ ဦး၏ တစ်နေ့တာ ရေလိုအပ်ချက် (ဂါလန် ၄၀/ဦး) ကို တွက်ချက်ကာ ၁:၂၄ စကေး ပုံစံငယ်ဖြင့် လက်တွေ့ပြသထားပါသည်။",
@@ -386,7 +386,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "civil-03",
-        "title": "Movable Lift Bridge Across the River (Swing Bridge)",
+        "title": "Swing Bridge",
         "titleMm": "ကုန်းလမ်းနှင့် ရေလမ်းသွားလာမှု ထိန်းချုပ်ရေး ရေလယ်လှည့်တံတား ပုံစံငယ်",
         "tagline": "Physical scale model demonstrating automated swing bridge rotation and urban traffic coordination.",
         "description": "ရေလမ်းကြောင်းတွင် သင်္ဘောများ သွားလာနိုင်စေရန်နှင့် ကုန်းလမ်းယာဉ်ကြော မပြတ်တောက်စေရန် ရေပြင်ညီ ၉၀ ဒီဂရီ လှည့်ပတ်ပေးနိုင်သော ရေလယ်လှည့်တံတား (Swing Bridge) စနစ်ဖြစ်ပါသည်။ တံတားဖွင့်/ပိတ်ချိန်တွင် ကုန်းလမ်းယာဉ်ကြော ထိန်းချုပ်မီးပွိုင့်များနှင့် ဗဟိုထိန်းချုပ်ခန်း (Central Control Station) တို့ စနစ်တကျ ပေါင်းစပ်လှုပ်ရှားပုံကို စကေးမော်ဒယ်ဖြင့် သရုပ်ပြထားပါသည်။",
@@ -437,7 +437,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "civil-05",
-        "title": "Underpass and Overpass Highway and Railway",
+        "title": "Railway Underpass",
         "titleMm": "မီးရထားလမ်းနှင့် အဝေးပြေးယာဉ်ကြော ကူးလူးဆက်သွယ်မှု ဥမင်လှိုဏ်ခေါင်း စနစ်",
         "tagline": "Scale engineering model of a 2-lane reinforced concrete underpass designed under ACI 318-08 & AASHTO-2012.",
         "description": "ယာဉ်ကြောပိတ်ဆို့မှုနှင့် မီးရထားလမ်းဖြတ်သန်းမှု အန္တရာယ်များကို လျှော့ချရန်အတွက် (၃၀' x ၃၀') အရွယ်အစားရှိ Two-Lane One-Way Reinforced Concrete Underpass စနစ်ကို ဒီဇိုင်းရေးဆွဲထားခြင်း ဖြစ်ပါသည်။ ACI 318-08 နှင့် AASHTO-2012 (HS-25 အကြီးစားယာဉ် ဝန်အားတွက်ချက်မှု) စံနှုန်းများနှင့်အညီ တွက်ချက်တည်ဆောက်ထားပြီး ၁:၇၅ စကေး ပုံစံငယ်ဖြင့် ပြသထားပါသည်။",
@@ -1251,7 +1251,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "me-04",
-        "title": "Evaporative Air Cooler (Two-Stage Direct/Indirect)",
+        "title": "Evaporative Air Cooler",
         "titleMm": "စွမ်းအင်ချွေတာပြီး သဘာဝပတ်ဝန်းကျင်နှင့်ညီညွတ်သော ရေငွေ့ပျံ လေအေးပေးစက်",
         "tagline": "Two-stage evaporative cooler with flat-plate heat exchanger and wet cellulose pads (tested drop to 23.8°C).",
         "description": "ပူပြင်းခြောက်သွေ့သော ဒေသများအတွက် သမားရိုးကျ အဲကွန်းများထက် လျှပ်စစ်မီတာခ ၈၀% ကျော် သက်သာစေသော ရေငွေ့ပျံ လေအေးပေးစက် ဖြစ်ပါသည်။ Flat Plate Heat Exchanger ဖြင့် လေကို ပထမအဆင့် အပူလျှော့ချပေးပြီး၊ စိုစွတ်နေသော Cellulose Cooling Pad များမှတစ်ဆင့် ဒုတိယအဆင့် အေးမြစေကာ စမ်းသပ်ချက်အရ အပြင်လေ ၂၉°C မှ ၂၃.၈°C အထိ အပူချိန် လျှော့ချပေးနိုင်ပါသည်။",
@@ -1326,7 +1326,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "me-07",
-        "title": "Manual Screw Press Oil Expeller",
+        "title": "Screw Press Oil Expeller",
         "titleMm": "မီးမလို လက်လှည့် ဝက်အူသုံး ဆီကြိတ်စက်",
         "tagline": "Hand-flywheel worm screw press extracting up to 0.7 L of edible oil per batch without electricity.",
         "description": "ကျေးလက်ဒေသများနှင့် MSME လုပ်ငန်းငယ်များအတွက် လျှပ်စစ်မီးမလိုဘဲ မြေပဲ၊ နှမ်းနှင့် နေကြာစေ့များမှ ဆီကြိတ်ယူနိုင်သော လက်လှည့် ဝက်အူသုံး ဆီစက် ဖြစ်ပါသည်။ လက်ကိုင်ပါသော Flywheel ကို လှည့်ပေးခြင်းဖြင့် Spur Gear နှင့် Pinion မှတစ်ဆင့် Tapered Worm Screw Shaft ကို မောင်းနှင်ကာ ဆီစေ့များကို ဖိသိပ်ညှစ်ထုတ်ပြီး တစ်သုတ်လျှင် ဆီ ၀.၇ လီတာ အထိ ထုတ်လုပ်ပေးနိုင်ပါသည်။",
@@ -1377,7 +1377,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "me-09",
-        "title": "Solar Water Heating System (Thermosiphon)",
+        "title": "Solar Water Heating System",
         "titleMm": "သဘာဝအပူစီးဆင်းမှုသုံး နေရောင်ခြည်စွမ်းအင်သုံး ရေနွေးစနစ်",
         "tagline": "Natural buoyancy thermosiphon flat-plate collector heating water up to 75°C without electric pumps.",
         "description": "လျှပ်စစ်စွမ်းအင် အသုံးပြုစရာ မလိုဘဲ နေရောင်ခြည် အပူစွမ်းအင်ဖြင့် ရေနွေးထုတ်လုပ်ပေးနိုင်သော Flat-Plate Solar Collector စနစ် ဖြစ်ပါသည်။ မှန်ချပ်ဖြင့် ဖုံးအုပ်ထားသော ကြေးနီပိုက်လိုင်းများမှတစ်ဆင့် နေရောင်ခြည် အပူကို စုပ်ယူပြီး၊ သဘာဝ အပူစီးဆင်းမှုနိယာမ (Thermosiphon Convection) ဖြင့် ရေနွေးများကို အပေါ်ဘက်ရှိ သိုလှောင်ကန်အတွင်းသို့ အလိုအလျောက် ပို့ဆောင်ပေးကာ နေ့လယ် ၁ နာရီတွင် အပူချိန် ၇၅°C အထိ ရရှိပါသည်။",
@@ -1402,7 +1402,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "me-10",
-        "title": "Vertical Rotary Car Parking System",
+        "title": "Vertical Rotary Car Parking",
         "titleMm": "နေရာချွေတာနိုင်သော ဒေါင်လိုက် လှည့်ပတ် မော်တော်ယာဉ် ပါကင်စနစ်",
         "tagline": "High-density carousel parking mechanism utilizing a 40-RPM geared motor, heavy chain, and suspended slots.",
         "description": "မြို့ပြကြီးများတွင် ယာဉ်ရပ်နားရန် မြေနေရာ ရှားပါးမှုပြဿနာကို ဖြေရှင်းရန်အတွက် ဒေါင်လိုက် လှည့်ပတ်ကားပါကင် (Vertical Rotary Parking) စနစ်ကို ပုံစံထုတ် တည်ဆောက်ထားခြင်း ဖြစ်ပါသည်။ ကား ၂ စီးရပ်နိုင်သော မြေနေရာတွင် ကားအများအပြားကို ဒေါင်လိုက် အထက်သို့ ၄၀ RPM မော်တာ၊ Spur Gear နှင့် Chain ယန္တရားများဖြင့် အလှည့်ကျ လှည့်တင်/ချပေးနိုင်ပါသည်။",
@@ -1493,7 +1493,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "chem-02",
-        "title": "Preparation of Soybean Protein Isolate (SPI) from Defatted Soybean Meal",
+        "title": "Preparation of Soybean Protein Isolate from Soybean Meal",
         "titleMm": "ဆီထုတ်ပြီး ပဲဖတ်မှ ပဲပရိုတင်း (SPI) ထုတ်လုပ်ခြင်း",
         "tagline": "Alkaline extraction and acid precipitation process producing quality plant-based protein isolate.",
         "description": "ပဲဆီထုတ်လုပ်ပြီးနောက် ထွက်ရှိလာသော ဘေးထွက်ပစ္စည်းဖြစ်သည့် ပဲဖတ်မှ တန်ဖိုးမြင့် အပင်အခြေခံပရိုတင်း (Soybean Protein Isolate - SPI) ကို အယ်ကာလီထုတ်ယူခြင်းနှင့် အက်ဆစ်အနည်ချခြင်း နည်းလမ်းများဖြင့် သန့်စင်ထုတ်လုပ်ထားပါသည်။",
