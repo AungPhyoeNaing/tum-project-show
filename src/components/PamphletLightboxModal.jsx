@@ -434,11 +434,11 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
               >
                 <Page
                   pageNumber={currentPageIndex + 1}
-                  height={typeof window !== 'undefined' ? window.innerHeight * 0.8 : 800}
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
                   className="lightbox-pamphlet-pdf-page"
-                  devicePixelRatio={3}
+                  scale={typeof window !== 'undefined' && window.innerWidth < 768 ? 2.5 : 2}
+                  devicePixelRatio={Math.min(typeof window !== 'undefined' ? window.devicePixelRatio : 1, 2)}
                 />
               </Document>
             </div>
