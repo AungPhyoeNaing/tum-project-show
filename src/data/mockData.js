@@ -1516,7 +1516,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "chem-03",
-        "title": "Valorization of Watermelon Rind into Value-Added Fruit Leather",
+        "title": "Preparation of Fruit Leather from Watermelon Rind",
         "titleMm": "ဖရဲသီးခွံမှ တန်ဖိုးမြှင့် သစ်သီးယိုချပ် (Fruit Leather) ထုတ်လုပ်ခြင်း",
         "tagline": "Converting organic watermelon rind waste into functional, fiber-rich confectionery fruit leather.",
         "description": "စွန့်ပစ်ပစ္စည်းဖြစ်သော ဖရဲသီးအခွံမှ အာဟာရဓာတ်များနှင့် အမျှင်ဓာတ်များကို အသုံးချ၍ အရည်အသွေးမြင့် သစ်သီးယိုချပ် (Fruit Leather) အဖြစ် အဆင့်ဆင့် သန့်စင်ပြုပြင် ထုတ်လုပ်ထားသော အစားအသောက် အင်ဂျင်နီယာ သုတေသန ဖြစ်ပါသည်။",
