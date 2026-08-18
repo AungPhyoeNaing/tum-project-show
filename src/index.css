@@ -894,21 +894,21 @@ button {
   box-shadow: 0 2px 8px rgba(15, 52, 96, 0.2);
 }
 
-/* Global react-pdf responsive canvas sizing */
-.react-pdf__Document {
+/* Card Pamphlet Preview PDF sizing */
+.pamphlet-preview-container .react-pdf__Document {
   display: flex !important;
   justify-content: center !important;
   width: 100% !important;
   max-width: 100% !important;
 }
 
-.react-pdf__Page {
+.pamphlet-preview-container .react-pdf__Page {
   max-width: 100% !important;
   display: flex !important;
   justify-content: center !important;
 }
 
-.react-pdf__Page canvas {
+.pamphlet-preview-container .react-pdf__Page canvas {
   max-width: 100% !important;
   height: auto !important;
   object-fit: contain !important;
@@ -1239,15 +1239,19 @@ button {
 }
 
 .lightbox-pamphlet-pdf-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  max-width: none !important;
+  width: auto !important;
 }
 
 .lightbox-pamphlet-pdf-page canvas {
   border-radius: var(--radius-sm);
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.7);
   pointer-events: none;
+  max-width: none !important;
+  height: auto !important;
 }
 
 /* Gesture Hint Pill */
