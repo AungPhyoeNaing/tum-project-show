@@ -1,27 +1,54 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Bookmark } from 'lucide-react';
+import { Bookmark, Info } from 'lucide-react';
 
-export default function Header({ bookmarkCount = 0 }) {
+export default function Header({ bookmarkCount = 0, onOpenInfo, onOpenBookmarks, onResetToHome }) {
   return (
     <header className="navbar">
-      <Link to="/" className="nav-brand">
-        <div className="brand-badge">TUM</div>
+      <div className="nav-brand-wrapper" onClick={onResetToHome} style={{ cursor: 'pointer' }}>
+        <div className="brand-badge">
+          <span>TUM</span>
+        </div>
         <div className="brand-info">
-          <h1>Project Show 2026</h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <h1>Project Show 2026</h1>
+            <span className="live-pill">
+              <span className="live-dot" />
+              Live
+            </span>
+          </div>
           <p>Technological University Mandalay</p>
         </div>
-      </Link>
+      </div>
       
       <div className="header-actions">
-        <Link to="/bookmarks" className="icon-btn" title="Saved Projects">
-          <Bookmark size={18} />
+        {/* Info Modal Trigger Button */}
+        <button 
+          type="button"
+          className="header-action-btn info-btn"
+          onClick={onOpenInfo}
+          title="Event Information"
+          aria-label="Event Information"
+        >
+          <Info size={17} />
+          <span className="action-label">ပြပွဲ အချက်အလက်</span>
+        </button>
+
+        {/* Bookmarks Modal Trigger Button */}
+        <button 
+          type="button"
+          className="header-action-btn bookmark-btn-header" 
+          onClick={onOpenBookmarks}
+          title="Saved Projects"
+          aria-label="Saved Projects"
+        >
+          <Bookmark size={17} fill={bookmarkCount > 0 ? '#f59e0b' : 'none'} color={bookmarkCount > 0 ? '#f59e0b' : 'currentColor'} />
+          <span className="action-label">သိမ်းဆည်းမှု</span>
           {bookmarkCount > 0 && (
             <span className="badge-counter">
               {bookmarkCount}
             </span>
           )}
-        </Link>
+        </button>
       </div>
     </header>
   );

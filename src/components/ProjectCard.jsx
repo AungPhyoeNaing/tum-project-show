@@ -1,54 +1,94 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Bookmark, Users, ChevronRight } from 'lucide-react';
+import { Bookmark, Users, Award, ChevronRight } from 'lucide-react';
 
-export default function ProjectCard({ project, majorCode, isBookmarked, onToggleBookmark }) {
+export default function ProjectCard({ project, majorCode, isBookmarked, onToggleBookmark, onSelectProject }) {
+  const handleClick = (e) => {
+    // If user clicked bookmark button, don't open modal
+    if (e.target.closest('.bookmark-btn')) return;
+    if (onSelectProject) {
+      onSelectProject(project);
+    }
+  };
+
   return (
-    <div className="project-card">
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-        {majorCode ? (
-          <span className="project-booth-badge" style={{ background: 'var(--primary-light)', color: 'var(--primary)', borderColor: '#bfdbfe', fontWeight: 800 }}>
-            {majorCode} Department
-          </span>
-        ) : <div />}
+    <div 
+      className="project-card" 
+      onClick={handleClick} 
+      role="button" 
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (onSelectProject) onSelectProject(project);
+        }
+      }}
+      aria-label={`View details for ${project.title}`}
+    >
+      <div className="project-card-header">
+        <span className="project-major-badge">
+          {majorCode || project.majorCode} Department
+        </span>
 
         <button 
+          type="button"
           className={`bookmark-btn ${isBookmarked ? 'active' : ''}`}
           onClick={(e) => {
-            e.preventDefault();
             e.stopPropagation();
             onToggleBookmark(project.id);
           }}
-          title={isBookmarked ? "Remove Bookmark" : "Save Project"}
+          title={isBookmarked ? "စာရင်းမှ ဖျက်မည်" : "သိမ်းဆည်းမည်"}
           aria-label={isBookmarked ? "Remove Bookmark" : "Save Project"}
         >
-          <Bookmark size={17} fill={isBookmarked ? "#f59e0b" : "none"} />
+          <Bookmark size={17} fill={isBookmarked ? "#f59e0b" : "none"} color={isBookmarked ? "#f59e0b" : "currentColor"} />
         </button>
       </div>
 
-      <Link to={`/project/${project.id}`} style={{ display: 'block' }}>
+      <div className="project-card-titles">
         <h3 className="project-title">{project.title}</h3>
         <h4 className="project-title-mm">{project.titleMm}</h4>
+      </div>
 
-        <p className="project-desc">{project.description}</p>
+      <p className="project-desc">{project.description}</p>
 
+      {/* Tags */}
+      {project.tags && project.tags.length > 0 && (
         <div className="project-tags">
-          {project.tags.map((tag, idx) => (
+          {project.tags.slice(0, 5).map((tag, idx) => (
             <span key={idx} className="tag-pill">{tag}</span>
           ))}
+          {project.tags.length > 5 && (
+            <span className="tag-pill more-tags">+{project.tags.length - 5}</span>
+          )}
+        </div>
+      )}
+
+      {/* Supervisor Preview if available */}
+      {project.supervisor && (
+        <div className="project-supervisor-snippet">
+          <Award size={13} className="supervisor-icon" />
+          <span className="supervisor-label">ကြီးကြပ်သူ:</span>
+          <span className="supervisor-name">{project.supervisor}</span>
+        </div>
+      )}
+
+      <div className="project-footer">
+        <div className="project-team">
+          <Users size={14} />
+          <span>{project.team ? project.team.join(', ') : 'Student Team'}</span>
         </div>
 
-        <div className="project-footer">
-          <div className="project-team">
-            <Users size={14} />
-            <span>{project.team ? project.team.join(', ') : 'Student Team'}</span>
-          </div>
-
-          <span style={{ color: 'var(--primary)', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '2px' }}>
-            ကြည့်ရှုရန် <ChevronRight size={14} />
-          </span>
-        </div>
-      </Link>
+        <button 
+          type="button" 
+          className="project-view-btn"
+          onClick={(e) => {
+            e.stopPropagation();
+            if (onSelectProject) onSelectProject(project);
+          }}
+        >
+          <span>ကြည့်ရှုရန်</span>
+          <ChevronRight size={15} />
+        </button>
+      </div>
     </div>
   );
 }

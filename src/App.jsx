@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
-import FooterNav from './components/FooterNav';
 import Home from './pages/Home';
-import MajorsDirectory from './pages/MajorsDirectory';
 import Major from './pages/Major';
 import ProjectDetail from './pages/ProjectDetail';
-import Bookmarks from './pages/Bookmarks';
-import Info from './pages/Info';
 
 export default function App() {
   // Load bookmarks from localStorage
@@ -19,6 +15,9 @@ export default function App() {
       return [];
     }
   });
+
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const [isBookmarksOpen, setIsBookmarksOpen] = useState(false);
 
   // Sync bookmarks to localStorage
   useEffect(() => {
@@ -37,21 +36,61 @@ export default function App() {
     );
   };
 
+  const handleResetToHome = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <BrowserRouter>
-      <div className="app-container">
-        <Header bookmarkCount={bookmarks.length} />
+      <div className="app-container single-tab-app">
+        <Header 
+          bookmarkCount={bookmarks.length}
+          onOpenInfo={() => setIsInfoOpen(true)}
+          onOpenBookmarks={() => setIsBookmarksOpen(true)}
+          onResetToHome={handleResetToHome}
+        />
 
         <Routes>
-          <Route path="/" element={<Home bookmarks={bookmarks} onToggleBookmark={toggleBookmark} />} />
-          <Route path="/majors" element={<MajorsDirectory />} />
-          <Route path="/major/:majorId" element={<Major bookmarks={bookmarks} onToggleBookmark={toggleBookmark} />} />
-          <Route path="/project/:projectId" element={<ProjectDetail bookmarks={bookmarks} onToggleBookmark={toggleBookmark} />} />
-          <Route path="/bookmarks" element={<Bookmarks bookmarks={bookmarks} onToggleBookmark={toggleBookmark} />} />
-          <Route path="/info" element={<Info />} />
+          <Route 
+            path="/" 
+            element={
+              <Home 
+                bookmarks={bookmarks} 
+                onToggleBookmark={toggleBookmark}
+                isInfoOpen={isInfoOpen}
+                setIsInfoOpen={setIsInfoOpen}
+                isBookmarksOpen={isBookmarksOpen}
+                setIsBookmarksOpen={setIsBookmarksOpen}
+              />
+            } 
+          />
+          {/* Dedicated Major Page displaying all projects for that major */}
+          <Route 
+            path="/major/:majorId" 
+            element={
+              <Major 
+                bookmarks={bookmarks} 
+                onToggleBookmark={toggleBookmark}
+                isInfoOpen={isInfoOpen}
+                setIsInfoOpen={setIsInfoOpen}
+                isBookmarksOpen={isBookmarksOpen}
+                setIsBookmarksOpen={setIsBookmarksOpen}
+              />
+            } 
+          />
+          {/* Deep link / direct URL support for shared project links */}
+          <Route 
+            path="/project/:projectId" 
+            element={
+              <ProjectDetail 
+                bookmarks={bookmarks} 
+                onToggleBookmark={toggleBookmark} 
+              />
+            } 
+          />
+          {/* Fallback to homepage */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-
-        <FooterNav />
       </div>
     </BrowserRouter>
   );

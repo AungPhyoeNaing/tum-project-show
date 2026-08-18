@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { MAJORS_DATA } from '../data/mockData';
-import { ArrowLeft, Users, Award, Bookmark, Share2, Check, Sparkles, AlertTriangle } from 'lucide-react';
+import { CEIT_PAMPHLETS } from '../data/ceitPamphlets';
+import PamphletLightboxModal from '../components/PamphletLightboxModal';
+import { 
+  ArrowLeft, Users, Award, Bookmark, Share2, Check, 
+  Sparkles, AlertTriangle, FileText, Maximize2, Download 
+} from 'lucide-react';
 
 export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
   const { projectId } = useParams();
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
+  const [activePageIndex, setActivePageIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   // Find project across all majors
   let project = null;
@@ -37,6 +44,11 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
   }
 
   const isBookmarked = bookmarks.includes(project.id);
+  const isCeit = major.id === 'ceit';
+  const pamphletData = isCeit ? CEIT_PAMPHLETS[project.id] : null;
+  const pages = pamphletData?.pageImages || [];
+  const pageLabels = pamphletData?.pageLabels || [];
+  const currentImage = pages[activePageIndex] || '';
 
   const handleShare = () => {
     if (navigator.share) {
@@ -54,11 +66,11 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
 
   return (
     <div className="main-content" style={{ paddingTop: '16px' }}>
-      <button onClick={() => navigate(-1)} className="back-btn">
+      <button onClick={() => navigate(-1)} className="back-btn" style={{ marginBottom: '14px' }}>
         <ArrowLeft size={16} /> နောက်သို့ ပြန်သွားရန်
       </button>
 
-      <div className="detail-header">
+      <div className="detail-header" style={{ background: 'white', borderRadius: 'var(--radius-lg)', border: '1.5px solid var(--border-color)', padding: '20px', boxShadow: 'var(--shadow-card)' }}>
         {/* Department Badge and Action Bar */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '16px', paddingBottom: '12px', borderBottom: '1px solid var(--border-subtle)' }}>
           <Link to={`/major/${major.id}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'var(--primary-light)', padding: '5px 12px', borderRadius: 'var(--radius-full)', border: '1px solid #bfdbfe' }}>
@@ -97,6 +109,73 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
         <h3 style={{ fontSize: '0.96rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '14px', lineHeight: '1.6' }}>
           {project.titleMm}
         </h3>
+
+        {/* Pamphlet Viewer for CEIT */}
+        {isCeit && pamphletData && (
+          <div style={{ marginBottom: '20px' }}>
+            {/* Page Switcher */}
+            {pages.length > 1 && (
+              <div className="pamphlet-page-switcher">
+                {pages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    className={`pamphlet-switch-tab ${activePageIndex === idx ? 'active' : ''}`}
+                    onClick={() => setActivePageIndex(idx)}
+                  >
+                    <FileText size={13} />
+                    <span>{pageLabels[idx] || `Page ${idx + 1}`}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Pamphlet Preview Image */}
+            <div 
+              className="pamphlet-preview-container"
+              onClick={() => setIsLightboxOpen(true)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter') setIsLightboxOpen(true); }}
+            >
+              {currentImage && (
+                <img
+                  src={currentImage}
+                  alt={`${project.title} - Page ${activePageIndex + 1}`}
+                  className="pamphlet-preview-img"
+                />
+              )}
+              <div className="pamphlet-expand-overlay">
+                <div className="expand-pill">
+                  <Maximize2 size={15} />
+                  <span>နှိပ်၍ အကြီးချဲ့ကြည့်ရှုပါ (Tap to Zoom)</span>
+                </div>
+              </div>
+            </div>
+
+            {/* PDF Actions */}
+            <div className="pamphlet-actions-row" style={{ marginTop: '10px' }}>
+              <a
+                href={pamphletData.pdfUrl}
+                download
+                target="_blank"
+                rel="noreferrer"
+                className="pamphlet-pdf-link-btn"
+              >
+                <Download size={14} />
+                <span>မူရင်း PDF ဒေါင်းလုဒ် (PDF)</span>
+              </a>
+              <button
+                type="button"
+                className="pamphlet-fullscreen-btn"
+                onClick={() => setIsLightboxOpen(true)}
+              >
+                <Maximize2 size={14} />
+                <span>အပြည့်ကြည့်ရှုရန်</span>
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Description */}
         <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.65', marginBottom: '16px' }}>
@@ -138,10 +217,10 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
               <Sparkles size={16} color="var(--accent-gold)" />
               အဓိက အင်္ဂါရပ်များ (Key Features)
             </h4>
-            <ul className="feature-list">
+            <ul className="modal-feature-list">
               {project.features.map((feat, i) => (
-                <li key={i} className="feature-item">
-                  <Check size={16} className="feature-bullet" />
+                <li key={i} className="modal-feature-item">
+                  <Check size={16} className="modal-check-icon" />
                   <span>{feat}</span>
                 </li>
               ))}
@@ -149,6 +228,16 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
           </div>
         )}
       </div>
+
+      {/* Lightbox Modal */}
+      {isLightboxOpen && (
+        <PamphletLightboxModal
+          project={project}
+          pamphletData={pamphletData}
+          initialPageIndex={activePageIndex}
+          onClose={() => setIsLightboxOpen(false)}
+        />
+      )}
 
       {/* Floating Toast Message */}
       {copied && (
