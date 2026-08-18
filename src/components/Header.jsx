@@ -5,9 +5,6 @@ export default function Header({ bookmarkCount = 0, onOpenInfo, onOpenBookmarks,
   return (
     <header className="navbar">
       <div className="nav-brand-wrapper" onClick={onResetToHome} style={{ cursor: 'pointer' }}>
-        <div className="brand-badge">
-          <span>TUM</span>
-        </div>
         <div className="brand-info">
           <div className="brand-title-row">
             <h1>Project Show 2026</h1>
