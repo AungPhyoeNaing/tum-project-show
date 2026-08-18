@@ -26,6 +26,4 @@ dist-ssr
 # Raw project assets / pamphlets
 all-projects/
 new-projects-appended/
-*.pdf
-!public/pdfs/**
 
