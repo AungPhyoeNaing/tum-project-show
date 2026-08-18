@@ -11,6 +11,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
   const [isInteracting, setIsInteracting] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 800);
 
+  const overlayRef = useRef(null);
   const viewportRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -92,7 +93,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
 
   // Bulletproof block against iOS native pinch-to-zoom and bounce scrolling
   useEffect(() => {
-    const overlay = document.querySelector('.pamphlet-lightbox-overlay');
+    const overlay = overlayRef.current;
     if (!overlay) return;
 
     const blockNativeZoomAndScroll = (e) => {
@@ -340,7 +341,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
   };
 
   return (
-    <div className="pamphlet-lightbox-overlay" onClick={onClose}>
+    <div className="pamphlet-lightbox-overlay" ref={overlayRef} onClick={onClose}>
       <div 
         className="pamphlet-lightbox-container" 
         onClick={(e) => e.stopPropagation()}
