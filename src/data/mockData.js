@@ -1469,7 +1469,7 @@ export const MAJORS_DATA = [
     "projects": [
       {
         "id": "chem-01",
-        "title": "Extraction of Soluble Bioactive Compounds from Dried Tea Leaves",
+        "title": "Extraction of Bioactive Compounds from Dried Tea Leaves",
         "titleMm": "လက်ဖက်ခြောက်မှ ပျော်ဝင်နိုင်သော ဇီဝဒြပ်ပေါင်းများကို Soxhlet နည်းပညာဖြင့် ထုတ်ယူခြင်း",
         "tagline": "Soxhlet extraction of antioxidants, catechins, and polyphenols from Camellia sinensis.",
         "description": "သဘာဝလက်ဖက်ခြောက် (Camellia sinensis) မှ ကျန်းမာရေးအတွက် အလွန်အသုံးဝင်သော Polyphenols, Catechins, Flavonoids, EGCG နှင့် Amino Acids များကို Soxhlet Extraction နည်းပညာဖြင့် အောင်မြင်စွာ ထုတ်ယူသုတေသနပြုထားခြင်း ဖြစ်ပါသည်။",
