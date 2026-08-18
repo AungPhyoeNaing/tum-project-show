@@ -13,7 +13,6 @@ export default function Header({ bookmarkCount = 0, onOpenInfo, onOpenBookmarks,
               Live
             </span>
           </div>
-          <p className="brand-subtitle">Technological University Mandalay</p>
         </div>
       </div>
       
