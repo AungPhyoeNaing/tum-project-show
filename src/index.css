@@ -1195,6 +1195,9 @@ button {
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  transform: translateZ(0);
 }
 
 /* Gesture Hint Pill */

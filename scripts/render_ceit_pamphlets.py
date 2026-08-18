@@ -93,8 +93,8 @@ def render_pdfs():
         print(f"Saved combined PDF: {pdf_out_path} ({len(combined_doc)} pages)")
 
         page_images = []
-        # Render each page to image with 2.0x matrix (~144-200 DPI, perfect balance of high sharpness and fast mobile loading)
-        zoom = 2.0
+        # Render each page to image with 3.5x matrix (~250-300 DPI Ultra HD, crystal clear when zoomed up to 5x)
+        zoom = 3.5
         mat = fitz.Matrix(zoom, zoom)
 
         for page_idx in range(len(combined_doc)):
@@ -104,9 +104,9 @@ def render_pdfs():
             img_filename = f"{proj_id}-page-{page_idx + 1}.webp"
             img_path = os.path.join(out_img_dir, img_filename)
             
-            # Save as WebP via PIL for ultra-compact file size and high quality
+            # Save as WebP via PIL for compact file size and ultra high quality
             img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
-            img.save(img_path, format="WEBP", quality=90, method=6)
+            img.save(img_path, format="WEBP", quality=92, method=6)
             
             print(f"Rendered {proj_id} Page {page_idx + 1}: {pix.width}x{pix.height} -> {img_filename}")
             page_images.append(f"/pamphlets/ceit/{img_filename}")
