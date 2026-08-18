@@ -39,7 +39,9 @@ export default function MajorLogosList() {
             {/* Short Term Name & Tag */}
             <div className="logo-button-label">
               <span className="logo-short-code">{major.shortCode}</span>
-              <span className="logo-count-badge">{major.projects.length} Projects</span>
+              <span className="logo-count-badge">
+                {major.id === 'ep' ? 10 : major.projects.length} Projects
+              </span>
             </div>
           </Link>
         ))}

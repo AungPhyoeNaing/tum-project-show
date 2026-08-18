@@ -18,7 +18,10 @@ export default function Home({
 
   // Total projects count across all majors
   const totalProjectsCount = useMemo(() => {
-    return MAJORS_DATA.reduce((acc, m) => acc + (m.projects?.length || 0), 0);
+    return MAJORS_DATA.reduce((acc, m) => {
+      const count = m.id === 'ep' ? 10 : (m.projects?.length || 0);
+      return acc + count;
+    }, 0);
   }, []);
 
   return (

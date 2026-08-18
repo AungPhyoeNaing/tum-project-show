@@ -51,7 +51,7 @@ export default function MajorCard({ major }) {
         <p className="major-desc">{major.description}</p>
 
         <div className="major-card-footer">
-          <span>{major.projects?.length || 0} Projects</span>
+          <span>{major.id === 'ep' ? 10 : (major.projects?.length || 0)} Projects</span>
           <span style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
             ကြည့်ရန် <ChevronRight size={15} />
           </span>

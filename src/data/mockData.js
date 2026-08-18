@@ -335,7 +335,7 @@ export const MAJORS_DATA = [
     "projects": [
       {
         "id": "civil-01",
-        "title": "Modelling of TUM (Campus Infrastructure)",
+        "title": "Small Scale Model for TUM",
         "titleMm": "နည်းပညာတက္ကသိုလ်(မန္တလေး) ပရဝုဏ်နှင့် အဆောက်အအုံများ 3D ရုပ်ကြွနှင့် 2D CAD ပုံစံငယ်",
         "tagline": "Comprehensive 1:120 scaled physical 3D model and 2D CAD blueprint of TUM's 65.37-acre campus.",
         "description": "ပုသိမ်ကြီးမြို့နယ်ရှိ နည်းပညာတက္ကသိုလ် (မန္တလေး) ၏ ၆၅.၃၇ ဧက ကျယ်ဝန်းသော ပရဝုဏ်တစ်ခုလုံးကို ၁:၁၂၀ စကေးဖြင့် လက်တွေ့ဖန်တီးထားသော မြို့ပြအင်ဂျင်နီယာ Capstone ပရောဂျက်ဖြစ်ပါသည်။ ပင်မဆောင်၊ စာသင်ဆောင်များ၊ အလုပ်ရုံများ၊ အဆောင်များ၊ အားကစားရုံနှင့် ဌာနပေါင်းစုံ (စုစုပေါင်း အဆောက်အအုံ ၅၃ လုံးကျော်) ကို AutoCAD/SketchUp ဖြင့် တိုင်းတာရေးဆွဲ၍ PVC နှင့် မှန်များဖြင့် တိကျစွာ ပုံဖော်ထားပါသည်။",
@@ -361,7 +361,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "civil-02",
-        "title": "Rainwater Harvesting",
+        "title": "Rain Water Harvesting for Domestic House",
         "titleMm": "လူနေအိမ်များအတွက် မိုးရေသိုလှောင်စုဆောင်း အသုံးချစနစ်",
         "tagline": "Sustainable water conservation system for a 2-storey RC residence with 10-year rainfall analysis.",
         "description": "မြေအောက်ရေ သုံးစွဲမှု လျှော့ချရန်နှင့် ရေရှားပါးချိန်တွင် အထောက်အကူပြုစေရန် ပျဉ်းမနားမြို့ရှိ (၃၈'-၆\" x ၃၈'-၆\") အမိုးလေးဖက်စောင်း နှစ်ထပ် RC အဆောက်အအုံကို အခြေခံ၍ ဒီဇိုင်းထုတ်ထားသော ပရောဂျက်ဖြစ်ပါသည်။ ပျဉ်းမနားဒေသ၏ ၁၀ နှစ်တာ ပျမ်းမျှမိုးရေချိန် (၄၇.၀၉ လက်မ) နှင့် မိသားစုဝင် ၅ ဦး၏ တစ်နေ့တာ ရေလိုအပ်ချက် (ဂါလန် ၄၀/ဦး) ကို တွက်ချက်ကာ ၁:၂၄ စကေး ပုံစံငယ်ဖြင့် လက်တွေ့ပြသထားပါသည်။",
@@ -386,7 +386,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "civil-03",
-        "title": "Swing Bridge",
+        "title": "Moveable Lift Bridge across the River",
         "titleMm": "ကုန်းလမ်းနှင့် ရေလမ်းသွားလာမှု ထိန်းချုပ်ရေး ရေလယ်လှည့်တံတား ပုံစံငယ်",
         "tagline": "Physical scale model demonstrating automated swing bridge rotation and urban traffic coordination.",
         "description": "ရေလမ်းကြောင်းတွင် သင်္ဘောများ သွားလာနိုင်စေရန်နှင့် ကုန်းလမ်းယာဉ်ကြော မပြတ်တောက်စေရန် ရေပြင်ညီ ၉၀ ဒီဂရီ လှည့်ပတ်ပေးနိုင်သော ရေလယ်လှည့်တံတား (Swing Bridge) စနစ်ဖြစ်ပါသည်။ တံတားဖွင့်/ပိတ်ချိန်တွင် ကုန်းလမ်းယာဉ်ကြော ထိန်းချုပ်မီးပွိုင့်များနှင့် ဗဟိုထိန်းချုပ်ခန်း (Central Control Station) တို့ စနစ်တကျ ပေါင်းစပ်လှုပ်ရှားပုံကို စကေးမော်ဒယ်ဖြင့် သရုပ်ပြထားပါသည်။",
@@ -437,7 +437,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "civil-05",
-        "title": "Railway Underpass",
+        "title": "Underpass and Overpass Highway and Railway",
         "titleMm": "မီးရထားလမ်းနှင့် အဝေးပြေးယာဉ်ကြော ကူးလူးဆက်သွယ်မှု ဥမင်လှိုဏ်ခေါင်း စနစ်",
         "tagline": "Scale engineering model of a 2-lane reinforced concrete underpass designed under ACI 318-08 & AASHTO-2012.",
         "description": "ယာဉ်ကြောပိတ်ဆို့မှုနှင့် မီးရထားလမ်းဖြတ်သန်းမှု အန္တရာယ်များကို လျှော့ချရန်အတွက် (၃၀' x ၃၀') အရွယ်အစားရှိ Two-Lane One-Way Reinforced Concrete Underpass စနစ်ကို ဒီဇိုင်းရေးဆွဲထားခြင်း ဖြစ်ပါသည်။ ACI 318-08 နှင့် AASHTO-2012 (HS-25 အကြီးစားယာဉ် ဝန်အားတွက်ချက်မှု) စံနှုန်းများနှင့်အညီ တွက်ချက်တည်ဆောက်ထားပြီး ၁:၇၅ စကေး ပုံစံငယ်ဖြင့် ပြသထားပါသည်။",
@@ -463,7 +463,7 @@ export const MAJORS_DATA = [
       },
       {
         "id": "civil-06",
-        "title": "Design of a Two-Storeyed Timber Building",
+        "title": "Detail Model of Timber Structure",
         "titleMm": "နှစ်ထပ် သစ်သားအဆောက်အအုံ တည်ဆောက်မှုဆိုင်ရာ ဖွဲ့စည်းပုံ ဒီဇိုင်းနှင့် ပုံစံငယ်",
         "tagline": "IBC-2006 compliant timber structural design highlighting Myanmar hardwood properties and member sizing.",
         "description": "သဘာဝပတ်ဝန်းကျင်နှင့် လိုက်လျောညီထွေရှိပြီး ခိုင်ခံ့လှပသော သစ်သားအဆောက်အအုံ တည်ဆောက်မှုကို သုတေသနပြုထားခြင်း ဖြစ်ပါသည်။ IBC-2006 စံနှုန်းအရ အမိုးထုပ်တန်း (Purlin 3\"x3\", Rafter 3\"x6\")၊ ကြမ်းခင်းယက်မ (Joist 3\"x6\")၊ ထောက်တန်း (Beam 6\"x8\") နှင့် တိုင် (Column 5\"x5\") တို့ကို စနစ်တကျ တွက်ချက်ကာ မြန်မာ့ကျွန်း၊ ပျဉ်းကတိုး၊ ပိတောက်နှင့် ကညင်သစ်တို့၏ ဂုဏ်သတ္တိများကို စကေးမော်ဒယ်ဖြင့် ပြသထားပါသည်။",
@@ -688,267 +688,54 @@ export const MAJORS_DATA = [
       "U Than Toe Aung (Demonstrator)",
       "Dr. Phyo Thet Su (Demonstrator)"
     ],
-    "projects": [
+        "projects": [
       {
         "id": "ep-01",
-        "title": "Hybrid Solar Power System for Domestic Load and Street Lighting",
-        "titleMm": "အိမ်သုံးလျှပ်စစ်ဝန်အားနှင့် လမ်းမီးအလင်းရောင်အတွက် နေရောင်ခြည်စွမ်းအင်သုံး လျှပ်စစ်ဓာတ်အားပေးစနစ်",
-        "tagline": "Hybrid renewable energy system combining solar PV generation, 12V battery storage, and 240V grid fallback.",
-        "description": "အိမ်သုံး လျှပ်စစ်ဝန်အားများနှင့် လမ်းမီးအလင်းရောင်များအတွက် ယုံကြည်စိတ်ချရသော လျှပ်စစ်ဓာတ်အား ထောက်ပံ့ပေးနိုင်ရန် Hybrid Solar Power System ကို ဒီဇိုင်းရေးဆွဲ တည်ဆောက်ထားခြင်း ဖြစ်ပါသည်။ နေရောင်ခြည် စွမ်းအင်နှင့် ဘက်ထရီ စွမ်းအင်သိုလှောင်မှုစနစ်ကို ပေါင်းစပ်ထားပြီး ညဘက်တွင် Light Sensor ဖြင့် လမ်းမီးများကို အလိုအလျောက် ဖွင့်ပေးပါသည်။",
+        "title": "Electrical Power Projects",
+        "titleMm": "လျှပ်စစ်စွမ်းအား အင်ဂျင်နီယာဌာန ပရောဂျက်များ",
+        "tagline": "Hybrid Solar System, 400V Distribution Line, PLC Drink Filling, PLC Hand-Washing, and Power System Models.",
+        "description": "ဤအုပ်စုတွင် လျှပ်စစ်စွမ်းအားဌာန၏ ပရောဂျက် ၅ ခု ပါဝင်သည်။ အိမ်သုံးလျှပ်စစ်ဝန်အားနှင့် လမ်းမီးအလင်းရောင်အတွက် နေရောင်ခြည်စွမ်းအင်သုံး လျှပ်စစ်ဓာတ်အားပေးစနစ်၊ ၄၀၀ ဗို့ ဓာတ်အားဖြန့်ဖြူးရေးလိုင်း၊ PLC ကို အသုံးပြုထားသော အလိုအလျောက် သောက်ရေသန့်ဗူးဖြည့်စနစ်၊ ၄ ဆင့် အလိုအလျောက် လက်ဆေးစက် နှင့် လျှပ်စစ်ဓာတ်အားစနစ်၏ ဒီဇိုင်းနှင့် တည်ဆောက်မှုပုံစံငယ်တို့ ပါဝင်ပါသည်။",
         "team": [
-          "Maung Hein Linn (VEP-39)",
-          "Ma Sandar Win (VEP-20)"
+          "Electrical Power Engineering Group 1 Teams"
         ],
-        "supervisor": "Dr. Aye Aye Myat (Lecturer, Department of EP)",
+        "supervisor": "Department of Electrical Power Engineering",
         "tags": [
           "Hybrid Solar",
-          "Renewable Energy",
-          "Battery Storage",
-          "MPPT Controller",
-          "Smart Streetlight"
+          "Power Distribution",
+          "PLC Automation",
+          "Power Systems"
         ],
         "features": [
-          "Dual Power Source: 214V Solar Array and 240V AC Grid auto-switching",
-          "12V deep cycle battery energy storage bank with smart charge controller and pure sine wave inverter",
-          "Automated dusk-to-dawn street lighting control via photocell light sensor",
-          "Circuit breaker overcurrent protection and high power efficiency",
-          "System dimension: 4' Length x 2.5' Width"
+          "Hybrid Solar Power System for Domestic Load and Street Lighting",
+          "Design and Implementation of 400V Distribution Line with Smart Street Light Control System",
+          "Automatic Drink Filling Machine Using Programmable Logic Controller (PLC)",
+          "PLC-Based Automatic Hand-Washing Machine",
+          "Design and Construction of Power System: Generation, Transmission and Distribution"
         ]
       },
       {
         "id": "ep-02",
-        "title": "Design and Construction of a Power System: Generation, Transmission and Distribution",
-        "titleMm": "လျှပ်စစ်ဓာတ်အားစနစ်၏ ဒီဇိုင်းနှင့် တည်ဆောက်မှု — ဓာတ်အား ထုတ်လုပ်ခြင်းမှ ပို့လွှတ်ခြင်းနှင့် ဖြန့်ဖြူးခြင်း",
-        "tagline": "Physical scale educational prototype mapping hydro generation, step-up transmission, substation, and distribution.",
-        "description": "ရေအားလျှပ်စစ် ဓာတ်အားပေးစနစ်၏ အဆင့်ဆင့် လုပ်ဆောင်ပုံကို Physical Prototype Model ဖြင့် သရုပ်ပြထားခြင်း ဖြစ်ပါသည်။ ရေအားမှ လျှပ်စစ်ထုတ်လုပ်ခြင်း၊ Step-up Transformer ဖြင့် ဗို့အားမြှင့်၍ Transmission လိုင်းဖြင့် ပို့လွှတ်ခြင်း၊ Substation တွင် ဗို့အားလျှော့ချခြင်းနှင့် သုံးစွဲသူများထံ 400V/230V Distribution စနစ်ဖြင့် ဖြန့်ဖြူးပေးပုံများကို LED Circuit များဖြင့် မျက်ဝါးထင်ထင် ပြသထားပါသည်။",
+        "title": "Electrical Power Projects",
+        "titleMm": "လျှပ်စစ်စွမ်းအား အင်ဂျင်နီယာဌာန ပရောဂျက်များ",
+        "tagline": "Hydro Power, Automatic Door, Solar Tracking, Intelligent Traffic Light, and Floor Cleaning Robot.",
+        "description": "ဤအုပ်စုတွင် လျှပ်စစ်စွမ်းအားဌာန၏ ပရောဂျက် ၅ ခု ပါဝင်သည်။ ကျေးလက်ဒေသများအတွက် အသေးစား ရေအားလျှပ်စစ် ထုတ်လုပ်ခြင်းစနစ်၊ PLC အသုံးပြုထားသော အလိုအလျောက် တံခါးအဖွင့်/အပိတ်စနစ်၊ PLC အသုံးပြုထားသော အလိုအလျောက် ဆိုလာသန့်ရှင်းရေးနှင့် ခြေရာခံစနစ်၊ ဉာဏ်ရည်မြင့် ရွေ့လျား မီးပွိုင့်စနစ် နှင့် အလိုအလျောက် ကြမ်းပြင်သန့်ရှင်းရေးစက်ရုပ် တို့ ပါဝင်ပါသည်။",
         "team": [
-          "Ma Thazin Hlaing Myo (VEP-2)",
-          "Maung Zayar Htin (VEP-26)"
-        ],
-        "supervisor": "Dr. Aye Aye Myat (Lecturer, Department of EP)",
-        "tags": [
-          "Power Systems",
-          "Hydro Generation",
-          "High Voltage Transmission",
-          "Substation",
-          "3D Printing"
-        ],
-        "features": [
-          "Complete end-to-end power grid pipeline model (Hydro Plant -> Step-Up -> Transmission Grid -> Substation -> Load)",
-          "Detailed 3D printed transmission towers, power transformers, switchyards, and utility distribution poles",
-          "Dynamic LED lighting circuit illustrating actual direction of current flow through the network",
-          "Parallel 9V battery DC power bus driving the entire demonstration circuit",
-          "Model footprint: 5' Length x 4' Width"
-        ]
-      },
-      {
-        "id": "ep-03",
-        "title": "Automatic Door Control Using PLC",
-        "titleMm": "ပရိုဂရမ်းမေးဘယ်လ်လောဂျစ် ကွန်ထရိုလာ (PLC) ကို အသုံးပြုထားသော အလိုအလျောက် တံခါးအဖွင့်/အပိတ်စနစ်",
-        "tagline": "Industrial PLC-based automatic sliding door system for touchless hospital and department entrances.",
-        "description": "ဆေးရုံကြီးများ၊ ခေတ်မီစတိုးဆိုင်များနှင့် အဆောက်အအုံများတွင် တစ်ကိုယ်ရေ သန့်ရှင်းရေးနှင့် ရောဂါပိုးမွှား ကူးစက်မှု ကာကွယ်ရန်အတွက် PLC Controller၊ အာရုံခံ ဆင်ဆာများနှင့် Limit Switch များကို အသုံးပြု၍ လူများ အနီးသို့ ရောက်ရှိလာပါက အလိုအလျောက် ပွင့်ပြီး ပြန်ပိတ်ပေးသည့် လျှောတံခါး စနစ်ဖြစ်ပါသည်။",
-        "team": [
-          "U Than Toe Aung (Demonstrator)",
-          "Daw Thin Su Hlaing"
+          "Electrical Power Engineering Group 2 Teams"
         ],
         "supervisor": "Department of Electrical Power Engineering",
-        "tags": [
-          "PLC Control",
-          "Industrial Automation",
-          "Limit Switch",
-          "Sensors",
-          "DC Gear Motor"
-        ],
-        "features": [
-          "PLC logic controller unit programmed for reliable obstacle sensing and timing delays",
-          "Optical proximity sensors detecting approaching persons or wheelchair users touch-free",
-          "24V DC geared motor with limit switch endpoints for smooth open/close cycling",
-          "Enhances public hygiene by eliminating physical door contact in crowded environments",
-          "Dimensions: 3' Length x 2' Width (220V AC Power)"
-        ]
-      },
-      {
-        "id": "ep-04",
-        "title": "Hydropower Generation System (Micro-Hydro)",
-        "titleMm": "ကျေးလက်ဒေသများအတွက် အသေးစား ရေအားလျှပ်စစ် ထုတ်လုပ်ခြင်းစနစ်",
-        "tagline": "Micro-hydro generation prototype with penstock, pitchback waterwheel, and DC dynamo generator.",
-        "description": "အိမ်ထောင်စုများ၏ လျှပ်စစ်လိုအပ်ချက်ကို ဖြည့်ဆည်းပေးနိုင်ရန် ရေစီးကြောင်း၏ အင်အားကို အသုံးပြု၍ လျှပ်စစ်ဓာတ်အား ထုတ်လုပ်ပေးသော အသေးစား ရေအားလျှပ်စစ်စနစ် (Micro-Hydro System) ဖြစ်ပါသည်။ ရေအားစွမ်းအင်ဖြင့် ရေလည်ဘီး (Pitchback Waterwheel) ကို လည်ပတ်စေပြီး Generator မှတစ်ဆင့် စက်မှုစွမ်းအင်ကို လျှပ်စစ်စွမ်းအင်အဖြစ် ပြောင်းလဲပေးပါသည်။",
-        "team": [
-          "Ma Ezar Phyo Phyo (V.EP-2 LSO)",
-          "Ma Shoon Lae Tun (V.EP-1 LSO)"
-        ],
-        "supervisor": "Dr. Myat Myat Moe (Lecturer), Dr. Phyo Thet Su (Demonstrator)",
         "tags": [
           "Micro-Hydro",
-          "Waterwheel",
-          "Renewable Energy",
-          "DC Generator",
-          "Off-Grid Power"
-        ],
-        "features": [
-          "Engineered Penstock nozzle and Pitchback waterwheel optimizing water kinetic impact",
-          "DC Dynamo generator converting rotational torque into electrical wattage",
-          "Float switch level sensing and automatic pump circulation loop",
-          "Eco-friendly zero-emission power solution suitable for hilly rural streams",
-          "System dimension: 3' Length x 2' Width x 1.5' Height"
-        ]
-      },
-      {
-        "id": "ep-05",
-        "title": "Design and Implementation of a 400V Distribution Line with Smart Street Light Control System",
-        "titleMm": "စမတ်လမ်းမီး ထိန်းချုပ်စနစ်ပါဝင်သော ၄၀၀ ဗို့ ဓာတ်အားဖြန့်ဖြူးရေးလိုင်း ဒီဇိုင်းရေးဆွဲခြင်းနှင့် တည်ဆောက်တပ်ဆင်ခြင်း",
-        "tagline": "Standardized 400V/230V low-voltage power distribution line integrated with automated photocell street lighting.",
-        "description": "အင်ဂျင်နီယာ စံချိန်စံညွှန်းများနှင့်အညီ တည်ဆောက်ထားသော ၄၀၀ ဗို့ ဗို့အားနိမ့် ဓာတ်အားဖြန့်ဖြူးရေးလိုင်း စနစ်ဖြစ်ပါသည်။ သံတိုင်များ၊ ACSR ကြိုးများ၊ Insulator များနှင့် ဖြန့်ဖြူးရေးသေတ္တာများ တပ်ဆင်ထားပြီး၊ Photocell Light Sensor များဖြင့် နေ့/ည အလင်းအမှောင်ပေါ်မူတည်၍ လမ်းမီးများကို အလိုအလျောက် အဖွင့်/အပိတ် ပြုလုပ်ကာ လျှပ်စစ်စွမ်းအင် ဆုံးရှုံးမှုကို လျှော့ချပေးပါသည်။",
-        "team": [
-          "U Lwin Maung Maung (Demonstrator, EP)"
-        ],
-        "supervisor": "Department of Electrical Power Engineering",
-        "tags": [
-          "400V Distribution",
-          "ACSR Cables",
-          "Power Systems",
-          "Smart Streetlight",
-          "Photocell",
-          "Magnetic Contactor"
-        ],
-        "features": [
-          "Standardized 400V three-phase / 230V single-phase low-voltage distribution architecture",
-          "Steel utility poles, ACSR conductors, pin/shackle insulators, and Miniature Circuit Breakers (MCB)",
-          "Automated ambient photocell sensors paired with magnetic contactors for street light switching",
-          "Eliminates daylight energy wastage and manual operational overhead",
-          "Demonstration model size: 20' Length x 4' Width"
-        ]
-      },
-      {
-        "id": "ep-06",
-        "title": "Automatic Drink Filling Machine Using PLC",
-        "titleMm": "ပရိုဂရမ်မေဘယ်လ် လောဂျစ် ကွန်ထရိုလာ (PLC) ကို အသုံးပြုထားသော အလိုအလျောက် သောက်ရေသန့်/အဖျော်ယမကာ ဗူးဖြည့်စနစ်",
-        "tagline": "Precision beverage bottling automation prototype using Mitsubishi PLC ladder logic and solenoid valves.",
-        "description": "စက်မှုကုန်ထုတ်လုပ်ငန်းများတွင် သောက်ရေသန့်နှင့် အဖျော်ယမကာ ဗူးများကို တိကျမြန်ဆန်စွာ ဖြည့်သွင်းနိုင်ရန် PLC Controller (GX Works) ဖြင့် တည်ဆောက်ထားသော စက်ဖြစ်ပါသည်။ Proximity Sensor မှ ပုလင်းရောက်ရှိမှုကို သိရှိပါက Solenoid Valve နှင့် Pump တို့ကို အလိုအလျောက် ထိန်းချုပ်ကာ သတ်မှတ်အရည်ပမာဏ ပြည့်ပါက အလိုအလျောက် ရပ်တန့်ပေးပါသည်။",
-        "team": [
-          "U Lwin Maung Maung (Demonstrator, EP)"
-        ],
-        "supervisor": "Department of Electrical Power Engineering",
-        "tags": [
-          "Mitsubishi PLC",
-          "GX Works",
-          "Industrial Automation",
-          "Solenoid Valve",
-          "Proximity Sensor",
-          "Bottling"
-        ],
-        "features": [
-          "Mitsubishi PLC Ladder Logic sequence programmed via GX Works",
-          "Proximity sensor array ensuring zero spillage and container alignment detection",
-          "Accurate volumetric filling control utilizing timed DC pump and solenoid valves",
-          "Drastically reduces packaging time, product waste, and manual labor costs",
-          "Model dimensions: 4' x 4' (Requires Power Supply)"
-        ]
-      },
-      {
-        "id": "ep-07",
-        "title": "Automatic Hand-Washing Machine Using PLC",
-        "titleMm": "ပရိုဂရမ်မေဘယ်လ် လောဂျစ် ကွန်ထရိုလာ (PLC) ကို အသုံးပြုထားသော ၄ ဆင့် အလိုအလျောက် လက်ဆေးစက်",
-        "tagline": "Hygienic 4-stage touchless station: Soap Dispense -> Water Wash -> Hot Air Dry -> Gel Dispense with battery backup.",
-        "description": "အများသုံးနေရာများတွင် တစ်ကိုယ်ရေ သန့်ရှင်းရေးအတွက် ထိတွေ့မှုမလိုဘဲ အလိုအလျောက် လက်ဆေးနိုင်ရန် တည်ဆောက်ထားသော PLC စနစ်ဖြစ်ပါသည်။ Photoelectric Sensor ဖြင့် လက်ရောက်ရှိမှုကို သိရှိကာ ဆပ်ပြာရည်ဖြန်းခြင်း၊ သန့်ရှင်းသောရေဖြင့် ဆေးကြောခြင်း၊ လေပူဖြင့် အခြောက်ခံခြင်းနှင့် လက်သန့်ဂျယ်ဖြန်းခြင်း အဆင့် (၄) ဆင့်ကို အလိုအလျောက် စနစ်တကျ ပြုလုပ်ပေးပြီး မီးပျက်ပါက ဘက်ထရီဖြင့် ဆက်လက် အလုပ်လုပ်နိုင်ပါသည်။",
-        "team": [
-          "Maung Kyaw Zin",
-          "Ma Myint Myat Moe"
-        ],
-        "supervisor": "Dr. Kyu Kyu Nyunt (Associate Professor, Department of EP)",
-        "tags": [
           "PLC Automation",
-          "GX Works2",
-          "Touchless Hygiene",
-          "Sequential Timer Control",
-          "Battery Backup"
-        ],
-        "features": [
-          "Seamless 4-stage automated cycle: Soapy Water -> Clean Water Wash -> 220V Hand Dryer -> Hand Gel",
-          "Mutual interlocking and precision timer logic preventing stage conflicts",
-          "Photoelectric infrared sensors ensuring completely contact-free operation",
-          "Automatic power-supply changeover system providing battery backup during AC mains failure",
-          "Station dimensions: 2.4' x 1.5' x 4.5' Height"
-        ]
-      },
-      {
-        "id": "ep-08",
-        "title": "Intelligent Mobile Traffic Light System",
-        "titleMm": "ဉာဏ်ရည်မြင့် ရွေ့လျား မီးပွိုင့်စနစ်",
-        "tagline": "Portable 12-ft solar-powered traffic light mast with PIC16F887 microcontroller and battery storage.",
-        "description": "လမ်းပြင်နေသော နေရာများနှင့် ယာယီ ယာဉ်ကြောပိတ်ဆို့မှုများကို ထိန်းညှိပေးနိုင်ရန် လိုအပ်သည့်နေရာသို့ အလွယ်တကူ သယ်ယူရွှေ့ပြောင်း တပ်ဆင်နိုင်သော စမတ်မီးပွိုင့်စနစ် ဖြစ်ပါသည်။ PIC16F887 Microcontroller ဖြင့် မီးပွိုင့်စနစ်ကို ထိန်းချုပ်ထားပြီး၊ မီးပျက်နေချိန်တွင်လည်း မပြတ်တောက်စေရန် 18V Solar PV Panel နှင့် Battery Bank တို့ကို ထည့်သွင်း အသုံးပြုထားပါသည်။",
-        "team": [
-          "Mg Thet Myat Thu (Staff Officer, MCDC)",
-          "Mg Aung Myint Tun (Junior Engineer 3, MCDC)",
-          "Ma Hnin Hnin Soe (Department Officer, Agricultural Mechanization Dept)"
-        ],
-        "supervisor": "Department of Electrical Power Engineering",
-        "tags": [
-          "PIC Microcontroller",
-          "PIC16F887",
-          "Solar PV",
-          "Traffic System",
-          "Portable Infrastructure"
-        ],
-        "features": [
-          "PIC16F887 microcontroller driving optimized multi-lane traffic timing algorithms",
-          "Self-sustaining 18V Solar Photovoltaic panel and battery bank for 24/7 standalone operation",
-          "12-foot tall portable heavy-duty base stand easily relocatable to municipal work zones",
-          "Reduces human traffic warden requirement while eliminating bottleneck delays",
-          "Base dimension: 3.5' x 2.5' x 12' Height"
-        ]
-      },
-      {
-        "id": "ep-09",
-        "title": "Automatic Solar Panel Dust Cleaning and Tracking System Using PLC",
-        "titleMm": "PLC အသုံးပြုထားသော အလိုအလျောက် ဆိုလာသန့်ရှင်းရေးနှင့် နေသွားရာဘက်သို့ ခြေရာခံ ရွေ့လျားသောစနစ်",
-        "tagline": "Dual-axis PLC system combining motorized wiper dust cleaning with single-axis sun tracking (25-40% yield boost).",
-        "description": "ဆိုလာပြားများ၏ လျှပ်စစ်ထုတ်လုပ်မှု စွမ်းအားကို အမြင့်ဆုံး ရရှိစေရန်အတွက် PLC Controller နှင့် Light Sensor များကို အသုံးပြု၍ နေရောင်ခြည် လာရာဘက်သို့ ဆိုလာပြားကို အလိုအလျောက် ချိန်ညှိပေးခြင်း (Sun Tracking) နှင့် ဖုန်မှုန့်များကို စက်တပ်ဆင်ထားသော စုတ်တံများဖြင့် အလိုအလျောက် သန့်ရှင်းပေးခြင်း (Dust Cleaning) တို့ကို ပေါင်းစပ်ထားပြီး စွမ်းအင်ထုတ်လုပ်မှုကို ၂၅% မှ ၄၀% အထိ တိုးတက်စေပါသည်။",
-        "team": [
-          "Dr. Kyu Kyu Nyunt Team"
-        ],
-        "supervisor": "Dr. Kyu Kyu Nyunt (Associate Professor, Department of EP)",
-        "tags": [
-          "PLC Control",
           "Solar Tracking",
-          "Dust Cleaning",
-          "GX Works",
-          "Linear Actuator",
-          "Energy Efficiency"
+          "Smart Traffic Light",
+          "Robotics"
         ],
         "features": [
-          "Differential light sensors tracking the sun's trajectory across the sky throughout the day",
-          "24V Linear Actuator rotating panel orientation toward peak solar irradiance",
-          "Automated 12V pump and mechanical brush wipers washing away efficiency-reducing dust layers",
-          "Increases solar panel power output by 25% to 40% compared to static uncleaned modules",
-          "Prototype dimensions: 5' Length x 3' Width"
-        ]
-      },
-      {
-        "id": "ep-10",
-        "title": "Automatic Floor Cleaning System",
-        "titleMm": "အလိုအလျောက် ကြမ်းပြင်သန့်ရှင်းရေးစနစ် (Smart Vacuum & Floor Cleaning Robot)",
-        "tagline": "Circular autonomous cleaning robot with ultrasonic obstacle avoidance, disc scrubber, and 12.6V Li-ion pack.",
-        "description": "လူအင်အား စိုက်ထုတ်စရာ မလိုဘဲ အိမ်နှင့် ရုံးခန်း ကြမ်းပြင်ပေါ်ရှိ ဖုန်နှင့် အမှိုက်များကို အလိုအလျောက် လှည်းကျင်းသန့်ရှင်းပေးနိုင်သော စမတ်စက်ရုပ် ဖြစ်ပါသည်။ Arduino Uno၊ Ultrasonic Sensor နှင့် IR Sensor များကို အသုံးပြု၍ အတားအဆီးများကို ရှောင်ရှားကာ လည်ပတ်နေသော Disc Brush နှင့် 12V Fan Motor တို့ဖြင့် ကြမ်းပြင်ကို စနစ်တကျ သန့်ရှင်းပေးပါသည်။",
-        "team": [
-          "Maung Htike Linn Maung (VEP-21)",
-          "Maung Si Thu Tun (VEP-22)"
-        ],
-        "supervisor": "Dr. Swe Zin Oo (Associate Professor, Department of EP)",
-        "tags": [
-          "Arduino Uno",
-          "Robotics",
-          "Ultrasonic Sensor",
-          "Brush Motor",
-          "18650 Battery",
-          "Floor Cleaning"
-        ],
-        "features": [
-          "Autonomous navigation with ultrasonic sensor for forward obstacle avoidance and IR cliff/edge detection",
-          "High-speed rotating disc scrubbing brush paired with 12V DC vacuum suction fan motor",
-          "Powered by 3S 18650 Lithium-Ion battery pack (12.6V) with integrated Battery Management System (BMS)",
-          "Includes RF Remote Control module for manual navigational override",
-          "Compact circular form factor: 10\" Diameter x 4\" Height"
+          "Hydro Power Generation System",
+          "Automatic Door Control with PLC Program",
+          "Automatic Solar Panel Dust Cleaning and Tracking System Using PLC",
+          "Intelligent Mobile Traffic Light System",
+          "Automatic Floor Cleaning Machine"
         ]
       }
     ]

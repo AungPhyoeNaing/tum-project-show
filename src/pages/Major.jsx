@@ -104,7 +104,7 @@ export default function Major({
                 {major.shortCode} Department
               </h2>
               <span className="selected-major-count-pill">
-                {major.projects.length} Projects
+                {major.id === 'ep' ? 10 : major.projects.length} Projects
               </span>
               {hasPamphlets && (
                 <span className="pdf-showcase-pill">
@@ -126,7 +126,7 @@ export default function Major({
           <Search size={18} className="search-icon" />
           <input 
             type="text" 
-            className="search-input"
+            className="search-input" 
             placeholder={`${major.shortCode} ပရောဂျက်ခေါင်းစဉ်၊ ကြီးကြပ်သူ (Dr.) သို့မဟုတ် နည်းပညာ ရှာပါ...`}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -155,7 +155,9 @@ export default function Major({
               : `${major.shortCode} Department`}
           </h3>
         </div>
-        <span className="section-badge">{displayedProjects.length} Projects</span>
+        <span className="section-badge">
+          {major.id === 'ep' && !searchQuery ? 10 : displayedProjects.length} Projects
+        </span>
       </div>
 
       {/* Projects Grid Feed */}

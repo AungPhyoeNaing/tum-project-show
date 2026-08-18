@@ -204,98 +204,19 @@ export const PAMPHLETS_DATA = {
     ]
   },
   "ep-01": {
-    "pdfUrl": "/pdfs/ep/ep-01-pamphlet.pdf",
-    "pageCount": 3,
+    "pdfUrl": "/pdfs/ep/ep-01-group.pdf",
+    "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3"
+      "စာမျက်နှာ 2"
     ]
   },
   "ep-02": {
-    "pdfUrl": "/pdfs/ep/ep-02-pamphlet.pdf",
-    "pageCount": 4,
+    "pdfUrl": "/pdfs/ep/ep-02-group.pdf",
+    "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3",
-      "စာမျက်နှာ 4"
-    ]
-  },
-  "ep-03": {
-    "pdfUrl": "/pdfs/ep/ep-03-pamphlet.pdf",
-    "pageCount": 3,
-    "pageLabels": [
-      "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3"
-    ]
-  },
-  "ep-04": {
-    "pdfUrl": "/pdfs/ep/ep-04-pamphlet.pdf",
-    "pageCount": 3,
-    "pageLabels": [
-      "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3"
-    ]
-  },
-  "ep-05": {
-    "pdfUrl": "/pdfs/ep/ep-05-pamphlet.pdf",
-    "pageCount": 4,
-    "pageLabels": [
-      "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3",
-      "စာမျက်နှာ 4"
-    ]
-  },
-  "ep-06": {
-    "pdfUrl": "/pdfs/ep/ep-06-pamphlet.pdf",
-    "pageCount": 4,
-    "pageLabels": [
-      "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3",
-      "စာမျက်နှာ 4"
-    ]
-  },
-  "ep-07": {
-    "pdfUrl": "/pdfs/ep/ep-07-pamphlet.pdf",
-    "pageCount": 4,
-    "pageLabels": [
-      "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3",
-      "စာမျက်နှာ 4"
-    ]
-  },
-  "ep-08": {
-    "pdfUrl": "/pdfs/ep/ep-08-pamphlet.pdf",
-    "pageCount": 3,
-    "pageLabels": [
-      "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3"
-    ]
-  },
-  "ep-09": {
-    "pdfUrl": "/pdfs/ep/ep-09-pamphlet.pdf",
-    "pageCount": 4,
-    "pageLabels": [
-      "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3",
-      "စာမျက်နှာ 4"
-    ]
-  },
-  "ep-10": {
-    "pdfUrl": "/pdfs/ep/ep-10-pamphlet.pdf",
-    "pageCount": 3,
-    "pageLabels": [
-      "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3"
+      "စာမျက်နှာ 2"
     ]
   },
   "mc-01": {
