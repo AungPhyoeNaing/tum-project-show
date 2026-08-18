@@ -4,7 +4,7 @@ import { MAJORS_DATA, SHOW_INFO } from '../data/mockData';
 import MajorLogosList from '../components/MajorLogosList';
 import InfoModal from '../components/InfoModal';
 import BookmarksModal from '../components/BookmarksModal';
-import { Calendar, MapPin, Sparkles } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 export default function Home({ 
   bookmarks, 
@@ -26,11 +26,6 @@ export default function Home({
       {/* Hero Exhibition Banner */}
       <section className="hero-banner">
         <div className="hero-content">
-          <div className="hero-pill">
-            <Sparkles size={14} className="hero-sparkle-icon" />
-            <span>Graduation Project Exhibition 2026</span>
-          </div>
-
           <h1 className="hero-title">{SHOW_INFO.titleMm}</h1>
           <p className="hero-sub">{SHOW_INFO.university} • Final Year Research Showcase</p>
 

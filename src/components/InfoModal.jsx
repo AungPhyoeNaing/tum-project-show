@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { SHOW_INFO } from '../data/mockData';
-import { X, Calendar, Clock, MapPin, Phone, Sparkles, Building } from 'lucide-react';
+import { X, Calendar, Clock, MapPin, Phone, Building } from 'lucide-react';
 
 export default function InfoModal({ isOpen, onClose }) {
   useEffect(() => {
@@ -30,7 +30,6 @@ export default function InfoModal({ isOpen, onClose }) {
       >
         <div className="modal-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Sparkles size={20} color="var(--accent-gold)" />
             <h2 id="info-modal-title" style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--primary)' }}>
               ပြပွဲ အချက်အလက်များ
             </h2>

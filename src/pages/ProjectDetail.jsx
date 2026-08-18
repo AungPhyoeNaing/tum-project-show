@@ -6,7 +6,7 @@ import { PAMPHLETS_DATA } from '../data/pamphletsData';
 import PamphletLightboxModal from '../components/PamphletLightboxModal';
 import { 
   ArrowLeft, Users, Award, Bookmark, Share2, Check, 
-  Sparkles, AlertTriangle, FileText, Maximize2, Download 
+  AlertTriangle, FileText, Maximize2, Download 
 } from 'lucide-react';
 
 export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
@@ -235,8 +235,7 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
         {/* Features Checklist */}
         {project.features && project.features.length > 0 && (
           <div>
-            <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Sparkles size={16} color="var(--accent-gold)" />
+            <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '8px' }}>
               အဓိက အင်္ဂါရပ်များ (Key Features)
             </h4>
             <ul className="modal-feature-list">

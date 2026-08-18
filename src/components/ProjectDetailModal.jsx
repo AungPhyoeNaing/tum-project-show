@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Bookmark, Share2, Check, Users, Award, Sparkles, Tag } from 'lucide-react';
+import { X, Bookmark, Share2, Check, Users, Award, Tag } from 'lucide-react';
 
 export default function ProjectDetailModal({ project, major, isBookmarked, onToggleBookmark, onClose }) {
   const [copied, setCopied] = useState(false);
@@ -121,7 +121,6 @@ export default function ProjectDetailModal({ project, major, isBookmarked, onTog
           {project.features && project.features.length > 0 && (
             <div className="modal-section">
               <h4 className="modal-section-title">
-                <Sparkles size={16} className="feature-icon" />
                 အဓိက အင်္ဂါရပ်များနှင့် လုပ်ဆောင်ချက်များ
               </h4>
               <ul className="modal-feature-list">

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MAJORS_DATA } from '../data/mockData';
-import { Sparkles } from 'lucide-react';
 
 export default function MajorLogosList() {
   return (
@@ -9,7 +8,6 @@ export default function MajorLogosList() {
       <div className="major-logos-header">
         <div className="major-logos-title-box">
           <div className="section-pill-tag">
-            <Sparkles size={14} className="pill-sparkle" />
             <span>Select Major</span>
           </div>
           <h2 className="major-logos-heading">မေဂျာ Logo ရွေးချယ်ပါ</h2>

@@ -1,13 +1,12 @@
 import React from 'react';
 import { SHOW_INFO } from '../data/mockData';
-import { Calendar, Clock, MapPin, Phone, Sparkles } from 'lucide-react';
+import { Calendar, Clock, MapPin, Phone } from 'lucide-react';
 
 export default function Info() {
   return (
     <div className="main-content" style={{ paddingTop: '16px' }}>
       <div className="detail-header">
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-          <Sparkles size={18} color="var(--accent-gold)" />
           <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--primary)' }}>
             {SHOW_INFO.titleMm}
           </h2>
