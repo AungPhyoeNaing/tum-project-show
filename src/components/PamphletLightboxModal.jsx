@@ -9,6 +9,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
   const [zoomLevel, setZoomLevel] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isInteracting, setIsInteracting] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 800);
 
   const viewportRef = useRef(null);
   const imgRef = useRef(null);
@@ -89,18 +90,31 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
     };
   }, [currentPageIndex, pages.length, onClose, resetZoom]);
 
-  // Prevent native browser pinch-to-zoom on iOS devices
+  // Prevent native browser pinch-to-zoom on iOS/Android devices
   useEffect(() => {
     const blockNativeZoom = (e) => {
       if (e.touches && e.touches.length > 1) {
         e.preventDefault();
       }
     };
+    // iOS Safari uses gesturestart/gesturechange for pinch - must block these too
+    const blockGesture = (e) => { e.preventDefault(); };
     
     document.addEventListener('touchmove', blockNativeZoom, { passive: false });
+    document.addEventListener('gesturestart', blockGesture, { passive: false });
+    document.addEventListener('gesturechange', blockGesture, { passive: false });
     return () => {
       document.removeEventListener('touchmove', blockNativeZoom);
+      document.removeEventListener('gesturestart', blockGesture);
+      document.removeEventListener('gesturechange', blockGesture);
     };
+  }, []);
+
+  // Track viewport width for responsive PDF sizing
+  useEffect(() => {
+    const handleResize = () => setViewportWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   // Mouse wheel & trackpad pinch zoom
@@ -451,8 +465,8 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
                   className="lightbox-pamphlet-pdf-page"
-                  scale={typeof window !== 'undefined' && window.innerWidth < 768 ? 2.5 : 2}
-                  devicePixelRatio={Math.min(typeof window !== 'undefined' ? window.devicePixelRatio : 1, 2)}
+                  width={viewportWidth < 768 ? viewportWidth * 0.92 : viewportWidth * 0.7}
+                  devicePixelRatio={4}
                 />
               </Document>
             </div>
