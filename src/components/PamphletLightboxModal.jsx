@@ -11,6 +11,11 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
   const [isInteracting, setIsInteracting] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 800);
 
+  // iOS Safari downsamples canvases when scaled up via CSS. 
+  // To keep it sharp, we render the canvas 3x larger and scale it down to 1/3rd visually.
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const basePdfScale = isMobile ? 3 : 2;
+
   const overlayRef = useRef(null);
   const viewportRef = useRef(null);
   const imgRef = useRef(null);
@@ -451,7 +456,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
             <div 
               className="lightbox-img-transform-wrapper"
               style={{
-                transform: `translate3d(${position.x}px, ${position.y}px, 0px) scale(${zoomLevel})`,
+                transform: `translate3d(${position.x}px, ${position.y}px, 0px) scale(${zoomLevel / basePdfScale})`,
                 transformOrigin: 'center center',
                 transition: isInteracting ? 'none' : 'transform 0.22s cubic-bezier(0.16, 1, 0.3, 1)',
                 cursor: zoomLevel > 1 ? (isInteracting ? 'grabbing' : 'grab') : 'zoom-in',
@@ -479,8 +484,8 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
                   className="lightbox-pamphlet-pdf-page"
-                  width={viewportWidth < 768 ? viewportWidth * 0.92 : viewportWidth * 0.7}
-                  devicePixelRatio={4}
+                  width={(viewportWidth < 768 ? viewportWidth * 0.92 : viewportWidth * 0.7) * basePdfScale}
+                  devicePixelRatio={2}
                 />
               </Document>
             </div>
