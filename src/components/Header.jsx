@@ -9,14 +9,14 @@ export default function Header({ bookmarkCount = 0, onOpenInfo, onOpenBookmarks,
           <span>TUM</span>
         </div>
         <div className="brand-info">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <div className="brand-title-row">
             <h1>Project Show 2026</h1>
             <span className="live-pill">
               <span className="live-dot" />
               Live
             </span>
           </div>
-          <p>Technological University Mandalay</p>
+          <p className="brand-subtitle">Technological University Mandalay</p>
         </div>
       </div>
       
@@ -29,7 +29,7 @@ export default function Header({ bookmarkCount = 0, onOpenInfo, onOpenBookmarks,
           title="Event Information"
           aria-label="Event Information"
         >
-          <Info size={17} />
+          <Info size={18} />
           <span className="action-label">ပြပွဲ အချက်အလက်</span>
         </button>
 
@@ -41,7 +41,7 @@ export default function Header({ bookmarkCount = 0, onOpenInfo, onOpenBookmarks,
           title="Saved Projects"
           aria-label="Saved Projects"
         >
-          <Bookmark size={17} fill={bookmarkCount > 0 ? '#f59e0b' : 'none'} color={bookmarkCount > 0 ? '#f59e0b' : 'currentColor'} />
+          <Bookmark size={18} fill={bookmarkCount > 0 ? '#f59e0b' : 'none'} color={bookmarkCount > 0 ? '#f59e0b' : 'currentColor'} />
           <span className="action-label">သိမ်းဆည်းမှု</span>
           {bookmarkCount > 0 && (
             <span className="badge-counter">
