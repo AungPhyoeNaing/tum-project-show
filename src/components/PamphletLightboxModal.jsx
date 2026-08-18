@@ -525,7 +525,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
           {zoomLevel <= 1 && (
             <div className="lightbox-gesture-pill">
               <Move size={13} />
-              <span>Pinch သို့မဟုတ် ၂ ချက်နှိပ်၍ အကြီးချဲ့ကြည့်ရှုနိုင်ပါသည်</span>
+              <span>Zoom ဆွဲကြည့်လို့ရပါသည်</span>
             </div>
           )}
 
