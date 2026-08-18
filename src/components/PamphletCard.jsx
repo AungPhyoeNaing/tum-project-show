@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Document, Page } from 'react-pdf';
 import { Bookmark, Users, Award, Maximize2, FileText, Download } from 'lucide-react';
 
 export default function PamphletCard({ 
@@ -11,8 +12,9 @@ export default function PamphletCard({
 }) {
   const [activePageIndex, setActivePageIndex] = useState(0);
 
+  const pageCount = pamphletData?.pageCount || pamphletData?.pageImages?.length || 1;
+  const pageLabels = pamphletData?.pageLabels || Array.from({ length: pageCount }, (_, i) => `စာမျက်နှာ ${i + 1}`);
   const pages = pamphletData?.pageImages || [];
-  const pageLabels = pamphletData?.pageLabels || [];
   const currentImage = pages[activePageIndex] || '';
 
   return (
@@ -22,7 +24,7 @@ export default function PamphletCard({
         <div className="pamphlet-titles-block">
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
             <span className="pamphlet-dept-badge">{majorCode || 'Project'} Pamphlet</span>
-            <span className="pamphlet-pages-pill">{pages.length} Pages</span>
+            <span className="pamphlet-pages-pill">{pageCount} Pages</span>
           </div>
           <h3 className="pamphlet-project-title">{project.title}</h3>
           <h4 className="pamphlet-project-title-mm">{project.titleMm}</h4>
@@ -43,9 +45,9 @@ export default function PamphletCard({
       </div>
 
       {/* Page Switcher Tabs (Front / Back) */}
-      {pages.length > 1 && (
+      {pageCount > 1 && (
         <div className="pamphlet-page-switcher">
-          {pages.map((_, idx) => (
+          {Array.from({ length: pageCount }).map((_, idx) => (
             <button
               key={idx}
               type="button"
@@ -73,7 +75,26 @@ export default function PamphletCard({
           }
         }}
       >
-        {currentImage ? (
+        {pamphletData?.pdfUrl ? (
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'hidden' }}>
+            <Document
+              file={pamphletData.pdfUrl}
+              loading={
+                <div className="empty-state" style={{ padding: '30px' }}>
+                  <FileText size={40} />
+                  <p>Pamphlet preview loading...</p>
+                </div>
+              }
+            >
+              <Page
+                pageNumber={activePageIndex + 1}
+                width={360}
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
+              />
+            </Document>
+          </div>
+        ) : currentImage ? (
           <img
             src={currentImage}
             alt={`${project.title} - Page ${activePageIndex + 1}`}

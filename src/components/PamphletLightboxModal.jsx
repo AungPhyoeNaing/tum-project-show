@@ -35,9 +35,11 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
     mouseStart: { x: 0, y: 0 },
   });
 
-  const pages = pamphletData?.pageImages || [];
-  const pageLabels = pamphletData?.pageLabels || [];
-  const currentImage = pages[currentPageIndex] || '';
+  const [numPdfPages, setNumPdfPages] = useState(pamphletData?.pageCount || pamphletData?.pageImages?.length || 1);
+  const pageCount = numPdfPages || 1;
+  const pageLabels = pamphletData?.pageLabels || Array.from({ length: pageCount }, (_, i) => `စာမျက်နှာ ${i + 1}`);
+  const pages = pamphletData?.pageImages || Array.from({ length: pageCount });
+  const currentImage = pamphletData?.pageImages?.[currentPageIndex] || '';
 
   const resetZoom = useCallback(() => {
     setZoomLevel(1);
@@ -358,7 +360,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
           <div className="lightbox-title-area">
             <h3 className="lightbox-project-title">{project.title}</h3>
             <span className="lightbox-page-indicator">
-              {pageLabels[currentPageIndex] || `Page ${currentPageIndex + 1} / ${pages.length}`}
+              {pageLabels[currentPageIndex] || `Page ${currentPageIndex + 1} / ${pageCount}`}
             </span>
           </div>
 
@@ -470,6 +472,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
             >
               <Document
                 file={pamphletData.pdfUrl}
+                onLoadSuccess={({ numPages }) => setNumPdfPages(numPages)}
                 loading={
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', color: 'rgba(255,255,255,0.7)' }}>
                     <div className="pdf-spinner" style={{ width: '40px', height: '40px', border: '3px solid rgba(255,255,255,0.1)', borderTopColor: '#fff', borderRadius: '50%', animation: 'spin 1s linear infinite' }}></div>
@@ -529,7 +532,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
           )}
 
           {/* Quick Page Overlay Navigation Arrows (for easy touch access) */}
-          {pages.length > 1 && (
+          {pageCount > 1 && (
             <>
               {currentPageIndex > 0 && (
                 <button
@@ -546,13 +549,13 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
                 </button>
               )}
 
-              {currentPageIndex < pages.length - 1 && (
+              {currentPageIndex < pageCount - 1 && (
                 <button
                   type="button"
                   className="lightbox-floating-nav-btn next"
                   onClick={(e) => {
                     e.stopPropagation();
-                    setCurrentPageIndex(prev => Math.min(prev + 1, pages.length - 1));
+                    setCurrentPageIndex(prev => Math.min(prev + 1, pageCount - 1));
                     resetZoom();
                   }}
                   aria-label="Next Page"
@@ -565,7 +568,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
         </div>
 
         {/* Bottom Navigation & Page Switcher */}
-        {pages.length > 1 && (
+        {pageCount > 1 && (
           <div className="lightbox-bottombar">
             <button
               type="button"
@@ -581,7 +584,7 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
             </button>
 
             <div className="lightbox-page-tabs">
-              {pages.map((_, idx) => (
+              {Array.from({ length: pageCount }).map((_, idx) => (
                 <button
                   key={idx}
                   type="button"

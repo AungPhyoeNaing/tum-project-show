@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
+import { Document, Page } from 'react-pdf';
 import { MAJORS_DATA } from '../data/mockData';
 import { PAMPHLETS_DATA } from '../data/pamphletsData';
 import PamphletLightboxModal from '../components/PamphletLightboxModal';
@@ -45,8 +46,9 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
 
   const isBookmarked = bookmarks.includes(project.id);
   const pamphletData = PAMPHLETS_DATA[project.id];
+  const pageCount = pamphletData?.pageCount || pamphletData?.pageImages?.length || 1;
+  const pageLabels = pamphletData?.pageLabels || Array.from({ length: pageCount }, (_, i) => `စာမျက်နှာ ${i + 1}`);
   const pages = pamphletData?.pageImages || [];
-  const pageLabels = pamphletData?.pageLabels || [];
   const currentImage = pages[activePageIndex] || '';
 
   const handleShare = () => {
@@ -113,9 +115,9 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
         {pamphletData && (
           <div style={{ marginBottom: '20px' }}>
             {/* Page Switcher */}
-            {pages.length > 1 && (
+            {pageCount > 1 && (
               <div className="pamphlet-page-switcher">
-                {pages.map((_, idx) => (
+                {Array.from({ length: pageCount }).map((_, idx) => (
                   <button
                     key={idx}
                     type="button"
@@ -137,13 +139,32 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
               tabIndex={0}
               onKeyDown={(e) => { if (e.key === 'Enter') setIsLightboxOpen(true); }}
             >
-              {currentImage && (
+              {pamphletData.pdfUrl ? (
+                <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'hidden' }}>
+                  <Document
+                    file={pamphletData.pdfUrl}
+                    loading={
+                      <div className="empty-state" style={{ padding: '30px' }}>
+                        <FileText size={40} />
+                        <p>Pamphlet preview loading...</p>
+                      </div>
+                    }
+                  >
+                    <Page
+                      pageNumber={activePageIndex + 1}
+                      width={360}
+                      renderTextLayer={false}
+                      renderAnnotationLayer={false}
+                    />
+                  </Document>
+                </div>
+              ) : currentImage ? (
                 <img
                   src={currentImage}
                   alt={`${project.title} - Page ${activePageIndex + 1}`}
                   className="pamphlet-preview-img"
                 />
-              )}
+              ) : null}
               <div className="pamphlet-expand-overlay">
                 <div className="expand-pill">
                   <Maximize2 size={15} />
