@@ -23,11 +23,11 @@ export const MAJORS_DATA = [
     "image": "/logos/CEIT_2026_logo.PNG",
     "description": "ဂိမ်းအင်ဂျင် 3D Simulation၊ AI/ML ဉာဏ်ရည်တုစနစ်၊ ဝဘ်နှင့် မိုဘိုင်း အက်ပ်လီကေးရှင်း၊ ကြိုးမဲ့ ဆက်သွယ်ရေးနှင့် ကွန်ရက်လုံခြုံရေးဆိုင်ရာ လက်တွေ့သုတေသန ပရောဂျက်များ",
     "faculty": [
-      "Dr. Thandar Soe (Professor)",
-      "Daw Moh Moh Khaing (Associate Professor)",
-      "Daw Cho Me Me Maung (Lecturer)",
-      "Daw Ei Ei Khaing (Lecturer)",
-      "Daw Khin Myo Chit (Lecturer)"
+      "Dr. Daw Thandar Soe (Professor)",
+      "Dr. Daw Moh Moh Khaing (Associate Professor)",
+      "Dr. Daw Cho Me Me Maung (Lecturer)",
+      "Dr. Daw Ei Ei Khaing (Lecturer)",
+      "Dr. Daw Khin Myo Chit (Lecturer)"
     ],
     "projects": [
       {
@@ -44,7 +44,7 @@ export const MAJORS_DATA = [
           "Mg Nay Phone Myint",
           "Mg Kaung Khant Ko Ko"
         ],
-        "supervisor": "Dr. Thandar Soe (Professor, Department of CEIT)",
+        "supervisor": "Dr. Daw Thandar Soe (Professor, Department of CEIT)",
         "tags": [
           "C++17",
           "OpenGL 3.3",
@@ -94,9 +94,9 @@ export const MAJORS_DATA = [
         "tagline": "Modern expense tracker built with Next.js, React, TypeScript, and interactive financial charts.",
         "description": "Next.js, React, TypeScript နှင့် Tailwind CSS တို့ဖြင့် ဖန်တီးထားသော ခေတ်မီ နေ့စဉ် ငွေကြေးစီမံမှုစနစ် ဖြစ်ပါသည်။ ဝင်ငွေ၊ အသုံးစရိတ်နှင့် စုငွေရည်မှန်းချက်များကို စနစ်တကျ မှတ်တမ်းတင်နိုင်ပြီး သတ်မှတ်ဘတ်ဂျက် ကျော်လွန်ပါက Visual Alert (လိုင်းနီ) ဖြင့် အလိုအလျောက် သတိပေးကာ Recharts ဖြင့် ဘဏ္ဍာရေး အခြေအနေကို ရှင်းလင်းစွာ ပြသပေးပါသည်။",
         "team": [
-          "Dr. Thandar Soe Team"
+          "Dr. Daw Thandar Soe Team"
         ],
-        "supervisor": "Dr. Thandar Soe (Professor)",
+        "supervisor": "Dr. Daw Thandar Soe (Professor)",
         "tags": [
           "Next.js",
           "React",
@@ -128,7 +128,7 @@ export const MAJORS_DATA = [
           "Hlyan Bhone Htet",
           "Prism Makers Club"
         ],
-        "supervisor": "Daw Ei Ei Khaing (Lecturer, Department of CEIT)",
+        "supervisor": "Dr. Daw Ei Ei Khaing (Lecturer, Department of CEIT)",
         "tags": [
           "Social Network",
           "Web Application",
@@ -158,7 +158,7 @@ export const MAJORS_DATA = [
           "Hlyan Bhone Htet",
           "Prism Makers Club"
         ],
-        "supervisor": "Daw Ei Ei Khaing (Lecturer, Department of CEIT)",
+        "supervisor": "Dr. Daw Ei Ei Khaing (Lecturer, Department of CEIT)",
         "tags": [
           "React 18",
           "Vite",
@@ -185,7 +185,7 @@ export const MAJORS_DATA = [
         "team": [
           "MetricFit Team"
         ],
-        "supervisor": "Department of Computer Engineering and Information Technology (Tr. Moh)",
+        "supervisor": "Department of Computer Engineering and Information Technology (Dr. Daw Moh Moh Khaing)",
         "tags": [
           "React Native",
           "Expo",
@@ -217,7 +217,7 @@ export const MAJORS_DATA = [
           "Hlyan Bhone Htet",
           "Prism Makers Club"
         ],
-        "supervisor": "Daw Ei Ei Khaing (Lecturer, Department of CEIT)",
+        "supervisor": "Dr. Daw Ei Ei Khaing (Lecturer, Department of CEIT)",
         "tags": [
           "ESP32",
           "Cybersecurity",
@@ -446,14 +446,14 @@ export const MAJORS_DATA = [
     "description": "DTMF အဝေးထိန်းစနစ်၊ PLC ပုလင်းအရည်ဖြည့်/ဖုံးပိတ်စက်၊ မြေပြင်စုံ စောင့်ကြည့်ရေး Rover၊ စမတ်ဖန်လုံအိမ်၊ RFID အလိုအလျောက် ပို့ဆောင်ရေး Robot နှင့် CAN Bus ဆက်သွယ်ရေး ပရောဂျက်များ",
     "faculty": [
       "Dr. Nyan Phyo Aung (Professor)",
-      "Dr. Hnin Yu Wai (Associate Professor)",
-      "Daw Ei Ei Thaw (Associate Professor)",
-      "Dr. Htet Htet Aung (Supervisor)",
-      "Daw Moe Moe Myint Wai (Lecturer)",
-      "Daw Su Wai Phyo (Lecturer)",
-      "Daw Khin Than Nwe (Assistant Lecturer)",
-      "Daw Hnin Nu Nu Kyaw (Demonstrator)",
-      "Daw Su Myat Myat Hlaing (Demonstrator)"
+      "Dr. Daw Hnin Yu Wai (Associate Professor)",
+      "Dr. Daw Ei Ei Thaw (Associate Professor)",
+      "Dr. Daw Htet Htet Aung (Supervisor)",
+      "Dr. Daw Moe Moe Myint Wai (Lecturer)",
+      "Dr. Daw Su Wai Phyo (Lecturer)",
+      "Dr. Daw Khin Than Nwe (Assistant Lecturer)",
+      "Dr. Daw Hnin Nu Nu Kyaw (Demonstrator)",
+      "Dr. Daw Su Myat Myat Hlaing (Demonstrator)"
     ],
     "projects": [
       {
@@ -465,7 +465,7 @@ export const MAJORS_DATA = [
         "team": [
           "Ma Htet Htet Zaw (VI EC - 5)"
         ],
-        "supervisor": "Dr. Hnin Yu Wai (Associate Professor), Daw Moe Moe Myint Wai, Daw Su Wai Phyo, Daw Hnin Nu Nu Kyaw",
+        "supervisor": "Dr. Daw Hnin Yu Wai (Associate Professor), Dr. Daw Moe Moe Myint Wai, Dr. Daw Su Wai Phyo, Dr. Daw Hnin Nu Nu Kyaw",
         "tags": [
           "Arduino Mega",
           "DTMF Decoder",
@@ -491,7 +491,7 @@ export const MAJORS_DATA = [
         "team": [
           "5th Year Integrated Design Project (IDP) Group 2"
         ],
-        "supervisor": "Dr. Hnin Yu Wai (Associate Professor), Daw Moe Moe Myint Wai, Daw Su Wai Phyo, Daw Hnin Nu Nu Kyaw",
+        "supervisor": "Dr. Daw Hnin Yu Wai (Associate Professor), Dr. Daw Moe Moe Myint Wai, Dr. Daw Su Wai Phyo, Dr. Daw Hnin Nu Nu Kyaw",
         "tags": [
           "Mitsubishi PLC",
           "Pneumatics",
@@ -517,7 +517,7 @@ export const MAJORS_DATA = [
         "team": [
           "2025-2026 Academic Year IDP Group 1"
         ],
-        "supervisor": "Dr. Nyan Phyo Aung (Professor), Daw Ei Ei Thaw (Associate Professor), Daw Su Wai Phyo, Daw Khin Than Nwe",
+        "supervisor": "Dr. Nyan Phyo Aung (Professor), Dr. Daw Ei Ei Thaw (Associate Professor), Dr. Daw Su Wai Phyo, Dr. Daw Khin Than Nwe",
         "tags": [
           "Arduino Uno Q",
           "Hexa-Wheeled Rover",
@@ -543,7 +543,7 @@ export const MAJORS_DATA = [
         "team": [
           "2024-2025 Academic Year IDP Group 2"
         ],
-        "supervisor": "Dr. Nyan Phyo Aung (Professor), Daw Moe Moe Myint Wai, Daw Khin Than Nwe, Daw Su Myat Myat Hlaing",
+        "supervisor": "Dr. Nyan Phyo Aung (Professor), Dr. Daw Moe Moe Myint Wai, Dr. Daw Khin Than Nwe, Dr. Daw Su Myat Myat Hlaing",
         "tags": [
           "Arduino Uno",
           "LoRa",
@@ -569,7 +569,7 @@ export const MAJORS_DATA = [
         "team": [
           "2025-2026 Academic Year IDP Group 3"
         ],
-        "supervisor": "Dr. Htet Htet Aung",
+        "supervisor": "Dr. Daw Htet Htet Aung",
         "tags": [
           "Arduino Mega 2560",
           "RFID Payment",
@@ -594,7 +594,7 @@ export const MAJORS_DATA = [
         "team": [
           "Maung Kyaw Swar Htike (VI EC - 6)"
         ],
-        "supervisor": "Dr. Htet Htet Aung",
+        "supervisor": "Dr. Daw Htet Htet Aung",
         "tags": [
           "CAN Bus",
           "MCP2515",
@@ -625,13 +625,13 @@ export const MAJORS_DATA = [
     "image": "/logos/EPLogo.jpg",
     "description": "Hybrid Solar စနစ်၊ ဓာတ်အားထုတ်လုပ်/ပို့လွှတ်/ဖြန့်ဖြူးရေး ပုံစံငယ်၊ PLC အလိုအလျောက် တံခါး၊ ရေအားလျှပ်စစ်၊ 400V လိုင်းနှင့် စမတ်လမ်းမီး၊ PLC သောက်ရေသန့်ဗူးဖြည့်စက်၊ PLC ၄ ဆင့် လက်ဆေးစက်၊ ရွေ့လျားမီးပွိုင့်၊ PLC ဆိုလာပြားသန့်ရှင်းရေးနှင့် ကြမ်းတိုက် Robot ပရောဂျက်များ",
     "faculty": [
-      "Dr. Swe Zin Oo (Associate Professor)",
-      "Daw Kyu Kyu Nyunt (Associate Professor)",
-      "Daw Aye Aye Myat (Lecturer)",
-      "Daw Myat Myat Moe (Lecturer)",
+      "Dr. Daw Swe Zin Oo (Associate Professor)",
+      "Dr. Daw Kyu Kyu Nyunt (Associate Professor)",
+      "Dr. Daw Aye Aye Myat (Lecturer)",
+      "Dr. Daw Myat Myat Moe (Lecturer)",
       "U Lwin Maung Maung (Demonstrator)",
       "U Than Toe Aung (Demonstrator)",
-      "Daw Phyo Thet Su (Demonstrator)"
+      "Dr. Daw Phyo Thet Su (Demonstrator)"
     ],
     "projects": [
       {
@@ -644,7 +644,7 @@ export const MAJORS_DATA = [
           "Maung Hein Linn (VEP-39)",
           "Ma Sandar Win (VEP-20)"
         ],
-        "supervisor": "Daw Aye Aye Myat (Lecturer, Department of EP)",
+        "supervisor": "Dr. Daw Aye Aye Myat (Lecturer, Department of EP)",
         "tags": [
           "Hybrid Solar",
           "Renewable Energy",
@@ -670,7 +670,7 @@ export const MAJORS_DATA = [
           "Ma Thazin Hlaing Myo (VEP-2)",
           "Maung Zayar Htin (VEP-26)"
         ],
-        "supervisor": "Daw Aye Aye Myat (Lecturer, Department of EP)",
+        "supervisor": "Dr. Daw Aye Aye Myat (Lecturer, Department of EP)",
         "tags": [
           "Power Systems",
           "Hydro Generation",
@@ -722,7 +722,7 @@ export const MAJORS_DATA = [
           "Ma Ezar Phyo Phyo (V.EP-2 LSO)",
           "Ma Shoon Lae Tun (V.EP-1 LSO)"
         ],
-        "supervisor": "Daw Myat Myat Moe (Lecturer), Daw Phyo Thet Su (Demonstrator)",
+        "supervisor": "Dr. Daw Myat Myat Moe (Lecturer), Dr. Daw Phyo Thet Su (Demonstrator)",
         "tags": [
           "Micro-Hydro",
           "Waterwheel",
@@ -800,7 +800,7 @@ export const MAJORS_DATA = [
           "Maung Kyaw Zin",
           "Ma Myint Myat Moe"
         ],
-        "supervisor": "Daw Kyu Kyu Nyunt (Associate Professor, Department of EP)",
+        "supervisor": "Dr. Daw Kyu Kyu Nyunt (Associate Professor, Department of EP)",
         "tags": [
           "PLC Automation",
           "GX Works2",
@@ -850,9 +850,9 @@ export const MAJORS_DATA = [
         "tagline": "Dual-axis PLC system combining motorized wiper dust cleaning with single-axis sun tracking (25-40% yield boost).",
         "description": "ဆိုလာပြားများ၏ လျှပ်စစ်ထုတ်လုပ်မှု စွမ်းအားကို အမြင့်ဆုံး ရရှိစေရန်အတွက် PLC Controller နှင့် Light Sensor များကို အသုံးပြု၍ နေရောင်ခြည် လာရာဘက်သို့ ဆိုလာပြားကို အလိုအလျောက် ချိန်ညှိပေးခြင်း (Sun Tracking) နှင့် ဖုန်မှုန့်များကို စက်တပ်ဆင်ထားသော စုတ်တံများဖြင့် အလိုအလျောက် သန့်ရှင်းပေးခြင်း (Dust Cleaning) တို့ကို ပေါင်းစပ်ထားပြီး စွမ်းအင်ထုတ်လုပ်မှုကို ၂၅% မှ ၄၀% အထိ တိုးတက်စေပါသည်။",
         "team": [
-          "Daw Kyu Kyu Nyunt Team"
+          "Dr. Daw Kyu Kyu Nyunt Team"
         ],
-        "supervisor": "Daw Kyu Kyu Nyunt (Associate Professor, Department of EP)",
+        "supervisor": "Dr. Daw Kyu Kyu Nyunt (Associate Professor, Department of EP)",
         "tags": [
           "PLC Control",
           "Solar Tracking",
@@ -879,7 +879,7 @@ export const MAJORS_DATA = [
           "Maung Htike Linn Maung (VEP-21)",
           "Maung Si Thu Tun (VEP-22)"
         ],
-        "supervisor": "Dr. Swe Zin Oo (Associate Professor, Department of EP)",
+        "supervisor": "Dr. Daw Swe Zin Oo (Associate Professor, Department of EP)",
         "tags": [
           "Arduino Uno",
           "Robotics",
@@ -911,7 +911,7 @@ export const MAJORS_DATA = [
     "description": "PID တည်ငြိမ်မှုထိန်း စက်ဘီး၊ လမ်းဆုံမီးပွိုင့်စနစ်၊ ဘက်စုံသုံး မိုဘိုင်း Robot၊ စမတ်စာကြည့်တိုက်၊ ဆိုလာခြေရာခံစနစ်နှင့် အမှိုက်ပစ်ပေးနိုင်သော စမတ်အမှိုက်ပုံး Robot ပရောဂျက်များ",
     "faculty": [
       "Department of Mechatronic Engineering Faculty Members",
-      "Daw Su Myat Hlaing (Supervisor)",
+      "Dr. Daw Su Myat Hlaing (Supervisor)",
       "Technological University (Mandalay)"
     ],
     "projects": [
@@ -953,7 +953,7 @@ export const MAJORS_DATA = [
           "Mg Aung Min Khant",
           "Ma Aye Chamm Moe Moe"
         ],
-        "supervisor": "Daw Su Myat Hlaing (Department of Mechatronics)",
+        "supervisor": "Dr. Daw Su Myat Hlaing (Department of Mechatronics)",
         "tags": [
           "Arduino UNO",
           "Traffic Light",
