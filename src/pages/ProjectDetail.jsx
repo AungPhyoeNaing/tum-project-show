@@ -6,7 +6,7 @@ import { PAMPHLETS_DATA } from '../data/pamphletsData';
 import PamphletLightboxModal from '../components/PamphletLightboxModal';
 import { 
   ArrowLeft, Users, Award, Bookmark, Share2, Check, 
-  AlertTriangle, FileText, Maximize2, Download 
+  AlertTriangle, FileText, Maximize2 
 } from 'lucide-react';
 
 export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
@@ -173,28 +173,6 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
                   <span>နှိပ်၍ အကြီးချဲ့ကြည့်ရှုပါ (Tap to Zoom)</span>
                 </div>
               </div>
-            </div>
-
-            {/* PDF Actions */}
-            <div className="pamphlet-actions-row" style={{ marginTop: '10px' }}>
-              <a
-                href={pamphletData.pdfUrl}
-                download
-                target="_blank"
-                rel="noreferrer"
-                className="pamphlet-pdf-link-btn"
-              >
-                <Download size={14} />
-                <span>မူရင်း PDF ဒေါင်းလုဒ် (PDF)</span>
-              </a>
-              <button
-                type="button"
-                className="pamphlet-fullscreen-btn"
-                onClick={() => setIsLightboxOpen(true)}
-              >
-                <Maximize2 size={14} />
-                <span>အပြည့်ကြည့်ရှုရန်</span>
-              </button>
             </div>
           </div>
         )}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf';
-import { Bookmark, Users, Award, Maximize2, FileText, Download } from 'lucide-react';
+import { Bookmark, Maximize2, FileText } from 'lucide-react';
 
 export default function PamphletCard({ 
   project, 
@@ -118,33 +118,6 @@ export default function PamphletCard({
         </div>
       </div>
 
-      {/* Action Bar */}
-      <div className="pamphlet-meta-footer">
-        {/* Action Links */}
-        <div className="pamphlet-actions-row">
-          {pamphletData?.pdfUrl && (
-            <a
-              href={pamphletData.pdfUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="pamphlet-pdf-link-btn"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <Download size={14} />
-              <span>မူရင်း PDF ဒေါင်းလုဒ် (PDF)</span>
-            </a>
-          )}
-
-          <button
-            type="button"
-            className="pamphlet-fullscreen-btn"
-            onClick={() => onOpenLightbox(project, activePageIndex)}
-          >
-            <Maximize2 size={14} />
-            <span>အပြည့်ကြည့်ရှုရန်</span>
-          </button>
-        </div>
-      </div>
     </div>
   );
 }
