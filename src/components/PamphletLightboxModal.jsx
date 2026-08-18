@@ -90,21 +90,34 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
     };
   }, [currentPageIndex, pages.length, onClose, resetZoom]);
 
-  // Prevent native browser pinch-to-zoom on iOS/Android devices
+  // Bulletproof block against iOS native pinch-to-zoom and bounce scrolling
   useEffect(() => {
-    const blockNativeZoom = (e) => {
-      if (e.touches && e.touches.length > 1) {
-        e.preventDefault();
+    const overlay = document.querySelector('.pamphlet-lightbox-overlay');
+    if (!overlay) return;
+
+    const blockNativeZoomAndScroll = (e) => {
+      // Allow horizontal scrolling only inside the page tabs
+      if (e.target.closest('.lightbox-page-tabs')) {
+        // If it's a multi-touch (pinch) on the tabs, still block it
+        if (e.touches && e.touches.length > 1) {
+          e.preventDefault();
+        }
+        return; 
       }
+      
+      // Block native scrolling, bouncing, and zooming everywhere else in the modal
+      e.preventDefault();
     };
-    // iOS Safari uses gesturestart/gesturechange for pinch - must block these too
+
     const blockGesture = (e) => { e.preventDefault(); };
-    
-    document.addEventListener('touchmove', blockNativeZoom, { passive: false });
+
+    // Use passive: false to allow e.preventDefault()
+    overlay.addEventListener('touchmove', blockNativeZoomAndScroll, { passive: false });
     document.addEventListener('gesturestart', blockGesture, { passive: false });
     document.addEventListener('gesturechange', blockGesture, { passive: false });
+
     return () => {
-      document.removeEventListener('touchmove', blockNativeZoom);
+      overlay.removeEventListener('touchmove', blockNativeZoomAndScroll);
       document.removeEventListener('gesturestart', blockGesture);
       document.removeEventListener('gesturechange', blockGesture);
     };
