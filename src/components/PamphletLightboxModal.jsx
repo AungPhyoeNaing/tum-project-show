@@ -89,6 +89,20 @@ export default function PamphletLightboxModal({ project, pamphletData, initialPa
     };
   }, [currentPageIndex, pages.length, onClose, resetZoom]);
 
+  // Prevent native browser pinch-to-zoom on iOS devices
+  useEffect(() => {
+    const blockNativeZoom = (e) => {
+      if (e.touches && e.touches.length > 1) {
+        e.preventDefault();
+      }
+    };
+    
+    document.addEventListener('touchmove', blockNativeZoom, { passive: false });
+    return () => {
+      document.removeEventListener('touchmove', blockNativeZoom);
+    };
+  }, []);
+
   // Mouse wheel & trackpad pinch zoom
   useEffect(() => {
     const viewport = viewportRef.current;

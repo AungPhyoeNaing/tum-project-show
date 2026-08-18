@@ -1028,6 +1028,7 @@ button {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 3000;
+  touch-action: none;
   display: flex;
   align-items: center;
   justify-content: center;
