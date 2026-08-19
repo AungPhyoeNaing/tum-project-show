@@ -59,7 +59,7 @@ export default function InfoModal({ isOpen, onClose }) {
 
           <div className="info-items-list">
             <div className="info-item-row">
-              <div className="info-icon-box" style={{ background: '#eff6ff', color: '#1d4ed8' }}>
+              <div className="info-icon-box date-box">
                 <Calendar size={18} />
               </div>
               <div>
@@ -69,7 +69,7 @@ export default function InfoModal({ isOpen, onClose }) {
             </div>
 
             <div className="info-item-row">
-              <div className="info-icon-box" style={{ background: '#fef3c7', color: '#b45309' }}>
+              <div className="info-icon-box time-box">
                 <Clock size={18} />
               </div>
               <div>
@@ -79,7 +79,7 @@ export default function InfoModal({ isOpen, onClose }) {
             </div>
 
             <div className="info-item-row">
-              <div className="info-icon-box" style={{ background: '#f0fdf4', color: '#15803d' }}>
+              <div className="info-icon-box loc-box">
                 <MapPin size={18} />
               </div>
               <div>
@@ -89,7 +89,7 @@ export default function InfoModal({ isOpen, onClose }) {
             </div>
 
             <div className="info-item-row">
-              <div className="info-icon-box" style={{ background: '#faf5ff', color: '#7e22ce' }}>
+              <div className="info-icon-box univ-box">
                 <Building size={18} />
               </div>
               <div>
@@ -99,7 +99,7 @@ export default function InfoModal({ isOpen, onClose }) {
             </div>
 
             <div className="info-item-row">
-              <div className="info-icon-box" style={{ background: '#fff1f2', color: '#be123c' }}>
+              <div className="info-icon-box contact-box">
                 <Phone size={18} />
               </div>
               <div>

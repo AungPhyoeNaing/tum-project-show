@@ -14,7 +14,9 @@
   
   --bg-main: #f8fafc;
   --bg-card: #ffffff;
-  --bg-glass: rgba(255, 255, 255, 0.92);
+  --bg-glass: rgba(255, 255, 255, 0.88);
+  --bg-glass-card: rgba(255, 255, 255, 0.86);
+  --bg-glass-modal: rgba(255, 255, 255, 0.94);
   --bg-surface-elevated: #ffffff;
   
   --text-main: #0f172a;
@@ -23,6 +25,8 @@
   
   --border-color: #e2e8f0;
   --border-subtle: #f1f5f9;
+  --border-glass: rgba(255, 255, 255, 0.75);
+  --border-glass-card: rgba(226, 232, 240, 0.85);
   --border-focus: #38bdf8;
   
   --radius-xs: 6px;
@@ -34,7 +38,8 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
   --shadow-md: 0 6px 20px -2px rgba(15, 23, 42, 0.08), 0 2px 8px -1px rgba(15, 23, 42, 0.04);
   --shadow-lg: 0 18px 36px -4px rgba(15, 23, 42, 0.14), 0 8px 18px -2px rgba(15, 23, 42, 0.08);
-  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-card: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-glass: 0 8px 32px 0 rgba(15, 52, 96, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
   --shadow-float: 0 20px 40px -12px rgba(15, 23, 42, 0.22);
 
   --font-sans: 'Plus Jakarta Sans', 'Noto Sans Myanmar', 'Padauk', 'Pyidaungsu', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -98,19 +103,20 @@ button {
   width: 100%;
 }
 
-/* Header Navbar */
+/* Header Navbar with Glassmorphism */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--bg-glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.85);
   padding: 10px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04);
   transition: all var(--transition-fast);
 }
 
@@ -171,7 +177,8 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: #f0fdf4;
+  background: rgba(240, 253, 244, 0.9);
+  backdrop-filter: blur(6px);
   color: #15803d;
   font-size: 0.7rem;
   font-weight: 700;
@@ -204,8 +211,10 @@ button {
   border-radius: var(--radius-full);
   font-size: 0.82rem;
   font-weight: 700;
-  background: white;
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
   color: var(--text-main);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-fast);
@@ -216,6 +225,7 @@ button {
   background: var(--primary-light);
   color: var(--primary);
   border-color: #bfdbfe;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
 }
 
 .header-action-btn:active {
@@ -299,16 +309,17 @@ button {
   }
 }
 
-/* Hero Section */
+/* Hero Section with Frosted Glass Overlay */
 .hero-banner {
-  background: linear-gradient(135deg, #091a32 0%, #0f3460 60%, #0284c7 100%);
+  background: linear-gradient(135deg, rgba(9, 26, 50, 0.96) 0%, rgba(15, 52, 96, 0.93) 60%, rgba(2, 132, 199, 0.88) 100%);
   color: white;
   padding: 24px 20px 20px;
   margin: 14px 16px 12px;
   border-radius: var(--radius-lg);
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 16px 36px -6px rgba(15, 52, 96, 0.28), inset 0 1px 0 0 rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .hero-banner::after {
@@ -318,7 +329,7 @@ button {
   right: -30px;
   width: 220px;
   height: 220px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -327,14 +338,16 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 4px 12px;
   border-radius: var(--radius-full);
   font-size: 0.76rem;
   font-weight: 700;
   margin-bottom: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero-sparkle-icon {
@@ -374,7 +387,7 @@ button {
   font-weight: 600;
 }
 
-/* Event Stats Bar */
+/* Event Stats Bar with Glassmorphic Frosted Tiles */
 .event-stats-bar {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -383,13 +396,15 @@ button {
 }
 
 .stat-item {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: var(--radius-sm);
   padding: 10px 8px;
   text-align: center;
   transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .stat-item.clickable {
@@ -397,25 +412,10 @@ button {
 }
 
 .stat-item.clickable:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.35);
   transform: translateY(-2px);
-}
-
-.stat-number {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.2;
-  display: block;
-}
-
-.stat-label {
-  font-size: 0.74rem;
-  color: #cbd5e1;
-  font-weight: 600;
-  line-height: 1.35;
-  margin-top: 2px;
-  display: block;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
 }
 
 /* ==========================================================================
@@ -434,14 +434,17 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--primary-light);
+  background: rgba(239, 246, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: var(--primary);
   font-size: 0.78rem;
   font-weight: 800;
-  padding: 5px 12px;
+  padding: 5px 14px;
   border-radius: var(--radius-full);
   border: 1px solid #bfdbfe;
   margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(15, 52, 96, 0.05);
 }
 
 .pill-sparkle {
@@ -485,10 +488,12 @@ button {
   }
 }
 
-/* Logo Button Card */
+/* Logo Button Card with Frosted Glass */
 .logo-button-card {
-  background: #ffffff;
-  border: 1.5px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(226, 232, 240, 0.85);
   border-radius: var(--radius-lg);
   padding: 16px 14px 12px;
   display: flex;
@@ -496,7 +501,7 @@ button {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   user-select: none;
@@ -512,7 +517,7 @@ button {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  background: linear-gradient(90deg, var(--primary), var(--accent));
   opacity: 0;
   transition: opacity 0.25s ease;
 }
@@ -520,8 +525,8 @@ button {
 .logo-button-card:hover {
   transform: translateY(-4px);
   border-color: #93c5fd;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.12);
-  background: #fafcff;
+  box-shadow: 0 12px 28px -4px rgba(2, 132, 199, 0.16), 0 4px 10px rgba(0, 0, 0, 0.03);
+  background: rgba(250, 252, 255, 0.98);
 }
 
 .logo-button-card:hover::before {
@@ -545,14 +550,14 @@ button {
   width: 86px;
   height: 86px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(226, 232, 240, 0.9);
   padding: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
   overflow: hidden;
   position: relative;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
@@ -615,9 +620,10 @@ button {
 .logo-count-badge {
   font-size: 0.68rem;
   font-weight: 800;
-  background: #f0f7ff;
+  background: rgba(240, 249, 255, 0.95);
+  backdrop-filter: blur(6px);
   color: var(--primary);
-  padding: 2px 8px;
+  padding: 2px 9px;
   border-radius: var(--radius-full);
   border: 1px solid #bfdbfe;
   transition: all var(--transition-fast);
@@ -673,9 +679,11 @@ button {
   color: var(--primary);
   padding: 8px 18px 8px 10px;
   border-radius: var(--radius-full);
-  background: #eff6ff;
+  background: rgba(239, 246, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1.5px solid #bfdbfe;
-  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.08);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   cursor: pointer;
@@ -699,7 +707,7 @@ button {
   background: #dbeafe;
   border-color: #93c5fd;
   color: #1d4ed8;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.16);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.16);
   transform: translateY(-1px);
 }
 
@@ -714,12 +722,14 @@ button {
 }
 
 .selected-major-banner {
-  background: white;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: var(--radius-md);
-  border: 1.5px solid var(--border-color);
+  border: 1.5px solid rgba(226, 232, 240, 0.85);
   padding: 16px 18px;
   margin-bottom: 16px;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 6px 24px -4px rgba(15, 23, 42, 0.06);
 }
 
 .selected-major-header-row {
@@ -733,8 +743,8 @@ button {
   width: 68px;
   height: 68px;
   border-radius: 50%;
-  background: white;
-  border: 1.5px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
   padding: 5px;
   display: flex;
   align-items: center;
@@ -773,17 +783,19 @@ button {
 .selected-major-count-pill {
   font-size: 0.76rem;
   font-weight: 800;
-  background: #dcfce7;
-  color: #15803d;
+  background: rgba(239, 246, 255, 0.95);
+  backdrop-filter: blur(6px);
+  color: var(--primary);
   padding: 3px 10px;
   border-radius: var(--radius-full);
-  border: 1px solid #bbf7d0;
+  border: 1px solid #bfdbfe;
 }
 
 .pdf-showcase-pill {
   font-size: 0.74rem;
   font-weight: 800;
-  background: #fef3c7;
+  background: rgba(254, 243, 199, 0.9);
+  backdrop-filter: blur(6px);
   color: #b45309;
   padding: 3px 10px;
   border-radius: var(--radius-full);
@@ -806,7 +818,7 @@ button {
 }
 
 /* ==========================================================================
-   Search & Filter Bar
+   Search & Filter Bar with Glassmorphic Input
    ========================================================================== */
 .search-filter-hub {
   margin-bottom: 16px;
@@ -830,8 +842,10 @@ button {
   width: 100%;
   padding: 12px 42px 12px 44px;
   border-radius: var(--radius-md);
-  border: 1.5px solid var(--border-color);
-  background: white;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   font-size: 0.92rem;
   color: var(--text-main);
   outline: none;
@@ -840,8 +854,9 @@ button {
 }
 
 .search-input:focus {
+  background: #ffffff;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.16);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.16), 0 4px 14px rgba(2, 132, 199, 0.08);
 }
 
 .clear-search {
@@ -889,8 +904,10 @@ button {
   border-radius: var(--radius-full);
   font-size: 0.76rem;
   font-weight: 600;
-  background: white;
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
   color: var(--text-main);
   white-space: nowrap;
   transition: all var(--transition-fast);
@@ -899,12 +916,14 @@ button {
 .quick-tag-chip:hover {
   border-color: var(--accent);
   background: var(--accent-light);
+  color: var(--accent-hover);
 }
 
 .quick-tag-chip.active {
   background: var(--primary);
   color: white;
   border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(15, 52, 96, 0.25);
 }
 
 .section-header {
@@ -932,7 +951,7 @@ button {
 
 .active-tag-indicator {
   font-size: 0.74rem;
-  background: #fef3c7;
+  background: rgba(254, 243, 199, 0.9);
   color: #b45309;
   font-weight: 700;
   padding: 2px 8px;
@@ -942,16 +961,17 @@ button {
 
 .section-badge {
   font-size: 0.78rem;
-  background: var(--primary-light);
+  background: rgba(239, 246, 255, 0.95);
+  backdrop-filter: blur(8px);
   color: var(--primary);
-  padding: 4px 10px;
+  padding: 4px 11px;
   border-radius: var(--radius-full);
-  font-weight: 700;
+  font-weight: 800;
   border: 1px solid #bfdbfe;
 }
 
 /* ==========================================================================
-   Pamphlet Project Cards
+   Pamphlet Project Cards with Frosted Glass Surface
    ========================================================================== */
 .pamphlet-projects-list {
   display: flex;
@@ -960,11 +980,13 @@ button {
 }
 
 .pamphlet-project-card {
-  background: white;
-  border: 1.5px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(226, 232, 240, 0.85);
   border-radius: var(--radius-lg);
   padding: 16px;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
   overflow: hidden;
   max-width: 100%;
@@ -972,7 +994,8 @@ button {
 
 .pamphlet-project-card:hover {
   border-color: #bfdbfe;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 10px 28px -4px rgba(15, 52, 96, 0.1), 0 4px 8px rgba(0, 0, 0, 0.02);
+  transform: translateY(-2px);
 }
 
 .pamphlet-card-header {
@@ -990,11 +1013,12 @@ button {
 }
 
 .pamphlet-dept-badge {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 800;
-  background: var(--primary-light);
+  background: rgba(239, 246, 255, 0.95);
+  backdrop-filter: blur(6px);
   color: var(--primary);
-  padding: 2px 8px;
+  padding: 3px 9px;
   border-radius: var(--radius-xs);
   border: 1px solid #bfdbfe;
 }
@@ -1002,11 +1026,12 @@ button {
 .pamphlet-pages-pill {
   font-size: 0.72rem;
   font-weight: 700;
-  background: #f1f5f9;
-  color: var(--text-muted);
-  padding: 2px 8px;
+  background: rgba(240, 249, 255, 0.9);
+  backdrop-filter: blur(6px);
+  color: var(--accent-hover);
+  padding: 3px 8px;
   border-radius: var(--radius-xs);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid rgba(186, 230, 253, 0.85);
 }
 
 .pamphlet-project-title {
@@ -1043,7 +1068,9 @@ button {
   border-radius: var(--radius-sm);
   font-size: 0.76rem;
   font-weight: 700;
-  background: #f8fafc;
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--border-color);
   color: var(--text-muted);
   transition: all var(--transition-fast);
@@ -1060,7 +1087,7 @@ button {
   background: var(--primary);
   color: white;
   border-color: var(--primary);
-  box-shadow: 0 2px 8px rgba(15, 52, 96, 0.2);
+  box-shadow: 0 3px 10px rgba(15, 52, 96, 0.25);
 }
 
 /* Card Pamphlet Preview PDF sizing */
@@ -1121,14 +1148,15 @@ button {
   align-items: center;
   gap: 6px;
   background: rgba(15, 23, 42, 0.88);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: white;
   padding: 6px 14px;
   border-radius: var(--radius-full);
   font-size: 0.78rem;
   font-weight: 700;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 /* Pamphlet Meta Footer */
@@ -1147,10 +1175,12 @@ button {
   gap: 6px;
   font-size: 0.82rem;
   color: var(--text-main);
-  background: #f8fafc;
+  background: rgba(240, 249, 255, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 6px 12px;
   border-radius: var(--radius-xs);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid rgba(219, 234, 254, 0.8);
 }
 
 .supervisor-icon {
@@ -1190,7 +1220,8 @@ button {
   gap: 6px;
   padding: 8px 12px;
   border-radius: var(--radius-sm);
-  background: #f8fafc;
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(6px);
   border: 1px solid var(--border-color);
   font-size: 0.8rem;
   font-weight: 700;
@@ -1553,7 +1584,7 @@ button {
 }
 
 /* ==========================================================================
-   Standard Project Cards Feed
+   Standard Project Cards Feed with Frosted Glass
    ========================================================================== */
 .project-list {
   display: flex;
@@ -1562,11 +1593,13 @@ button {
 }
 
 .project-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
+  border: 1.5px solid rgba(226, 232, 240, 0.85);
   padding: 16px;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
   cursor: pointer;
   position: relative;
@@ -1574,8 +1607,8 @@ button {
 
 .project-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: #cbd5e1;
+  box-shadow: 0 10px 28px -4px rgba(15, 52, 96, 0.1), 0 4px 8px rgba(0, 0, 0, 0.02);
+  border-color: #bfdbfe;
 }
 
 .project-card:active {
@@ -1590,7 +1623,8 @@ button {
 }
 
 .project-major-badge {
-  background: var(--primary-light);
+  background: rgba(239, 246, 255, 0.95);
+  backdrop-filter: blur(6px);
   color: var(--primary);
   border: 1px solid #bfdbfe;
   font-size: 0.76rem;
@@ -1606,7 +1640,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f8fafc;
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(6px);
   border: 1px solid var(--border-color);
   transition: all var(--transition-fast);
 }
@@ -1660,20 +1695,36 @@ button {
   margin-bottom: 10px;
 }
 
-.tag-pill {
-  background: #f1f5f9;
-  color: #334155;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 3px 8px;
+/* Tag Pills - Azure/Ice Blue theme with glassmorphic blur */
+.tag-pill,
+.modal-tag-pill {
+  background: rgba(240, 249, 255, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #0369a1;
+  font-size: 0.73rem;
+  font-weight: 700;
+  padding: 3px 9px;
   border-radius: var(--radius-full);
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(186, 230, 253, 0.85);
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+}
+
+.tag-pill:hover,
+.modal-tag-pill:hover {
+  background: #e0f2fe;
+  border-color: #7dd3fc;
+  color: #0284c7;
+  transform: translateY(-1px);
 }
 
 .tag-pill.more-tags {
-  background: #e2e8f0;
-  color: #475569;
-  font-weight: 700;
+  background: rgba(224, 242, 254, 0.95);
+  color: #0369a1;
+  border-color: #7dd3fc;
+  font-weight: 800;
 }
 
 .project-supervisor-snippet {
@@ -1681,10 +1732,12 @@ button {
   align-items: center;
   gap: 6px;
   font-size: 0.78rem;
-  background: #f8fafc;
+  background: rgba(240, 249, 255, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 5px 10px;
   border-radius: var(--radius-xs);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid rgba(219, 234, 254, 0.8);
   margin-bottom: 10px;
   color: var(--text-muted);
 }
@@ -1730,7 +1783,7 @@ button {
 }
 
 /* ==========================================================================
-   Modals & Overlays (Detail View, Info, Bookmarks)
+   Modals & Overlays (Detail View, Info, Bookmarks) with Glassmorphism
    ========================================================================== */
 .modal-overlay {
   position: fixed;
@@ -1738,9 +1791,9 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(15, 23, 42, 0.62);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -1750,17 +1803,19 @@ button {
 }
 
 .modal-content {
-  background: white;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   width: 100%;
   max-width: 640px;
   max-height: 88vh;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-float);
+  box-shadow: 0 24px 48px -8px rgba(15, 23, 42, 0.22), 0 1px 0 rgba(255, 255, 255, 0.6) inset;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--border-color);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
   animation: slideUp 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1780,7 +1835,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .modal-major-badge {
@@ -1822,7 +1877,7 @@ button {
   align-items: center;
   justify-content: center;
   color: var(--text-muted);
-  background: var(--bg-main);
+  background: rgba(248, 250, 252, 0.9);
   border: 1px solid var(--border-color);
   transition: all var(--transition-fast);
 }
@@ -1856,7 +1911,8 @@ button {
   font-size: 0.82rem;
   font-weight: 700;
   border: 1px solid var(--border-color);
-  background: #f8fafc;
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(8px);
   color: var(--text-main);
   transition: all var(--transition-fast);
 }
@@ -1926,7 +1982,8 @@ button {
   font-size: 0.84rem;
   line-height: 1.5;
   color: var(--text-main);
-  background: #f8fafc;
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(8px);
   padding: 8px 12px;
   border-radius: var(--radius-xs);
   border: 1px solid var(--border-subtle);
@@ -1952,8 +2009,10 @@ button {
 }
 
 .metadata-card {
-  background: #f8fafc;
-  border: 1px solid var(--border-color);
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
   border-radius: var(--radius-sm);
   padding: 12px;
 }
@@ -1985,20 +2044,10 @@ button {
   gap: 6px;
 }
 
-.modal-tag-pill {
-  font-size: 0.74rem;
-  font-weight: 600;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  color: #334155;
-  padding: 3px 9px;
-  border-radius: var(--radius-full);
-}
-
 .modal-footer {
   padding: 12px 18px;
   border-top: 1px solid var(--border-color);
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: flex-end;
 }
@@ -2031,13 +2080,15 @@ button {
   background: #e2e8f0;
 }
 
-/* Info Modal Styling */
+/* Info Modal Styling with Theme-Coordinated Glass Icons */
 .info-modal-content {
   max-width: 540px;
 }
 
 .info-banner-card {
-  background: var(--primary-light);
+  background: rgba(239, 246, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid #bfdbfe;
   border-radius: var(--radius-sm);
   padding: 14px;
@@ -2055,19 +2106,62 @@ button {
   align-items: center;
   gap: 12px;
   padding: 10px 12px;
-  background: #f8fafc;
-  border: 1px solid var(--border-color);
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
   border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.info-item-row:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #bfdbfe;
+  box-shadow: 0 2px 8px rgba(15, 52, 96, 0.05);
 }
 
 .info-icon-box {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid #bfdbfe;
+  box-shadow: 0 2px 6px rgba(15, 52, 96, 0.06);
+}
+
+.info-icon-box.date-box {
+  background: rgba(239, 246, 255, 0.9);
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+.info-icon-box.time-box {
+  background: rgba(240, 249, 255, 0.9);
+  color: #0284c7;
+  border-color: #bae6fd;
+}
+
+.info-icon-box.loc-box {
+  background: rgba(239, 246, 255, 0.9);
+  color: #0f3460;
+  border-color: #bfdbfe;
+}
+
+.info-icon-box.univ-box {
+  background: rgba(240, 253, 244, 0.9);
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.info-icon-box.contact-box {
+  background: rgba(240, 249, 255, 0.9);
+  color: #0369a1;
+  border-color: #bae6fd;
 }
 
 .info-label {
@@ -2083,7 +2177,7 @@ button {
   font-weight: 700;
 }
 
-/* Bookmarks Modal Styling */
+/* Bookmarks Modal Styling with Frosted Cards */
 .bookmarks-modal-content {
   max-width: 580px;
 }
@@ -2095,8 +2189,10 @@ button {
 }
 
 .bookmark-modal-card {
-  background: #f8fafc;
-  border: 1px solid var(--border-color);
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
   border-radius: var(--radius-sm);
   padding: 12px;
   transition: all var(--transition-fast);
@@ -2104,7 +2200,8 @@ button {
 
 .bookmark-modal-card:hover {
   background: white;
-  border-color: #cbd5e1;
+  border-color: #bfdbfe;
+  box-shadow: 0 4px 12px rgba(15, 52, 96, 0.06);
 }
 
 .bookmark-card-top {
@@ -2117,10 +2214,11 @@ button {
 .bookmark-major-tag {
   font-size: 0.74rem;
   font-weight: 800;
-  background: var(--primary-light);
+  background: rgba(239, 246, 255, 0.95);
   color: var(--primary);
-  padding: 2px 7px;
+  padding: 2px 8px;
   border-radius: var(--radius-xs);
+  border: 1px solid #bfdbfe;
 }
 
 .bookmark-remove-btn {
@@ -2174,6 +2272,152 @@ button {
 .bookmark-view-btn:hover {
   background: var(--primary-light);
   border-color: #bfdbfe;
+}
+
+/* ==========================================================================
+   Project Detail Page Dedicated Styles
+   ========================================================================== */
+.detail-header-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid rgba(226, 232, 240, 0.85);
+  padding: 20px;
+  box-shadow: 0 8px 30px -4px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.detail-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.detail-major-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(239, 246, 255, 0.9);
+  backdrop-filter: blur(8px);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid #bfdbfe;
+  transition: all var(--transition-fast);
+}
+
+.detail-major-badge:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+
+.detail-major-logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: white;
+}
+
+.detail-major-code {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.detail-actions-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.detail-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border-color);
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+.detail-action-btn:hover {
+  background: var(--primary-light);
+  border-color: #bfdbfe;
+  color: var(--primary);
+}
+
+.detail-action-btn.bookmark-action.active {
+  background: #fef3c7;
+  border-color: #fde68a;
+  color: var(--accent-gold);
+}
+
+.detail-project-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.detail-project-title-mm {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 14px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.detail-project-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.detail-meta-card {
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  margin-bottom: 16px;
+}
+
+.detail-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.detail-meta-body {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.detail-meta-body.supervisor {
+  color: var(--accent-hover);
+  font-weight: 600;
 }
 
 /* Empty States */
@@ -2329,7 +2573,7 @@ button {
   }
 }
 
-/* Scroll To Top Button (အပေါ်သို့ပြန်သွားပါ) */
+/* Scroll To Top Button (အပေါ်သို့ပြန်သွားပါ) with Glassmorphic Navy Sheen */
 .scroll-to-top-btn {
   position: fixed;
   bottom: max(22px, calc(env(safe-area-inset-bottom) + 16px));
@@ -2337,25 +2581,26 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: var(--primary);
+  background: rgba(15, 52, 96, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: white;
   padding: 10px 18px;
   border-radius: var(--radius-full);
   font-size: 0.84rem;
   font-weight: 700;
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 6px 18px rgba(15, 52, 96, 0.38), 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 24px rgba(15, 52, 96, 0.38), 0 2px 6px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   z-index: 120;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   animation: scrollBtnIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  backdrop-filter: blur(8px);
 }
 
 .scroll-to-top-btn:hover {
   background: #1d4ed8;
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(15, 52, 96, 0.48);
+  box-shadow: 0 10px 28px rgba(15, 52, 96, 0.48);
 }
 
 .scroll-to-top-btn:active {

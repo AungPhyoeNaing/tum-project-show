@@ -79,43 +79,44 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
         <span>နောက်သို့ ပြန်သွားရန်</span>
       </button>
 
-      <div className="detail-header" style={{ background: 'white', borderRadius: 'var(--radius-lg)', border: '1.5px solid var(--border-color)', padding: '20px', boxShadow: 'var(--shadow-card)', overflow: 'hidden' }}>
+      <div className="detail-header-card">
         {/* Department Badge and Action Bar */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '16px', paddingBottom: '12px', borderBottom: '1px solid var(--border-subtle)' }}>
-          <Link to={`/major/${major.id}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'var(--primary-light)', padding: '5px 12px', borderRadius: 'var(--radius-full)', border: '1px solid #bfdbfe' }}>
+        <div className="detail-top-bar">
+          <Link to={`/major/${major.id}`} className="detail-major-badge">
             {major.logo && (
-              <img src={major.logo} alt="" style={{ width: '20px', height: '20px', borderRadius: '50%', objectFit: 'contain', background: 'white' }} />
+              <img src={major.logo} alt="" className="detail-major-logo" />
             )}
-            <span style={{ fontSize: '0.82rem', fontWeight: 800, color: 'var(--primary)' }}>{major.shortCode} Department</span>
+            <span className="detail-major-code">{major.shortCode} Department</span>
           </Link>
 
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          <div className="detail-actions-group">
             <button 
-              className={`bookmark-btn ${isBookmarked ? 'active' : ''}`}
+              type="button"
+              className={`detail-action-btn bookmark-action ${isBookmarked ? 'active' : ''}`}
               onClick={() => onToggleBookmark(project.id)}
-              style={{ border: '1px solid var(--border-color)', padding: '7px 14px', borderRadius: 'var(--radius-sm)', display: 'flex', gap: '6px', fontSize: '0.82rem', fontWeight: 700 }}
               aria-label={isBookmarked ? "Remove Bookmark" : "Save Project"}
             >
-              <Bookmark size={16} fill={isBookmarked ? "#f59e0b" : "none"} />
-              {isBookmarked ? 'သိမ်းပြီး' : 'သိမ်းမည်'}
+              <Bookmark size={16} fill={isBookmarked ? "#f59e0b" : "none"} color={isBookmarked ? "#f59e0b" : "currentColor"} />
+              <span>{isBookmarked ? 'သိမ်းပြီး' : 'သိမ်းမည်'}</span>
             </button>
 
             <button 
+              type="button"
               onClick={handleShare}
-              style={{ border: '1px solid var(--border-color)', padding: '7px 14px', borderRadius: 'var(--radius-sm)', display: 'flex', gap: '6px', fontSize: '0.82rem', fontWeight: 700, background: '#f8fafc' }}
+              className="detail-action-btn share-action"
               aria-label="Share project"
             >
               {copied ? <Check size={16} color="#16a34a" /> : <Share2 size={16} />}
-              {copied ? 'ကူးယူပြီး' : 'မျှဝေရန်'}
+              <span>{copied ? 'ကူးယူပြီး' : 'မျှဝေရန်'}</span>
             </button>
           </div>
         </div>
 
         {/* Titles */}
-        <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '4px', lineHeight: '1.35', wordBreak: 'break-word' }}>
+        <h2 className="detail-project-title">
           {project.title}
         </h2>
-        <h3 style={{ fontSize: '0.96rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '14px', lineHeight: '1.6', wordBreak: 'break-word' }}>
+        <h3 className="detail-project-title-mm">
           {project.titleMm}
         </h3>
 
@@ -184,34 +185,34 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
         )}
 
         {/* Description */}
-        <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.65', marginBottom: '16px' }}>
+        <p className="detail-project-desc">
           {project.description}
         </p>
 
         {/* Tags */}
         <div className="project-tags" style={{ marginBottom: '16px' }}>
           {project.tags.map((tag, idx) => (
-            <span key={idx} className="tag-pill" style={{ fontSize: '0.74rem', padding: '4px 10px' }}>
+            <span key={idx} className="tag-pill">
               {tag}
             </span>
           ))}
         </div>
 
         {/* Team & Supervisor Section */}
-        <div style={{ background: '#f8fafc', padding: '14px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)', marginBottom: '16px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px', fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-main)' }}>
+        <div className="detail-meta-card">
+          <div className="detail-meta-row">
             <Users size={16} color="var(--primary)" />
             <span>ပြုလုပ်သည့် ကျောင်းသားအဖွဲ့</span>
           </div>
-          <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginBottom: '12px', lineHeight: '1.5' }}>
+          <p className="detail-meta-body">
             {project.team ? project.team.join('၊ ') : 'N/A'}
           </p>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-main)' }}>
+          <div className="detail-meta-row" style={{ marginTop: '12px' }}>
             <Award size={16} color="var(--accent)" />
             <span>ကြီးကြပ်သူ ဆရာ/ဆရာမ</span>
           </div>
-          <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: '4px' }}>
+          <p className="detail-meta-body supervisor">
             {project.supervisor}
           </p>
         </div>
