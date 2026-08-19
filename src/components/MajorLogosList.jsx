@@ -20,7 +20,7 @@ export default function MajorLogosList() {
             key={major.id}
             to={`/major/${major.id}`}
             className="logo-button-card"
-            aria-label={`View ${major.shortCode} - ${major.nameMm} projects`}
+            aria-label={`View ${major.shortCode} - ${major.name} projects`}
           >
             {/* Top Badge with Project Count */}
             <div className="logo-card-top-bar">
@@ -42,10 +42,9 @@ export default function MajorLogosList() {
               />
             </div>
 
-            {/* Department Info & Labels */}
+            {/* Department Short Code Label */}
             <div className="logo-button-label">
               <span className="logo-short-code">{major.shortCode}</span>
-              <span className="logo-name-mm">{major.nameMm}</span>
             </div>
 
             {/* Action CTA */}
