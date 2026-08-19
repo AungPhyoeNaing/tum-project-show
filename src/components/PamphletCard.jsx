@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Document, Page } from 'react-pdf';
 import { Bookmark, Maximize2, FileText } from 'lucide-react';
 
@@ -11,6 +11,35 @@ export default function PamphletCard({
   onOpenLightbox 
 }) {
   const [activePageIndex, setActivePageIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: '350px 0px', // Pre-load 350px before scrolling into view
+      }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const pageCount = pamphletData?.pageCount || pamphletData?.pageImages?.length || 1;
   const pageLabels = pamphletData?.pageLabels || Array.from({ length: pageCount }, (_, i) => `စာမျက်နှာ ${i + 1}`);
@@ -20,7 +49,7 @@ export default function PamphletCard({
   const previewWidth = typeof window !== 'undefined' ? Math.min(window.innerWidth - 64, 520) : 340;
 
   return (
-    <div className="pamphlet-project-card">
+    <div className="pamphlet-project-card" ref={cardRef}>
       {/* Project Header Info */}
       <div className="pamphlet-card-header">
         <div className="pamphlet-titles-block">
@@ -77,24 +106,31 @@ export default function PamphletCard({
         }}
       >
         {pamphletData?.pdfUrl ? (
-          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', maxWidth: '100%', overflow: 'hidden' }}>
-            <Document
-              file={pamphletData.pdfUrl}
-              loading={
-                <div className="empty-state" style={{ padding: '30px' }}>
-                  <FileText size={40} />
-                  <p>Pamphlet preview loading...</p>
-                </div>
-              }
-            >
-              <Page
-                pageNumber={activePageIndex + 1}
-                width={previewWidth}
-                renderTextLayer={false}
-                renderAnnotationLayer={false}
-              />
-            </Document>
-          </div>
+          isVisible ? (
+            <div style={{ display: 'flex', justifyContent: 'center', width: '100%', maxWidth: '100%', overflow: 'hidden' }}>
+              <Document
+                file={pamphletData.pdfUrl}
+                loading={
+                  <div className="empty-state" style={{ padding: '30px', minHeight: '220px' }}>
+                    <FileText size={40} />
+                    <p>Pamphlet preview loading...</p>
+                  </div>
+                }
+              >
+                <Page
+                  pageNumber={activePageIndex + 1}
+                  width={previewWidth}
+                  renderTextLayer={false}
+                  renderAnnotationLayer={false}
+                />
+              </Document>
+            </div>
+          ) : (
+            <div className="empty-state" style={{ padding: '40px 20px', minHeight: '220px' }}>
+              <FileText size={40} color="var(--primary)" style={{ opacity: 0.4 }} />
+              <p style={{ marginTop: '8px', fontSize: '0.82rem', color: 'var(--text-muted)' }}>Pamphlet Preview</p>
+            </div>
+          )
         ) : currentImage ? (
           <img
             src={currentImage}
@@ -103,7 +139,7 @@ export default function PamphletCard({
             loading="lazy"
           />
         ) : (
-          <div className="empty-state" style={{ padding: '30px' }}>
+          <div className="empty-state" style={{ padding: '30px', minHeight: '220px' }}>
             <FileText size={40} />
             <p>Pamphlet preview loading...</p>
           </div>
