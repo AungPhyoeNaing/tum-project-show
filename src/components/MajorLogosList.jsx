@@ -1,16 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MAJORS_DATA } from '../data/mockData';
+import { ChevronRight, Sparkles } from 'lucide-react';
 
 export default function MajorLogosList() {
   return (
-    <div className="major-logos-section" id="majors-hub">
+    <section className="major-logos-section" id="majors-hub">
       <div className="major-logos-header">
         <div className="major-logos-title-box">
           <div className="section-pill-tag">
-            <span>Select Major</span>
+            <Sparkles size={13} className="pill-sparkle" />
+            <span>Departments Directory</span>
           </div>
           <h2 className="major-logos-heading">မေဂျာ Logo ရွေးချယ်ပါ</h2>
+          <p className="major-logos-subheading">
+            ဘွဲ့ကြိုသုတေသန ပရောဂျက်များနှင့် Pamphlet များ လေ့လာရန် မိမိစိတ်ဝင်စားရာ အင်ဂျင်နီယာဌာနကို ရွေးချယ်ပါ
+          </p>
         </div>
       </div>
 
@@ -21,8 +26,15 @@ export default function MajorLogosList() {
             key={major.id}
             to={`/major/${major.id}`}
             className="logo-button-card"
-            aria-label={`View ${major.shortCode} projects`}
+            aria-label={`View ${major.shortCode} - ${major.nameMm} projects`}
           >
+            {/* Top Badge with Project Count */}
+            <div className="logo-card-top-bar">
+              <span className="logo-count-badge">
+                {major.id === 'ep' ? 10 : major.projects.length} Projects
+              </span>
+            </div>
+
             {/* Logo Display */}
             <div className="logo-button-avatar">
               <img
@@ -36,16 +48,20 @@ export default function MajorLogosList() {
               />
             </div>
 
-            {/* Short Term Name & Tag */}
+            {/* Department Info & Labels */}
             <div className="logo-button-label">
               <span className="logo-short-code">{major.shortCode}</span>
-              <span className="logo-count-badge">
-                {major.id === 'ep' ? 10 : major.projects.length} Projects
-              </span>
+              <span className="logo-name-mm">{major.nameMm}</span>
+            </div>
+
+            {/* Action CTA */}
+            <div className="logo-card-action">
+              <span>ကြည့်ရှုရန်</span>
+              <ChevronRight size={14} className="action-arrow" />
             </div>
           </Link>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
