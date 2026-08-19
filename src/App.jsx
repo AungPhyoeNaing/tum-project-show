@@ -1,6 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import Home from './pages/Home';
 
 const Major = lazy(() => import('./pages/Major'));
@@ -103,6 +104,8 @@ export default function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>
+
+        <ScrollToTopButton />
       </div>
     </BrowserRouter>
   );
