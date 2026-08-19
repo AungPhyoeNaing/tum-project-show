@@ -592,26 +592,50 @@ button {
 .back-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.86rem;
+  gap: 10px;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--primary);
-  padding: 8px 16px;
-  border-radius: var(--radius-sm);
+  padding: 8px 18px 8px 10px;
+  border-radius: var(--radius-full);
+  background: #eff6ff;
+  border: 1.5px solid #bfdbfe;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.08);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back-icon-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
   background: white;
-  border: 1.5px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  color: var(--primary);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
 }
 
 .back-btn:hover {
-  background: var(--primary-light);
-  border-color: #bfdbfe;
-  color: var(--primary);
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.16);
+  transform: translateY(-1px);
+}
+
+.back-btn:hover .back-icon-circle {
+  transform: translateX(-3px);
+  background: var(--primary);
+  color: white;
 }
 
 .back-btn:active {
-  transform: scale(0.96);
+  transform: scale(0.96) translateY(0);
 }
 
 .selected-major-banner {

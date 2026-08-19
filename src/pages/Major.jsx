@@ -72,7 +72,10 @@ export default function Major({
           <h3>မေဂျာ မတွေ့ရှိပါ</h3>
           <p>တောင်းဆိုထားသော မေဂျာ မရှိပါ။</p>
           <Link to="/" className="back-btn" style={{ marginTop: '16px', display: 'inline-flex' }}>
-            <ArrowLeft size={16} /> ပင်မစာမျက်နှာသို့ ပြန်သွားရန်
+            <span className="back-icon-circle">
+              <ArrowLeft size={16} />
+            </span>
+            <span>ပင်မစာမျက်နှာသို့ ပြန်သွားရန်</span>
           </Link>
         </div>
       </div>
@@ -82,8 +85,11 @@ export default function Major({
   return (
     <div className="main-content" style={{ paddingTop: '16px' }}>
       {/* Back Button to Home */}
-      <Link to="/" className="back-btn" style={{ marginBottom: '14px' }}>
-        <ArrowLeft size={16} /> မေဂျာများ စာရင်းသို့ ပြန်သွားရန်
+      <Link to="/" className="back-btn" style={{ marginBottom: '16px' }}>
+        <span className="back-icon-circle">
+          <ArrowLeft size={16} />
+        </span>
+        <span>မေဂျာများ စာရင်းသို့ ပြန်သွားရန်</span>
       </Link>
 
       {/* Clean Compact Major Header Card */}

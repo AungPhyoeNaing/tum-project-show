@@ -37,7 +37,10 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
           <h3>ပရောဂျက် မတွေ့ရှိပါ</h3>
           <p>တောင်းဆိုထားသော ပရောဂျက် မရှိပါ။</p>
           <button onClick={() => navigate(-1)} className="back-btn" style={{ marginTop: '16px', display: 'inline-flex' }}>
-            <ArrowLeft size={16} /> နောက်သို့ ပြန်သွားရန်
+            <span className="back-icon-circle">
+              <ArrowLeft size={16} />
+            </span>
+            <span>နောက်သို့ ပြန်သွားရန်</span>
           </button>
         </div>
       </div>
@@ -69,8 +72,11 @@ export default function ProjectDetail({ bookmarks, onToggleBookmark }) {
 
   return (
     <div className="main-content" style={{ paddingTop: '16px' }}>
-      <button onClick={() => navigate(-1)} className="back-btn" style={{ marginBottom: '14px' }}>
-        <ArrowLeft size={16} /> နောက်သို့ ပြန်သွားရန်
+      <button onClick={() => navigate(-1)} className="back-btn" style={{ marginBottom: '16px' }}>
+        <span className="back-icon-circle">
+          <ArrowLeft size={16} />
+        </span>
+        <span>နောက်သို့ ပြန်သွားရန်</span>
       </button>
 
       <div className="detail-header" style={{ background: 'white', borderRadius: 'var(--radius-lg)', border: '1.5px solid var(--border-color)', padding: '20px', boxShadow: 'var(--shadow-card)', overflow: 'hidden' }}>
