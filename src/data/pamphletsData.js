@@ -415,5 +415,21 @@ export const PAMPHLETS_DATA = {
       "စာမျက်နှာ 2",
       "စာမျက်နှာ 3"
     ]
+  },
+  "ceit-11": {
+    "pdfUrl": "/pdfs/ceit/ceit-11-pamphlet.pdf",
+    "pageCount": 2,
+    "pageLabels": [
+      "စာမျက်နှာ 1 (Front)",
+      "စာမျက်နှာ 2 (Back)"
+    ]
+  },
+  "arch-01": {
+    "pdfUrl": "/pdfs/architecture/arch-01-pamphlet.pdf",
+    "pageCount": 2,
+    "pageLabels": [
+      "စာမျက်နှာ 1",
+      "စာမျက်နှာ 2"
+    ]
   }
 };

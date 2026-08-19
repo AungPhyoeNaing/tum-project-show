@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Cpu, Cog, Bot, Building2, Zap, Radio, 
-  Compass, Flame, Pickaxe, FlaskConical, 
+  Compass, Flame, Pickaxe, FlaskConical, Landmark, 
   Folder, ChevronRight 
 } from 'lucide-react';
 
@@ -17,6 +17,7 @@ const ICON_MAP = {
   Flame,
   Pickaxe,
   FlaskConical,
+  Landmark,
 };
 
 export default function MajorCard({ major }) {

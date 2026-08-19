@@ -6,7 +6,7 @@ export const SHOW_INFO = {
   "location": "ပင်မဆောင်၊ နည်းပညာတက္ကသိုလ် (မန္တလေး)၊ အောင်ချမ်းသာရပ်ကွက်၊ ပုသိမ်ကြီးမြို့နယ်",
   "university": "Technological University (Mandalay)",
   "contact": "ဖုန်း: +95-9-258225398 / အီးမေးလ်: info@tum.edu.mm",
-  "welcomeMessage": "နည်းပညာတက္ကသိုလ် (မန္တလေး) ၏ နှစ်စဉ်ကျင်းပမြဲဖြစ်သော Project Show & Job Fair 2026 မှ ကြိုဆိုပါ၏။ အင်ဂျင်နီယာမေဂျာ (9) ခုမှ ကျောင်းသား၊ ကျောင်းသူများ၏ လက်တွေ့ဖန်တီးထားသော ဘွဲ့ကြိုသုတေသန ပရောဂျက်ပေါင်း (57) ခုကို တစ်နေရာတည်းတွင် စုံလင်စွာ လေ့လာကြည့်ရှုနိုင်ပါသည်။",
+  "welcomeMessage": "နည်းပညာတက္ကသိုလ် (မန္တလေး) ၏ နှစ်စဉ်ကျင်းပမြဲဖြစ်သော Project Show & Job Fair 2026 မှ ကြိုဆိုပါ၏။ အင်ဂျင်နီယာမေဂျာ (10) ခုမှ ကျောင်းသား၊ ကျောင်းသူများ၏ လက်တွေ့ဖန်တီးထားသော ဘွဲ့ကြိုသုတေသန ပရောဂျက်ပေါင်း (59) ခုကို တစ်နေရာတည်းတွင် စုံလင်စွာ လေ့လာကြည့်ရှုနိုင်ပါသည်။",
   "description": "နည်းပညာတက္ကသိုလ် (မန္တလေး) ကျောင်းသား၊ ကျောင်းသူများ၏ လက်တွေ့တီထွင်ဖန်တီးထားသော စက်မှု၊ လျှပ်စစ်၊ အီလက်ထရောနစ်၊ ကွန်ပျူတာ၊ မက္ကာထရောနစ်နှင့် မြို့ပြအင်ဂျင်နီယာ ဘွဲ့ကြိုသုတေသန ပရောဂျက်များအား ခင်းကျင်းပြသခြင်း ဖြစ်ပါသည်။"
 };
 
@@ -313,6 +313,32 @@ export const MAJORS_DATA = [
           "Kanban Board view for agile workflow tracking",
           "Real-time task assignment and progress reporting",
           "Automated deadline reminders and team notifications"
+        ]
+      },
+      {
+        "id": "ceit-11",
+        "title": "Arduino Based Smart Cane",
+        "titleMm": "Arduino အခြေပြု စမတ်တုတ်ကောက် (Smart Cane)",
+        "tagline": "Assistive navigation cane for the visually impaired with ultrasonic obstacle detection, audio and vibration alerts.",
+        "description": "မျက်မမြင်သူများ အိမ်တွင်း/အပြင်တွင် ဘေးကင်းစိတ်ချစွာ သွားလာနိုင်ရန် Arduino Nano၊ HC-SR04 Ultrasonic Sensor၊ Buzzer နှင့် Vibration Motor တို့ကို အသုံးပြု၍ တည်ဆောက်ထားသော စမတ်တုတ်ကောက် ဖြစ်ပါသည်။ ရှေ့နှင့် မြေပြင်ရှိ အတားအဆီးများကို အလိုအလျောက် သိရှိပြီး အသံပေးစနစ် (Buzzer) နှင့် တုန်ခါမှုစနစ် (Vibration Motor) တို့ဖြင့် ချက်ချင်း သတိပေးပါသည်။ 18650 အားပြန်သွင်းနိုင်သော ဘက်ထရီဖြင့် အလွယ်တကူ ပြန်လည်အားသွင်း အသုံးပြုနိုင်ပါသည်။",
+        "team": [
+          "CEIT Smart Cane Development Team"
+        ],
+        "supervisor": "Department of Computer Engineering and Information Technology",
+        "tags": [
+          "Arduino Nano",
+          "HC-SR04 Ultrasonic Sensor",
+          "Buzzer",
+          "Vibration Motor",
+          "Assistive Technology",
+          "18650 Battery"
+        ],
+        "features": [
+          "Obstacle detection in front and on the ground using HC-SR04 ultrasonic sensors",
+          "Instant audio alert through buzzer module when obstacles are detected",
+          "Silent vibration motor alert for low-profile user notification",
+          "Simple ON/OFF switch for convenient everyday use",
+          "Rechargeable 18650 battery and charger power system"
         ]
       }
     ]
@@ -1459,6 +1485,52 @@ export const MAJORS_DATA = [
           "Mechanical crank, walking beam, horsehead, and pitman arm linkage",
           "Reciprocating downhole pump lifting fluid to storage tank",
           "Demonstrates artificial lift principles in petroleum extraction"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "architecture",
+    "shortCode": "ARCH",
+    "name": "Architecture",
+    "nameMm": "ဗိသုကာအင်ဂျင်နီယာဌာန",
+    "iconName": "Landmark",
+    "themeColor": "from-stone-600 to-slate-800",
+    "accentColor": "#78716c",
+    "logo": "/logos/ArchLogo.jpg",
+    "image": "/logos/ArchLogo.jpg",
+    "description": "မြန်မာ့အမွေအနှစ် သမိုင်းဝင်နေအိမ်များ မှတ်တမ်းပြုစုခြင်း၊ Mahasi တရားရှုမှတ်ရေးစင်တာ၊ ဟိုတယ်များ၊ ကျောက်မျက်ပြတိုက်နှင့် မင်္ဂလာခန်းမပုံစံကြီးများ၏ ဗိသုကာ ဒီဇိုင်းပရောဂျက်များ",
+    "faculty": [
+      "Department of Architecture Faculty Members",
+      "Technological University (Mandalay)"
+    ],
+    "projects": [
+      {
+        "id": "arch-01",
+        "title": "Heritage & Hospitality Architectural Design Projects",
+        "titleMm": "အမွေအနှစ် သမိုင်းဝင်နေအိမ်နှင့် ဧည့်ဝတ်ကျေပွန်ရေး ဗိသုကာ ဒီဇိုင်းပရောဂျက်များ",
+        "tagline": "Architectural documentation of the House of U Kaung plus hotel, meditation center, museum and wedding complex designs.",
+        "description": "အဆိုပါ ဗိသုကာဒီဇိုင်းပရောဂျက်များတွင် ကုန်းဘောင်ခေတ်နှောင်း ယဉ်ကျေးမှု အမွေအနှစ် အလုံမြို့ဝန် ဦးကောင်း၏ သမိုင်းဝင်နေအိမ် (The House of U Kaung) မှတ်တမ်းပြုစုခြင်း၊ မန္တလေးရှိ Mahasi တရားရှုမှတ်ရေးစင်တာ၊ The Mystic Fall Hotel၊ ကျောက်မျက်ပြတိုက်နှင့် ကျောက်မျက်ဈေးဝိုင်း၊ ကလောရှိ Hill Resort Hotel နှင့် Dazzling Dreams မင်္ဂလာခန်းမကြီးတို့၏ ဒီဇိုင်းများ ပါဝင်ပါသည်။ မြေပုံအစီအစဉ် (Site Plan)၊ အခင်းအကျင်းပုံများနှင့် အရှေ့/အနောက်/တောင်/မြောက် Elevation ပုံများကို စနစ်တကျ ရေးဆွဲပြသထားပါသည်။",
+        "team": [
+          "Architecture Department Design Team"
+        ],
+        "supervisor": "Department of Architecture, Technological University (Mandalay)",
+        "tags": [
+          "Heritage Building",
+          "Site Planning",
+          "Hotel Design",
+          "Meditation Center",
+          "Museum Design",
+          "Elevation Design",
+          "Wedding Complex"
+        ],
+        "features": [
+          "The House of U Kaung, The Ahlon Mayor — Konbaung-era heritage residence documentation with Burmese craftsmanship and Romanesque arches",
+          "Mahasi Meditation Center (MDY) — design based on the Buddha's throne symbol for stress-reduced, balanced healthy living",
+          "The Mystic Fall Hotel (MDY) — rectangular form with additive transformation into a U-shaped building layout",
+          "Gems Museum & Gems Mart (MDY) — diamond-faceted geometry inspired by the precious nature of gems",
+          "Hill Resort Hotel (Kalaw) — organic pine-cone inspired radial site plan in harmony with Kalaw's natural environment",
+          "Dazzling Dreams Wedding Complex — elegant white architecture with modern geometric forms and landscaped gardens"
         ]
       }
     ]
