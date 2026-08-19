@@ -151,11 +151,10 @@ export const PAMPHLETS_DATA = {
   },
   "ec-01": {
     "pdfUrl": "/pdfs/ec/ec-01-pamphlet.pdf",
-    "pageCount": 3,
+    "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3"
+      "စာမျက်နှာ 2"
     ]
   },
   "ec-02": {
@@ -178,11 +177,10 @@ export const PAMPHLETS_DATA = {
   },
   "ec-04": {
     "pdfUrl": "/pdfs/ec/ec-04-pamphlet.pdf",
-    "pageCount": 3,
+    "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3"
+      "စာမျက်နှာ 2"
     ]
   },
   "ec-05": {
@@ -196,11 +194,10 @@ export const PAMPHLETS_DATA = {
   },
   "ec-06": {
     "pdfUrl": "/pdfs/ec/ec-06-pamphlet.pdf",
-    "pageCount": 3,
+    "pageCount": 2,
     "pageLabels": [
       "စာမျက်နှာ 1",
-      "စာမျက်နှာ 2",
-      "စာမျက်နှာ 3"
+      "စာမျက်နှာ 2"
     ]
   },
   "ep-01": {
