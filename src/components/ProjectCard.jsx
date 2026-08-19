@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bookmark, Users, Award, ChevronRight } from 'lucide-react';
+import { Bookmark, Award, ChevronRight } from 'lucide-react';
 
 export default function ProjectCard({ project, majorCode, isBookmarked, onToggleBookmark, onSelectProject }) {
   const handleClick = (e) => {

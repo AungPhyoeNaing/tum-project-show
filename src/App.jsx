@@ -1,9 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
-import Major from './pages/Major';
-import ProjectDetail from './pages/ProjectDetail';
+
+const Major = lazy(() => import('./pages/Major'));
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
+
+const RouteLoadingFallback = () => (
+  <div className="main-content" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', color: 'var(--text-muted)' }}>
+      <div className="pdf-spinner" style={{ width: '36px', height: '36px', border: '3px solid #e2e8f0', borderTopColor: 'var(--primary)', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} />
+      <span style={{ fontSize: '0.88rem', fontWeight: 600 }}>ရယူနေပါသည်...</span>
+    </div>
+  </div>
+);
 
 export default function App() {
   // Load bookmarks from localStorage
@@ -50,47 +60,49 @@ export default function App() {
           onResetToHome={handleResetToHome}
         />
 
-        <Routes>
-          <Route 
-            path="/" 
-            element={
-              <Home 
-                bookmarks={bookmarks} 
-                onToggleBookmark={toggleBookmark}
-                isInfoOpen={isInfoOpen}
-                setIsInfoOpen={setIsInfoOpen}
-                isBookmarksOpen={isBookmarksOpen}
-                setIsBookmarksOpen={setIsBookmarksOpen}
-              />
-            } 
-          />
-          {/* Dedicated Major Page displaying all projects for that major */}
-          <Route 
-            path="/major/:majorId" 
-            element={
-              <Major 
-                bookmarks={bookmarks} 
-                onToggleBookmark={toggleBookmark}
-                isInfoOpen={isInfoOpen}
-                setIsInfoOpen={setIsInfoOpen}
-                isBookmarksOpen={isBookmarksOpen}
-                setIsBookmarksOpen={setIsBookmarksOpen}
-              />
-            } 
-          />
-          {/* Deep link / direct URL support for shared project links */}
-          <Route 
-            path="/project/:projectId" 
-            element={
-              <ProjectDetail 
-                bookmarks={bookmarks} 
-                onToggleBookmark={toggleBookmark} 
-              />
-            } 
-          />
-          {/* Fallback to homepage */}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <Suspense fallback={<RouteLoadingFallback />}>
+          <Routes>
+            <Route 
+              path="/" 
+              element={
+                <Home 
+                  bookmarks={bookmarks} 
+                  onToggleBookmark={toggleBookmark}
+                  isInfoOpen={isInfoOpen}
+                  setIsInfoOpen={setIsInfoOpen}
+                  isBookmarksOpen={isBookmarksOpen}
+                  setIsBookmarksOpen={setIsBookmarksOpen}
+                />
+              } 
+            />
+            {/* Dedicated Major Page displaying all projects for that major */}
+            <Route 
+              path="/major/:majorId" 
+              element={
+                <Major 
+                  bookmarks={bookmarks} 
+                  onToggleBookmark={toggleBookmark}
+                  isInfoOpen={isInfoOpen}
+                  setIsInfoOpen={setIsInfoOpen}
+                  isBookmarksOpen={isBookmarksOpen}
+                  setIsBookmarksOpen={setIsBookmarksOpen}
+                />
+              } 
+            />
+            {/* Deep link / direct URL support for shared project links */}
+            <Route 
+              path="/project/:projectId" 
+              element={
+                <ProjectDetail 
+                  bookmarks={bookmarks} 
+                  onToggleBookmark={toggleBookmark} 
+                />
+              } 
+            />
+            {/* Fallback to homepage */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
       </div>
     </BrowserRouter>
   );
