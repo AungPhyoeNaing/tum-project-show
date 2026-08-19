@@ -7,15 +7,9 @@ export default function MajorLogosList() {
   return (
     <section className="major-logos-section" id="majors-hub">
       <div className="major-logos-header">
-        <div className="major-logos-title-box">
-          <div className="section-pill-tag">
-            <Sparkles size={13} className="pill-sparkle" />
-            <span>Departments Directory</span>
-          </div>
-          <h2 className="major-logos-heading">မေဂျာ Logo ရွေးချယ်ပါ</h2>
-          <p className="major-logos-subheading">
-            ဘွဲ့ကြိုသုတေသန ပရောဂျက်များနှင့် Pamphlet များ လေ့လာရန် မိမိစိတ်ဝင်စားရာ အင်ဂျင်နီယာဌာနကို ရွေးချယ်ပါ
-          </p>
+        <div className="section-pill-tag" style={{ marginBottom: 0 }}>
+          <Sparkles size={13} className="pill-sparkle" />
+          <span>Departments Directory</span>
         </div>
       </div>
 
