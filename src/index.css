@@ -2678,7 +2678,7 @@ button {
 
 .esports-header {
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .esports-pill {
@@ -2700,30 +2700,22 @@ button {
   margin-top: 4px;
 }
 
-.esports-subheading {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  margin-top: 6px;
-  line-height: 1.5;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.esports-card-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+.esports-single-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: white;
   border: 1.5px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
   position: relative;
   overflow: hidden;
 }
 
-.esports-card-container::before {
+.esports-single-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -2731,23 +2723,6 @@ button {
   right: 0;
   height: 4px;
   background: linear-gradient(90deg, #db2777, #7c3aed, #2563eb);
-}
-
-@media (min-width: 860px) {
-  .esports-card-container {
-    grid-template-columns: 1.1fr 1fr;
-    padding: 28px;
-    gap: 28px;
-    align-items: start;
-  }
-}
-
-/* Flyer Block */
-.esports-flyer-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
 }
 
 .esports-preview-box {
@@ -2758,157 +2733,5 @@ button {
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
 }
 
-/* Info Block */
-.esports-info-block {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.esports-block-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin-bottom: 8px;
-}
-
-.esports-block-title.hiring-title {
-  color: #db2777;
-}
-
-/* Games Tags */
-.esports-game-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.esports-game-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--text-main);
-  background: #f8fafc;
-  border: 1px solid var(--border-color);
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-}
-
-/* Hiring Grid */
-.esports-hiring-group {
-  background: #fff1f2;
-  border: 1px solid #fecdd3;
-  border-radius: var(--radius-md);
-  padding: 14px 16px;
-}
-
-.esports-hiring-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 6px;
-}
-
-@media (min-width: 500px) {
-  .esports-hiring-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.hiring-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #9f1239;
-}
-
-.hiring-item .check-icon {
-  color: #e11d48;
-  flex-shrink: 0;
-}
-
-/* Benefits List */
-.esports-benefits-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.esports-benefits-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  line-height: 1.45;
-}
-
-.esports-benefits-list .bullet {
-  color: #7c3aed;
-  font-weight: bold;
-}
-
-/* Telegram & Contacts Bar */
-.esports-contact-bar {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-top: 12px;
-  border-top: 1px dashed var(--border-subtle);
-  margin-top: 4px;
-}
-
-.esports-btn-telegram {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: #0088cc;
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 10px 18px;
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.25);
-  transition: all 0.2s ease;
-}
-
-.esports-btn-telegram:hover {
-  background: #0077b5;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 136, 204, 0.35);
-  color: white;
-}
-
-.esports-btn-telegram:active {
-  transform: scale(0.97) translateY(0);
-}
-
-.esports-contact-details {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  font-size: 0.76rem;
-  color: var(--text-muted);
-}
-
-.contact-sub-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
 
 
