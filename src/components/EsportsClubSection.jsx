@@ -43,10 +43,10 @@ export default function EsportsClubSection() {
         <h2 className="esports-heading">{ESPORTS_DATA.title}</h2>
       </div>
 
-      {/* Centered Clean Flyer Showcase */}
+      {/* Centered Clean Mini Flyer Showcase */}
       <div className="esports-single-card">
         {/* Page Tabs */}
-        <div className="pamphlet-page-switcher" style={{ marginBottom: '14px', justifyContent: 'center' }}>
+        <div className="pamphlet-page-switcher esports-mini-switcher" style={{ marginBottom: '8px', justifyContent: 'center' }}>
           {ESPORTS_DATA.pageLabels.map((label, idx) => (
             <button
               key={idx}
@@ -54,7 +54,7 @@ export default function EsportsClubSection() {
               className={`pamphlet-switch-tab ${activePageIndex === idx ? 'active' : ''}`}
               onClick={() => setActivePageIndex(idx)}
             >
-              <FileText size={13} />
+              <FileText size={11} />
               <span>{label}</span>
             </button>
           ))}
@@ -84,8 +84,8 @@ export default function EsportsClubSection() {
           {/* Hover / Tap to Zoom Overlay Hint */}
           <div className="pamphlet-expand-overlay">
             <div className="expand-pill">
-              <Maximize2 size={15} />
-              <span>နှိပ်၍ အကြီးချဲ့ကြည့်ရှုပါ (Tap to Zoom)</span>
+              <Maximize2 size={12} />
+              <span>Tap to Zoom</span>
             </div>
           </div>
         </div>
