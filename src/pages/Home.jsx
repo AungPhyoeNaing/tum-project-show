@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MAJORS_DATA, SHOW_INFO } from '../data/mockData';
 import MajorLogosList from '../components/MajorLogosList';
+import EsportsClubSection from '../components/EsportsClubSection';
 import InfoModal from '../components/InfoModal';
 import BookmarksModal from '../components/BookmarksModal';
 import { Calendar, MapPin } from 'lucide-react';
@@ -63,6 +64,9 @@ export default function Home({
 
       {/* Major Logos Showcase Section */}
       <MajorLogosList />
+
+      {/* University Student Club: TUM Esports Club (TUMEA) */}
+      <EsportsClubSection />
 
       {/* Event Info Modal */}
       <InfoModal 
